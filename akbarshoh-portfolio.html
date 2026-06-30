@@ -717,18 +717,6 @@
     observeReveals();
     document.getElementById("year").textContent = new Date().getFullYear();
     document.querySelectorAll("[data-lang]").forEach(btn => btn.addEventListener("click", () => applyLanguage(btn.dataset.lang)));
-    const menuBtn = document.querySelector(".menu-btn");
-    const mobilePanel = document.querySelector(".mobile-panel");
-    menuBtn.addEventListener("click", () => {
-      const isOpen = mobilePanel.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-      document.body.classList.toggle("nav-open", isOpen);
-    });
-    mobilePanel.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-      mobilePanel.classList.remove("open");
-      menuBtn.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("nav-open");
-    }));
   </script>
   <script>
     (function(){
