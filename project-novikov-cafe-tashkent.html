@@ -64,9 +64,16 @@
   }
 }
 </style>
+<style id="project-language-style">
+.detail-lang{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--border);border-radius:999px;padding:3px;background:#fff}
+.detail-lang button{border:0;background:transparent;color:var(--muted);border-radius:999px;padding:7px 9px;font:720 11px/1 var(--font-body);letter-spacing:.06em;cursor:pointer}
+.detail-lang button.active{background:var(--fg);color:#fff}
+.visual[data-zoom-label]::after{content:attr(data-zoom-label)!important}
+@media(max-width:640px){.detail-lang{padding:2px}.detail-lang button{padding:6px 7px;font-size:10px}.detail-actions{gap:7px}}
+</style>
 </head>
 <body>
-<header class="topbar"><nav class="wrap nav" aria-label="Project navigation"><a class="brand" href="index.html">Akbarshoh Toshpolatov</a><div class="detail-links"><a href="index.html#about">About</a><a href="index.html#expertise">Expertise</a><a href="index.html#projects">Projects</a><a href="index.html#process">Process</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></div><div class="detail-actions"><a class="detail-contact" href="mailto:akbarshohdev@gmail.com">Contact Me</a><button class="detail-menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button></div></nav><div class="detail-mobile" aria-label="Mobile project menu"><a href="index.html#about">About</a><a href="index.html#expertise">Expertise</a><a href="index.html#projects">Projects</a><a href="index.html#process">Process</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></div></header>
+<header class="topbar"><nav class="wrap nav" aria-label="Project navigation"><a class="brand" href="index.html">Akbarshoh Toshpolatov</a><div class="detail-links"><a href="index.html#about">About</a><a href="index.html#expertise">Expertise</a><a href="index.html#projects">Projects</a><a href="index.html#process">Process</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></div><div class="detail-actions"><div class="detail-lang" aria-label="Language switcher"><button type="button" class="active" data-project-lang="en">EN</button><button type="button" data-project-lang="uz">UZ</button><button type="button" data-project-lang="ru">RU</button></div><a class="detail-contact" href="mailto:akbarshohdev@gmail.com">Contact Me</a><button class="detail-menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button></div></nav><div class="detail-mobile" aria-label="Mobile project menu"><a href="index.html#about">About</a><a href="index.html#expertise">Expertise</a><a href="index.html#projects">Projects</a><a href="index.html#process">Process</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></div></header>
 <main class="wrap">
 <section class="hero"><div><p class="eyebrow">Restaurant / cafe / Website</p><h1>Novikov Cafe Tashkent</h1><p class="lead">Website project for a premium cafe in Tashkent with a focus on digital presence, menu presentation and customer communication.</p><div class="actions"><a class="btn primary" href="index.html#contact">Discuss a similar project</a><a class="btn" href="index.html#projects">View all projects</a></div></div><div class="visual placeholder"><span>Website case study</span></div></section>
 <section class="grid" aria-label="Project details"><article class="panel"><h2>Key processes</h2><p>Website structure, menu sections, brand presentation, customer requests and content organization.</p></article><article class="panel"><h2>Role</h2><p>Website project coordination, content structuring and digital presence support.</p></article><article class="panel"><h2>Business value</h2><p>Improved online presentation and a clearer digital touchpoint for customers.</p></article></section>
@@ -133,6 +140,33 @@
     bindAllMenus();
   }
   window.addEventListener('pageshow', bindAllMenus);
+})();
+</script>
+<script id="project-language-controller">
+(function(){
+  var I18N = {"en": {"role": "ERP & Digital Transformation Project Manager", "projects": "Projects", "contact": "Contact", "contactMe": "Contact Me", "discuss": "Discuss a similar project", "view": "View all projects", "zoom": "Click to enlarge", "panel": ["Key processes", "Role", "Business value"], "narrativeTitle": "Case study context", "nav": ["About", "Expertise", "Projects", "Process", "Skills", "Experience", "Contact"], "eyebrow": "Restaurant / cafe / Website", "lead": "Website project for a premium cafe in Tashkent with a focus on digital presence, menu presentation and customer communication.", "panels": ["Website structure, menu sections, brand presentation, customer requests and content organization.", "Website project coordination, content structuring and digital presence support.", "Improved online presentation and a clearer digital touchpoint for customers."], "narrative": "The website direction supports premium cafe discovery: clear brand presence, menu structure, customer communication and a polished digital first impression."}, "uz": {"role": "ERP va raqamli transformatsiya loyiha menejeri", "projects": "Loyihalar", "contact": "Aloqa", "contactMe": "Bog'lanish", "discuss": "Shunga o'xshash loyihani muhokama qilish", "view": "Barcha loyihalarni ko'rish", "zoom": "Kattalashtirib ko'rish", "panel": ["Asosiy jarayonlar", "Rol", "Biznes qiymati"], "narrativeTitle": "Case konteksti", "nav": ["Men haqimda", "Ekspertiza", "Loyihalar", "Jarayon", "Ko'nikmalar", "Tajriba", "Aloqa"], "eyebrow": "Portfolio case / Raqamli loyiha", "lead": "Ushbu loyiha digital presence, biznes jarayonlarni tartibga solish va amaliy implementatsiya natijasini ko'rsatadi.", "panels": ["Sayt, kontent struktura, mijoz kommunikatsiyasi va ichki jarayonlarni tartibga solish.", "Loyiha koordinatsiyasi, biznes analiz, kontent mantiqi va digital yechimni joriy etish supporti.", "Online ko'rinish yaxshilandi, jarayonlar aniqroq bo'ldi va biznes kommunikatsiyasi tartibga tushdi."], "narrative": "Case biznes ehtiyojini tushunish, mavjud jarayonlarni aniqlashtirish va ularni amaliy digital yechimga aylantirishga qaratilgan."}, "ru": {"role": "Менеджер проектов ERP и цифровой трансформации", "projects": "Проекты", "contact": "Контакты", "contactMe": "Связаться", "discuss": "Обсудить похожий проект", "view": "Смотреть все проекты", "zoom": "Открыть крупно", "panel": ["Ключевые процессы", "Роль", "Бизнес-ценность"], "narrativeTitle": "Контекст кейса", "nav": ["Обо мне", "Экспертиза", "Проекты", "Процесс", "Навыки", "Опыт", "Контакты"], "eyebrow": "Портфолио-кейс / Цифровой проект", "lead": "Этот проект показывает цифровое присутствие, структурирование бизнес-процессов и практический результат внедрения.", "panels": ["Сайт, структура контента, коммуникация с клиентами и упорядочивание внутренних процессов.", "Координация проекта, бизнес-анализ, логика контента и поддержка внедрения цифрового решения.", "Улучшено онлайн-присутствие, процессы стали понятнее, а бизнес-коммуникация — более структурированной."], "narrative": "Кейс сфокусирован на понимании бизнес-потребности, уточнении текущих процессов и превращении их в практичное цифровое решение."}};
+  function applyProjectLanguage(lang){
+    var d = I18N[lang] || I18N.en;
+    document.documentElement.lang = lang;
+    try{localStorage.setItem('portfolio-language', lang);}catch(_){}
+    document.querySelectorAll('[data-project-lang]').forEach(function(btn){btn.classList.toggle('active', btn.dataset.projectLang === lang);});
+    document.querySelectorAll('.detail-links a').forEach(function(a,i){if(d.nav[i]) a.textContent=d.nav[i];});
+    document.querySelectorAll('.detail-mobile a').forEach(function(a,i){if(d.nav[i]) a.textContent=d.nav[i];});
+    var contact=document.querySelector('.detail-contact'); if(contact) contact.textContent=d.contactMe;
+    var eyebrow=document.querySelector('.eyebrow'); if(eyebrow) eyebrow.textContent=d.eyebrow;
+    var lead=document.querySelector('.lead'); if(lead) lead.textContent=d.lead;
+    var buttons=document.querySelectorAll('.actions .btn'); if(buttons[0]) buttons[0].textContent=d.discuss; if(buttons[1]) buttons[1].textContent=d.view;
+    document.querySelectorAll('.panel').forEach(function(panel,i){var h=panel.querySelector('h2'); var p=panel.querySelector('p'); if(h&&d.panel[i]) h.textContent=d.panel[i]; if(p&&d.panels[i]) p.textContent=d.panels[i];});
+    var narrative=document.querySelector('.narrative'); if(narrative){var h=narrative.querySelector('h2'); var p=narrative.querySelector('p'); if(h) h.textContent=d.narrativeTitle; if(p&&d.narrative) p.textContent=d.narrative;}
+    var process=document.querySelector('.process-list'); if(process&&d.process){var ph=process.querySelector('h2'); if(ph) ph.textContent=d.processTitle; process.querySelectorAll('.process-item').forEach(function(item,i){var row=d.process[i]; if(!row)return; var s=item.querySelector('strong'); var sp=item.querySelector('span'); if(s)s.textContent=row[0]; if(sp)sp.textContent=row[1];});}
+    var footerRole=document.querySelector('.footer span'); if(footerRole) footerRole.textContent=d.role;
+    var foot=document.querySelectorAll('.footer-links a'); if(foot[0]) foot[0].textContent=d.projects; if(foot[1]) foot[1].textContent=d.contact;
+    document.querySelectorAll('.visual').forEach(function(v){v.setAttribute('data-zoom-label', d.zoom);});
+  }
+  window.projectSetLanguage=applyProjectLanguage;
+  document.addEventListener('click', function(event){var btn=event.target.closest('[data-project-lang]'); if(!btn)return; event.preventDefault(); applyProjectLanguage(btn.dataset.projectLang||'en');});
+  function init(){applyProjectLanguage(localStorage.getItem('portfolio-language') || document.documentElement.lang || 'en');}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
 </body>
