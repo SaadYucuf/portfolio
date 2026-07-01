@@ -63,8 +63,11 @@
       letter-spacing: -0.01em; white-space: nowrap;
     }
     .brand-mark {
-      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
-      color: #fff; background: var(--fg); font-family: var(--font-display); font-size: 13px;
+      width: 34px; height: 34px; border-radius: 999px; display: block;
+      object-fit: cover; object-position: center top; background: #fff;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      box-shadow: 0 6px 18px rgba(11, 15, 25, 0.08);
+      flex: 0 0 auto;
     }
     .nav-links { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: 14px; font-weight: 520; }
     .nav-links a:hover { color: var(--fg); }
@@ -295,7 +298,7 @@
       .container { width: min(100% - 28px, 1180px); }
       .site-header { background: rgba(255,255,255,.94); }
       .nav { height: 64px; gap: 10px; }
-      .brand-mark { width: 32px; height: 32px; border-radius: 9px; }
+      .brand-mark { width: 32px; height: 32px; border-radius: 999px; }
       .brand span:last-child { display: none; }
       .nav-actions { gap: 8px; }
       .nav-actions .btn.primary { display: none; }
@@ -377,7 +380,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Akbarshoh Toshpolatov home"><span class="brand-mark">AT</span><span>Akbarshoh Toshpolatov</span></a>
+      <a class="brand" href="#top" aria-label="Akbarshoh Toshpolatov home"><img class="brand-mark" src="mqz14cuk-DSD-_2_.jpg" alt="" aria-hidden="true"><span>Akbarshoh Toshpolatov</span></a>
       <nav class="nav-links" aria-label="Main menu">
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
