@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Akbarshoh Toshpolatov">
+  <rect width="64" height="64" rx="16" fill="#0B0F19"/>
+  <circle cx="32" cy="24" r="11" fill="#EFF6FF"/>
+  <path d="M15 54c2.8-12.2 11-19 17-19s14.2 6.8 17 19H15z" fill="#2563EB"/>
+  <path d="M20 55h24" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+</svg>
