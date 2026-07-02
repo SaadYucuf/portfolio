@@ -71,6 +71,13 @@
       box-shadow: 0 6px 18px rgba(11, 15, 25, 0.08);
       flex: 0 0 auto;
     }
+    @media (prefers-color-scheme: dark) {
+      .brand-mark {
+        background: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 0 1px rgba(11, 15, 25, 0.18);
+      }
+    }
     .nav-links { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: 14px; font-weight: 520; }
     .nav-links a:hover { color: var(--fg); }
     .nav-actions { display: flex; align-items: center; gap: 12px; }
@@ -974,17 +981,17 @@
   function apply(lang){var d=T[lang]||T.en;document.documentElement.lang=lang;try{localStorage.setItem('portfolio-language',lang);}catch(_){}
     document.querySelectorAll('[data-lang]').forEach(function(b){b.classList.toggle('active',b.dataset.lang===lang);});
     document.querySelectorAll('[data-i18n]').forEach(function(el){var v=get(d,KEY[el.dataset.i18n]||[]);if(v)el.textContent=v;});
-    document.querySelectorAll('.filters button').forEach(function(btn){var key=btn.dataset.filter||btn.textContent.trim();if(d.filters[key])btn.textContent=d.filters[key];});
+    document.querySelectorAll('#projectFilters .filter-btn').forEach(function(btn){var key=btn.dataset.filter||btn.textContent.trim();if(d.filters[key])btn.textContent=d.filters[key];});
     var eg=document.getElementById('expertiseGrid'); if(eg){eg.innerHTML=d.expertise.map(function(x){return '<article class="card reveal"><div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"></path></svg></div><h3>'+x[0]+'</h3><p>'+x[1]+'</p></article>';}).join('');}
     var pg=document.getElementById('processGrid'); if(pg){pg.innerHTML=d.process.map(function(x,i){return '<article class="step reveal"><span>0'+(i+1)+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p></article>';}).join('');}
     var sg=document.getElementById('skillsGrid'); if(sg){sg.innerHTML=Object.keys(d.skills).map(function(k){return '<article class="skill-group reveal"><h3>'+k+'</h3><div class="tags">'+d.skills[k].map(function(s){return '<span>'+s+'</span>';}).join('')+'</div></article>';}).join('');}
-    var active=document.querySelector('.filters button.active'); var filter=active?(active.dataset.filter||'All'):'All'; var grid=document.getElementById('projectGrid');
+    var active=document.querySelector('#projectFilters .filter-btn.active'); var filter=active?(active.dataset.filter||'All'):'All'; var grid=document.getElementById('projectGrid');
     if(grid && window.projects){var selected=filter==='All'?window.projects:window.projects.filter(function(p){return p[6]===filter;});grid.innerHTML=selected.map(function(p){var tr=d.projects[p[0]]||[p[1],p[2]];return '<a class="project-card reveal" href="'+slug(p[0])+'" aria-label="'+d.projectCta+': '+p[0]+'">'+imgMarkup(p[7])+'<span>'+tr[0]+'</span><h3>'+p[0]+'</h3><p>'+tr[1]+'</p><span class="project-link">'+d.projectCta+'</span></a>';}).join('');}
   }
   window.setPortfolioLanguage=apply;
 
     document.addEventListener('click',function(e){
-      if(!e.target.closest('.filters button')) return;
+      if(!e.target.closest('#projectFilters .filter-btn')) return;
       setTimeout(function(){
         var lang='en';
         try{lang=localStorage.getItem('portfolio-language')||document.documentElement.lang||'en';}catch(_){lang=document.documentElement.lang||'en';}
