@@ -222,6 +222,12 @@
     .project-link { margin-top: auto; padding-top: 18px; color: var(--accent); font-weight: 720; font-size: 14px; }
     .project-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; border: 1px solid var(--border); margin-bottom: 18px; background: var(--soft); }
     .project-card .industry { color: var(--accent); font-size: 12px; font-weight: 720; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; }
+    /* Final project image guard: keeps translated-render cards inside the grid. */
+    .project-preview { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 18px; border: 1px solid var(--border); margin-bottom: 18px; background: var(--soft); }
+    .project-preview img, .project-card img, .project-image { display: block; width: 100%; max-width: 100%; height: 100%; object-fit: cover; }
+    .project-card { overflow: hidden; min-width: 0; }
+    .project-grid { align-items: stretch; }
+
     .process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; counter-reset: step; }
     .process-step {
       position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
@@ -972,7 +978,7 @@
   var KEY = {'nav.about':['nav',0],'nav.expertise':['nav',1],'nav.projects':['nav',2],'nav.process':['nav',3],'nav.skills':['nav',4],'nav.experience':['nav',5],'nav.contact':['nav',6],'cta.contact':['cta','contact'],'cta.cv':['cta','cv'],'cta.projects':['cta','projects'],'cta.telegram':['cta','telegram'],'cta.portfolio':['cta','portfolio'],'hero.title':['hero','title'],'hero.subtitle':['hero','subtitle'],'photo.status':['hero','status'],'sections.about.label':['sections','about',0],'sections.about.title':['sections','about',1],'sections.about.copy':['sections','about',2],'sections.expertise.label':['sections','expertise',0],'sections.expertise.title':['sections','expertise',1],'sections.expertise.copy':['sections','expertise',2],'sections.projects.label':['sections','projects',0],'sections.projects.title':['sections','projects',1],'sections.projects.copy':['sections','projects',2],'sections.process.label':['sections','process',0],'sections.process.title':['sections','process',1],'sections.skills.label':['sections','skills',0],'sections.skills.title':['sections','skills',1],'sections.experience.label':['sections','experience',0],'sections.experience.title':['sections','experience',1],'sections.contact.label':['sections','contact',0],'sections.contact.title':['sections','contact',1],'sections.contact.copy':['sections','contact',2]};
   function get(o,p){return p.reduce(function(v,k){return v&&v[k];},o);}
   function slug(name){return 'project-'+name.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.html';}
-  function imgMarkup(img){if(!img)return '';var src=Array.isArray(img)?img[0]:img;return '<div class="project-preview"><img src="'+src+'" alt="Project preview" loading="lazy"></div>';}
+  function imgMarkup(img){if(!img)return '';var src=Array.isArray(img)?img[0]:img;return '<div class="project-preview"><img class="project-image" src="'+src+'" alt="Project preview" loading="lazy"></div>';}
   function apply(lang){var d=T[lang]||T.en;document.documentElement.lang=lang;try{localStorage.setItem('portfolio-language',lang);}catch(_){}
     document.querySelectorAll('[data-lang]').forEach(function(b){b.classList.toggle('active',b.dataset.lang===lang);});
     document.querySelectorAll('[data-i18n]').forEach(function(el){var v=get(d,KEY[el.dataset.i18n]||[]);if(v)el.textContent=v;});
