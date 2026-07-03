@@ -1,1895 +1,333 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="color-scheme" content="light" />
-  <title>Toshpolatov Akbarshoh - ERP & Digital Transformation Project Manager</title>
-  <meta name="description" content="Personal portfolio of Toshpolatov Akbarshoh, ERP & Digital Transformation Project Manager, Business Analyst and ERP Consultant focused on Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online payments, HH integrations, AI tools and business process automation, AS-IS / TO-BE analysis and project coordination." />
-  <meta name="keywords" content="ERP, Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, Online Payments, HH integrations, AI Tools, Business Analyst, Digital Transformation, Project Manager, ERP Consultant, AS-IS TO-BE, Business Process Automation, Uzbekistan, Tashkent" />
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #ffffff;
-      --fg: #0b0f19;
-      --muted: #5b6472;
-      --border: #e5e7eb;
-      --soft: #f8fafc;
-      --blue-soft: #eff6ff;
-      --accent: #2563eb;
-      --accent-dark: #1d4ed8;
-      --surface: #ffffff;
-      --success: #16803c;
-      --warn: #a15c06;
-      --shadow: 0 18px 60px rgba(11, 15, 25, 0.08);
-      --radius: 18px;
-      --font-display: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      --font-body: "Inter", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-      --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; overflow-x: clip; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-    body.nav-open { overflow: hidden; }
-    a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-    .container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
-    .skip-link {
-      position: fixed; left: 16px; top: 12px; z-index: 2000;
-      transform: translateY(-150%); background: var(--fg); color: #fff;
-      padding: 10px 14px; border-radius: 10px;
-    }
-    .skip-link:focus { transform: translateY(0); }
-
-    .site-header {
-      position: sticky; top: 0; z-index: 1000;
-      background: rgba(255, 255, 255, 0.86);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(229, 231, 235, 0.78);
-    }
-    .nav {
-      height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 22px;
-    }
-    .brand {
-      display: inline-flex; align-items: center; gap: 12px; font-weight: 650;
-      letter-spacing: -0.01em; white-space: nowrap;
-    }
-    .brand-mark {
-      width: 34px; height: 34px; border-radius: 999px; display: block;
-      object-fit: cover; object-position: center top; background: #fff;
-      border: 1px solid rgba(37, 99, 235, 0.18);
-      box-shadow: 0 6px 18px rgba(11, 15, 25, 0.08);
-      flex: 0 0 auto;
-    }
-    .nav-links { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: 14px; font-weight: 520; }
-    .nav-links a:hover { color: var(--fg); }
-    .nav-actions { display: flex; align-items: center; gap: 12px; }
-    .lang-switcher {
-      display: inline-flex; padding: 3px; border: 1px solid var(--border); border-radius: 999px;
-      background: var(--surface); gap: 2px;
-    }
-    .lang-switcher button {
-      border: 0; background: transparent; color: var(--muted); border-radius: 999px;
-      padding: 7px 9px; font-size: 12px; font-weight: 620; letter-spacing: 0.06em; cursor: pointer;
-    }
-    .lang-switcher button.active { background: var(--fg); color: #fff; }
-    .btn {
-      min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-      padding: 11px 16px; border-radius: 999px; border: 1px solid var(--border);
-      background: var(--surface); color: var(--fg); font-size: 14px; font-weight: 620;
-      letter-spacing: 0.02em; cursor: pointer; transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
-    }
-    .btn:hover { transform: translateY(-2px); border-color: rgba(37, 99, 235, 0.28); box-shadow: 0 12px 30px rgba(11, 15, 25, 0.08); }
-    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .btn.primary:hover { background: var(--accent-dark); }
-    .btn.ghost { background: transparent; }
-    .menu-btn { display: none; width: 44px; height: 44px; padding: 0; }
-    .icon { width: 18px; height: 18px; display: inline-block; }
-
-    .hero {
-      padding: 86px 0 74px; border-bottom: 1px solid var(--border);
-      background:
-        radial-gradient(circle at 88% 16%, rgba(37, 99, 235, 0.08), transparent 34%),
-        linear-gradient(180deg, #fff 0%, #fff 62%, var(--soft) 100%);
-    }
-    .hero-grid {
-      display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.88fr);
-      gap: clamp(42px, 6vw, 82px); align-items: center;
-    }
-    h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--fg); }
-    h1 {
-      font-size: clamp(44px, 6.2vw, 76px); line-height: 1.02; letter-spacing: -0.03em;
-      max-width: 870px;
-    }
-    h2 { font-size: clamp(31px, 4vw, 48px); line-height: 1.08; letter-spacing: -0.025em; }
-    h3 { font-size: 21px; line-height: 1.22; letter-spacing: -0.01em; }
-    .lead {
-      color: var(--muted); font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; max-width: 72ch;
-      margin: 24px 0 0;
-    }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-    .trust-list {
-      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; padding: 0; list-style: none;
-    }
-    .trust-list li {
-      display: inline-flex; align-items: center; gap: 8px; min-height: 36px;
-      padding: 7px 12px; border: 1px solid var(--border); border-radius: 999px;
-      background: rgba(255,255,255,.8); color: #293243; font-size: 13px; font-weight: 540;
-    }
-    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex: none; }
-    .photo-card {
-      position: relative; border: 1px solid var(--border); border-radius: 28px; background: var(--surface);
-      padding: 18px; box-shadow: var(--shadow); overflow: hidden;
-    }
-    .photo-placeholder {
-      aspect-ratio: 4 / 5; border-radius: 22px; background:
-        linear-gradient(145deg, rgba(37,99,235,.11), rgba(248,250,252,.88)),
-        repeating-linear-gradient(135deg, rgba(11,15,25,.05) 0 1px, transparent 1px 12px);
-      display: grid; place-items: center; text-align: center; padding: 34px;
-    }
-    .profile-photo {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 22px;
-      display: block;
-      background: var(--blue-soft);
-    }
-    .photo-initials {
-      width: 128px; height: 128px; border-radius: 36px; display: grid; place-items: center;
-      background: #fff; border: 1px solid rgba(37,99,235,.18); box-shadow: 0 18px 50px rgba(37,99,235,.12);
-      font: 650 38px/1 var(--font-display); letter-spacing: -0.03em; color: var(--accent);
-      margin: 0 auto 24px;
-    }
-    .photo-caption { color: var(--muted); max-width: 27ch; margin: 0 auto; }
-    .availability {
-      position: absolute; left: 34px; right: 34px; bottom: 34px; border-radius: 18px;
-      background: rgba(255,255,255,.94); border: 1px solid rgba(229,231,235,.9);
-      padding: 12px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px;
-      box-shadow: 0 14px 34px rgba(11,15,25,.1);
-      backdrop-filter: blur(14px);
-    }
-    .profile-meta { min-width: 0; padding-left: 4px; }
-    .availability span { display: block; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; font-weight: 720; line-height: 1.1; }
-    .availability strong { display: block; margin-top: 5px; font-size: 15px; line-height: 1.15; letter-spacing: -.01em; white-space: nowrap; }
-    .availability .btn { min-height: 44px; padding: 0 17px; white-space: nowrap; box-shadow: 0 8px 22px rgba(11,15,25,.06); }
-
-    section { padding: 86px 0; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
-    .section-head p { margin: 12px 0 0; color: var(--muted); max-width: 66ch; }
-    .section-label {
-      margin: 0 0 12px; color: var(--accent); font-size: 12px; font-weight: 720;
-      letter-spacing: .09em; text-transform: uppercase;
-    }
-    .soft-band { background: var(--soft); border-block: 1px solid var(--border); }
-    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: stretch; }
-    .statement {
-      border: 1px solid var(--border); border-radius: var(--radius); padding: 34px;
-      background: var(--surface); box-shadow: 0 1px 0 rgba(11,15,25,.02);
-    }
-    .statement p { margin: 0; color: #263042; font-size: 18px; line-height: 1.75; max-width: 68ch; }
-    .signal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    .signal {
-      border: 1px solid var(--border); border-radius: 16px; padding: 20px; background: #fff;
-    }
-    .signal strong { display: block; font-family: var(--font-display); font-size: 28px; line-height: 1; letter-spacing: -0.02em; }
-    .signal span { display: block; margin-top: 8px; color: var(--muted); font-size: 14px; }
-
-    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .expertise-card, .project-card, .skill-card, .contact-card, .education-card {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 24px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-    .expertise-card:hover, .project-card:hover, .contact-card:hover, .education-card:hover {
-      transform: translateY(-4px); border-color: rgba(37, 99, 235, .26); box-shadow: var(--shadow);
-    }
-    .card-icon {
-      width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
-      background: var(--blue-soft); color: var(--accent); margin-bottom: 22px;
-    }
-    .expertise-card p, .project-card p, .skill-card p { color: var(--muted); margin: 12px 0 0; }
-    .project-card p {
-      font-size: 14px;
-      line-height: 1.55;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .project-toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
-    .filter-btn {
-      border: 1px solid var(--border); background: #fff; color: var(--muted); border-radius: 999px;
-      padding: 9px 13px; font-size: 13px; font-weight: 620; cursor: pointer;
-    }
-    .filter-btn.active { background: var(--fg); color: #fff; border-color: var(--fg); }
-    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .project-card { min-height: 100%; display: flex; flex-direction: column; }
-    .project-card { color: inherit; text-decoration: none; }
-    .project-link { margin-top: auto; padding-top: 18px; color: var(--accent); font-weight: 720; font-size: 14px; }
-    .project-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; border: 1px solid var(--border); margin-bottom: 18px; background: var(--soft); }
-    .project-card .industry { color: var(--accent); font-size: 12px; font-weight: 720; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; }
-    /* Final project image guard: keeps translated-render cards inside the grid. */
-    .project-preview { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 18px; border: 1px solid var(--border); margin-bottom: 18px; background: var(--soft); }
-    .project-preview img, .project-card img, .project-image { display: block; width: 100%; max-width: 100%; height: 100%; object-fit: cover; }
-    .project-card { overflow: hidden; min-width: 0; }
-    .project-grid { align-items: stretch; }
-
-    .process { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; counter-reset: step; }
-    .process-step {
-      position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 24px 20px; min-height: 220px;
-    }
-    .process-step::before {
-      counter-increment: step; content: "0" counter(step);
-      display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 12px;
-      background: var(--fg); color: #fff; font: 650 13px/1 var(--font-mono); letter-spacing: .04em; margin-bottom: 24px;
-    }
-    .process-step p { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
-
-    .skills-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .skill-card h3 { margin-bottom: 16px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 9px; }
-    .chip {
-      border: 1px solid var(--border); border-radius: 999px; padding: 8px 11px;
-      color: #303a4b; background: #fff; font-size: 13px; font-weight: 540;
-    }
-
-    .experience-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 34px; align-items: start; }
-    .timeline {
-      position: relative; border-left: 1px solid var(--border); padding-left: 26px;
-    }
-    .timeline-item {
-      position: relative; padding: 0 0 28px;
-    }
-    .timeline-item::before {
-      content: ""; position: absolute; left: -32px; top: 4px; width: 11px; height: 11px;
-      border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px var(--blue-soft);
-    }
-    .timeline-item time { display: block; color: var(--accent); font-size: 12px; font-weight: 720; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
-    .timeline-item p, .experience-card p { color: var(--muted); margin: 10px 0 0; }
-    .experience-card {
-      background: var(--fg); color: #fff; border-radius: 24px; padding: 34px; box-shadow: var(--shadow);
-    }
-    .experience-card h3, .experience-card strong { color: #fff; }
-    .experience-card p, .experience-card li { color: rgba(255,255,255,.72); }
-    .experience-card ul { margin: 24px 0 0; padding: 0; list-style: none; display: grid; gap: 13px; }
-    .experience-card li { display: flex; gap: 11px; align-items: flex-start; }
-    .experience-card li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #60a5fa; margin-top: 9px; flex: none; }
-    .education-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
-    .education-card span { display: block; color: var(--muted); font-size: 13px; margin-top: 8px; }
-
-    .contact-section { background: var(--fg); color: #fff; padding: 90px 0; }
-    .contact-section h2, .contact-section .section-label { color: #fff; }
-    .contact-section .section-head p { color: rgba(255,255,255,.68); }
-    .contact-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-    .contact-card {
-      background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.12); color: #fff;
-      min-height: 128px;
-    }
-    .contact-card span { color: rgba(255,255,255,.58); display: block; margin-top: 8px; font-size: 13px; word-break: break-word; }
-    .footer {
-      padding: 28px 0; border-top: 1px solid rgba(255,255,255,.1); background: var(--fg); color: rgba(255,255,255,.55);
-      font-size: 13px;
-    }
-    .footer .container { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 1080px) {
-      .nav-links { display: none; }
-      .menu-btn { display: inline-flex; }
-      .mobile-panel {
-        position: fixed; inset: 76px 0 auto; background: rgba(255,255,255,.98);
-        border-bottom: 1px solid var(--border); padding: 20px; display: none; z-index: 999;
-      }
-      .mobile-panel.open { display: grid; gap: 14px; }
-      .mobile-panel a { padding: 12px 0; color: var(--fg); font-weight: 600; border-bottom: 1px solid var(--border); }
-      .hero-grid, .about-grid, .experience-layout { grid-template-columns: 1fr; }
-      .card-grid, .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .process { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .education-grid, .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 720px) {
-      .container { width: min(100% - 28px, 1180px); }
-      .site-header { background: rgba(255,255,255,.94); }
-      .nav { height: 64px; gap: 10px; }
-      .brand-mark { width: 32px; height: 32px; border-radius: 999px; }
-      .brand span:last-child { display: none; }
-      .nav-actions { gap: 8px; }
-      .nav-actions .btn.primary { display: none; }
-      .lang-switcher { padding: 2px; }
-      .lang-switcher button { padding: 6px 7px; font-size: 11px; }
-      .menu-btn { width: 40px; height: 40px; min-height: 40px; }
-      .mobile-panel { inset: 64px 0 auto; width: 100%; max-width: 100%; padding: 14px; max-height: calc(100dvh - 64px); overflow-y: auto; overflow-x: hidden; }
-      .mobile-panel.open { gap: 8px; }
-      .mobile-panel a { padding: 10px 0; font-size: 15px; }
-      .hero { padding: 22px 0 50px; }
-      .hero-grid { display: flex; flex-direction: column; gap: 22px; }
-      .photo-card { order: -1; width: 100%; max-width: 340px; margin: 0 auto; padding: 10px; border-radius: 22px; box-shadow: 0 12px 40px rgba(11,15,25,.08); background: #fff; }
-      .profile-photo { aspect-ratio: 4 / 5.35; max-height: 58vh; border-radius: 18px; object-fit: contain; object-position: center top; background: #fff; }
-      .availability { position: static; margin-top: 10px; padding: 10px; border-radius: 16px; grid-template-columns: 1fr; gap: 10px; }
-      .profile-meta { padding: 2px 4px 0; }
-      .availability span { font-size: 10px; letter-spacing: .09em; }
-      .availability strong { margin-top: 4px; font-size: 14px; white-space: normal; }
-      .availability .btn { width: 100%; min-height: 42px; }
-      section { padding: 56px 0; }
-      h1 { font-size: clamp(34px, 10.5vw, 46px); line-height: 1.05; letter-spacing: -0.025em; }
-      h2 { font-size: clamp(27px, 8vw, 36px); }
-      h3 { font-size: 19px; }
-      .lead { margin-top: 18px; font-size: 16px; line-height: 1.62; }
-      .hero-actions { gap: 10px; margin-top: 24px; }
-      .hero-actions .btn { width: 100%; }
-      .trust-list { margin-top: 22px; gap: 8px; }
-      .trust-list li { width: 100%; border-radius: 14px; justify-content: flex-start; }
-      .section-head { display: block; margin-bottom: 24px; }
-      .section-head p { font-size: 15px; line-height: 1.6; }
-      .statement { padding: 24px; }
-      .statement p { font-size: 16px; line-height: 1.65; }
-      .expertise-card, .project-card, .skill-card, .contact-card, .education-card { padding: 20px; border-radius: 16px; }
-      .project-grid { gap: 14px; }
-      .project-image { border-radius: 14px; margin-bottom: 14px; }
-      .project-card .industry { margin-bottom: 8px; font-size: 11px; }
-      .project-link { padding-top: 14px; }
-      .process-step { min-height: auto; padding: 20px; }
-      .process-step::before { margin-bottom: 16px; }
-      .experience-card { padding: 24px; border-radius: 20px; }
-      .contact-section { padding: 62px 0; }
-      .contact-card { min-height: auto; }
-      .footer .container { display: grid; gap: 8px; }
-      .card-grid, .project-grid, .skills-layout, .process, .education-grid, .contact-grid, .signal-grid { grid-template-columns: 1fr; }
-      .project-toolbar { overflow-x: auto; overflow-y: hidden; flex-wrap: nowrap; padding-bottom: 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-      .project-toolbar::-webkit-scrollbar { display: none; }
-      .filter-btn { white-space: nowrap; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-      .reveal { opacity: 1; transform: none; }
-    }
-
-
-/* Portfolio footer component */
-:root {
-  --pf-bg: #f8fafc;
-  --pf-card: #ffffff;
-  --pf-text: #0b0f19;
-  --pf-muted: #5b6472;
-  --pf-border: #e5e7eb;
-  --pf-border-strong: #d6dde8;
-  --pf-blue: #2563eb;
-  --pf-blue-dark: #1d4ed8;
-  --pf-soft: #eff6ff;
-}
-.site-footer {
-  margin-top: clamp(56px, 8vw, 112px);
-  padding: clamp(22px, 4vw, 54px);
-  background: radial-gradient(circle at 8% 10%, rgba(37, 99, 235, 0.055), transparent 30%), var(--pf-bg);
-  color: var(--pf-text);
-}
-.pf-shell {
-  width: min(100%, 1180px);
-  margin: 0 auto;
-  padding: clamp(30px, 5vw, 58px);
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid var(--pf-border);
-  border-radius: 24px;
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
-}
-.pf-main {
-  display: grid;
-  grid-template-columns: minmax(250px, 1.45fr) minmax(140px, 0.85fr) minmax(240px, 1.05fr) minmax(230px, 1fr);
-  gap: clamp(26px, 4vw, 54px);
-  align-items: start;
-}
-.pf-lockup {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  color: inherit;
-  text-decoration: none;
-}
-.pf-avatar {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1px var(--pf-border), 0 10px 24px rgba(15, 23, 42, 0.08);
-  background: #fff;
-}
-.pf-avatar img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-.pf-lockup strong {
-  display: block;
-  font-size: clamp(20px, 2vw, 28px);
-  line-height: 1.06;
-  letter-spacing: -0.02em;
-  font-weight: 800;
-}
-.pf-lockup small {
-  display: block;
-  margin-top: 7px;
-  color: var(--pf-muted);
-  font-size: 13px;
-  line-height: 1.35;
-}
-.pf-intro {
-  max-width: 520px;
-  margin: 24px 0 0;
-  color: var(--pf-muted);
-  font-size: 15px;
-  line-height: 1.7;
-}
-.pf-eyebrow {
-  margin: 0 0 16px;
-  color: var(--pf-muted);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.pf-nav,
-.pf-connect {
-  display: grid;
-  align-content: start;
-  gap: 10px;
-}
-.pf-nav a {
-  display: flex;
-  width: max-content;
-  min-width: 118px;
-  justify-content: space-between;
-  gap: 14px;
-  color: var(--pf-text);
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 650;
-  line-height: 1.3;
-  transition: color 160ms ease, transform 160ms ease;
-}
-.pf-nav a span {
-  color: var(--pf-blue);
-}
-.pf-nav a:hover,
-.pf-nav a:focus-visible {
-  color: var(--pf-blue);
-  transform: translateX(2px);
-}
-.pf-contact-row {
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 12px;
-  align-items: center;
-  color: inherit;
-  text-decoration: none;
-}
-.pf-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  color: var(--pf-blue);
-  background: var(--pf-soft);
-  border: 1px solid #dbeafe;
-  transition: transform 160ms ease, background 160ms ease;
-}
-.pf-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.pf-contact-row strong {
-  display: block;
-  color: var(--pf-text);
-  font-size: 14px;
-  font-weight: 800;
-}
-.pf-contact-row small {
-  display: block;
-  margin-top: 3px;
-  color: var(--pf-muted);
-  font-size: 13px;
-  line-height: 1.3;
-  word-break: break-word;
-}
-.pf-contact-row:hover .pf-icon,
-.pf-contact-row:focus-visible .pf-icon {
-  background: #dbeafe;
-  transform: translateY(-1px);
-}
-.pf-cta h3,
-.pf-cta p { margin: 0; }
-.pf-cta h3 {
-  color: var(--pf-text);
-  font-size: clamp(20px, 1.8vw, 26px);
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-}
-.pf-cta p:not(.pf-eyebrow) {
-  margin-top: 9px;
-  color: var(--pf-muted);
-  font-size: 14px;
-  line-height: 1.6;
-}
-.pf-button {
-  margin-top: 22px;
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 18px;
-  border-radius: 12px;
-  background: var(--pf-blue);
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 800;
-  box-shadow: 0 16px 28px rgba(37, 99, 235, 0.2);
-  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
-}
-.pf-button:hover,
-.pf-button:focus-visible {
-  background: var(--pf-blue-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 20px 34px rgba(37, 99, 235, 0.24);
-}
-.pf-bottom {
-  margin-top: clamp(34px, 5vw, 58px);
-  padding-top: 22px;
-  border-top: 1px solid var(--pf-border-strong);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  color: var(--pf-muted);
-  font-size: 13px;
-  line-height: 1.5;
-}
-.pf-bottom p { margin: 0; }
-@media (max-width: 1040px) {
-  .pf-main { grid-template-columns: 1fr 1fr; }
-  .pf-brand { grid-column: 1 / -1; }
-}
-@media (max-width: 680px) {
-  .site-footer { padding: 16px; margin-top: 56px; }
-  .pf-shell { padding: 24px 18px 20px; border-radius: 20px; }
-  .pf-main { grid-template-columns: 1fr; gap: 28px; }
-  .pf-lockup { align-items: flex-start; }
-  .pf-avatar { width: 42px; height: 42px; flex-basis: 42px; }
-  .pf-nav a { width: 100%; }
-  .pf-contact-row { width: 100%; }
-  .pf-button { width: 100%; }
-  .pf-bottom { align-items: flex-start; flex-direction: column; }
-}
-
-
-
-/* Navbar component applied from portfolio-navbar-section */
-:root {
-  --nav-card: rgba(255,255,255,.88);
-  --nav-text: var(--fg, #0b0f19);
-  --nav-muted: var(--muted, #5b6472);
-  --nav-border: var(--border, #e5e7eb);
-  --nav-blue: var(--accent, #2563eb);
-  --nav-soft-blue: var(--blue-soft, #eff6ff);
-  --nav-shadow: 0 22px 60px rgba(15,23,42,.07);
-}
-.site-header {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1000 !important;
-  width: 100% !important;
-  padding: 14px 0 !important;
-  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.78)) !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
-  border-bottom: 1px solid rgba(229,231,235,.72) !important;
-}
-.site-header .nav-shell {
-  width: min(1180px, calc(100% - 40px)) !important;
-  min-height: 74px !important;
-  margin: 0 auto !important;
-  padding: 10px 14px 10px 16px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 18px !important;
-  background: var(--nav-card) !important;
-  border: 1px solid var(--nav-border) !important;
-  border-radius: 24px !important;
-  box-shadow: var(--nav-shadow) !important;
-}
-.site-header .brand,
-.site-header .brand-lockup {
-  min-width: 0 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  color: var(--nav-text) !important;
-  text-decoration: none !important;
-  flex: 0 1 auto !important;
-}
-.site-header .brand-mark,
-.site-header .brand-avatar {
-  width: 46px !important;
-  height: 46px !important;
-  flex: 0 0 46px !important;
-  border-radius: 999px !important;
-  object-fit: cover !important;
-  display: block !important;
-  background: #fff !important;
-  border: 1px solid rgba(37,99,235,.16) !important;
-  box-shadow: 0 10px 24px rgba(15,23,42,.10) !important;
-}
-.site-header .brand-text strong,
-.site-header .brand span {
-  display: block !important;
-  color: var(--nav-text) !important;
-  font: 780 16px/1.1 var(--font-display, Manrope, Inter, system-ui, sans-serif) !important;
-  letter-spacing: -.025em !important;
-  white-space: nowrap !important;
-}
-.site-header .brand-text small {
-  display: block !important;
-  margin-top: 4px !important;
-  color: var(--nav-muted) !important;
-  font: 600 12px/1.25 var(--font-body, Inter, system-ui, sans-serif) !important;
-  letter-spacing: 0 !important;
-  white-space: nowrap !important;
-}
-.site-header .desktop-nav,
-.site-header .detail-actions,
-.site-header .nav-actions {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-}
-.site-header .nav-links,
-.site-header .detail-links {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-}
-.site-header .nav-links a,
-.site-header .detail-links a {
-  min-height: 42px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  padding: 0 11px !important;
-  border-radius: 999px !important;
-  color: #263042 !important;
-  font: 700 13px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
-  letter-spacing: -.01em !important;
-  text-decoration: none !important;
-  border: 0 !important;
-  transition: background .18s ease, color .18s ease, transform .18s ease !important;
-}
-.site-header .nav-links a:hover,
-.site-header .detail-links a:hover,
-.site-header .nav-links a.is-active,
-.site-header .detail-links a.is-active {
-  color: var(--nav-blue) !important;
-  background: var(--nav-soft-blue) !important;
-}
-.site-header .lang-switcher,
-.site-header .detail-lang {
-  height: 42px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 2px !important;
-  padding: 3px !important;
-  border: 1px solid var(--nav-border) !important;
-  border-radius: 999px !important;
-  background: #fff !important;
-}
-.site-header .lang-switcher button,
-.site-header .detail-lang button {
-  min-width: 34px !important;
-  height: 34px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border: 0 !important;
-  border-radius: 999px !important;
-  background: transparent !important;
-  color: var(--nav-muted) !important;
-  font: 760 11px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
-  letter-spacing: .06em !important;
-  cursor: pointer !important;
-}
-.site-header .lang-switcher button.active,
-.site-header .detail-lang button.active {
-  background: var(--nav-text) !important;
-  color: #fff !important;
-}
-.site-header .nav-cta,
-.site-header .detail-contact {
-  min-height: 42px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0 16px !important;
-  border-radius: 999px !important;
-  background: var(--nav-blue) !important;
-  border: 1px solid rgba(37,99,235,.7) !important;
-  color: #fff !important;
-  font: 760 13px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
-  text-decoration: none !important;
-  box-shadow: 0 14px 26px rgba(37,99,235,.18) !important;
-}
-.site-header .menu-btn,
-.site-header .detail-menu {
-  display: none !important;
-  width: 42px !important;
-  height: 42px !important;
-  min-height: 42px !important;
-  flex: 0 0 42px !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border: 1px solid var(--nav-border) !important;
-  border-radius: 14px !important;
-  background: #fff !important;
-  color: var(--nav-text) !important;
-  padding: 0 !important;
-  cursor: pointer !important;
-}
-.site-header .menu-btn svg { width: 20px !important; height: 20px !important; }
-.site-header .detail-menu { flex-direction: column !important; gap: 4px !important; }
-.site-header .detail-menu span,
-.site-header .detail-menu:before,
-.site-header .detail-menu:after {
-  content: "" !important;
-  display: block !important;
-  width: 18px !important;
-  height: 2px !important;
-  background: currentColor !important;
-  border-radius: 99px !important;
-}
-.site-header .mobile-panel,
-.site-header .detail-mobile {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-@media (max-width: 1120px) {
-  .site-header { padding: 10px 0 !important; }
-  .site-header .nav-shell { width: min(100% - 28px, 1180px) !important; min-height: 64px !important; border-radius: 20px !important; }
-  .site-header .desktop-nav,
-  .site-header .nav-links,
-  .site-header .detail-links { display: none !important; }
-  .site-header .menu-btn,
-  .site-header .detail-menu { display: inline-flex !important; }
-  .site-header .mobile-panel.open,
-  .site-header .detail-mobile.is-open {
-    position: fixed !important;
-    inset: 84px 14px auto 14px !important;
-    z-index: 1001 !important;
-    display: grid !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    gap: 8px !important;
-    padding: 14px !important;
-    border: 1px solid var(--nav-border) !important;
-    border-radius: 22px !important;
-    background: rgba(255,255,255,.98) !important;
-    box-shadow: 0 24px 60px rgba(15,23,42,.14) !important;
-    backdrop-filter: blur(18px) !important;
-    -webkit-backdrop-filter: blur(18px) !important;
-  }
-  .site-header .mobile-panel a,
-  .site-header .detail-mobile a {
-    min-height: 44px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 0 12px !important;
-    border: 0 !important;
-    border-radius: 14px !important;
-    color: var(--nav-text) !important;
-    font: 740 14px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
-    text-decoration: none !important;
-  }
-  .site-header .mobile-panel a:hover,
-  .site-header .detail-mobile a:hover { background: var(--nav-soft-blue) !important; color: var(--nav-blue) !important; }
-}
-@media (max-width: 640px) {
-  .site-header .nav-shell { width: min(100% - 20px, 1180px) !important; padding: 9px 10px !important; gap: 8px !important; }
-  .site-header .brand-mark,
-  .site-header .brand-avatar { width: 38px !important; height: 38px !important; flex-basis: 38px !important; }
-  .site-header .brand-text strong,
-  .site-header .brand span { max-width: 162px !important; overflow: hidden !important; text-overflow: ellipsis !important; }
-  .site-header .brand-text small { max-width: 162px !important; overflow: hidden !important; text-overflow: ellipsis !important; font-size: 11px !important; }
-  .site-header .nav-cta,
-  .site-header .detail-contact { display: none !important; }
-  .site-header .lang-switcher,
-  .site-header .detail-lang { height: 38px !important; padding: 2px !important; }
-  .site-header .lang-switcher button,
-  .site-header .detail-lang button { min-width: 30px !important; height: 30px !important; font-size: 10px !important; }
-  .site-header .menu-btn,
-  .site-header .detail-menu { width: 38px !important; height: 38px !important; min-height: 38px !important; flex-basis: 38px !important; }
-  .site-header .mobile-panel.open,
-  .site-header .detail-mobile.is-open { inset: 74px 10px auto 10px !important; }
-}
-
-
-
-    /* Projects component - portfolio-projects-case-studies */
-    #projects {
-      position: relative;
-      overflow: hidden;
-      padding-top: clamp(72px, 8vw, 118px);
-      padding-bottom: clamp(72px, 8vw, 118px);
-      background:
-        radial-gradient(circle at 4% 14%, rgba(37, 99, 235, 0.07), transparent 25%),
-        radial-gradient(circle at 96% 10%, rgba(37, 99, 235, 0.055), transparent 22%),
-        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-    }
-    #projects::before {
-      content: "";
-      position: absolute;
-      width: 152px;
-      height: 220px;
-      left: -18px;
-      top: 176px;
-      opacity: 0.42;
-      pointer-events: none;
-      background-image: radial-gradient(rgba(37, 99, 235, 0.26) 1.5px, transparent 1.5px);
-      background-size: 18px 18px;
-    }
-    #projects::after {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -140px;
-      top: 44px;
-      border: 1px solid rgba(37, 99, 235, 0.12);
-      border-radius: 50%;
-      box-shadow: 0 0 0 22px rgba(37, 99, 235, 0.025), 0 0 0 44px rgba(37, 99, 235, 0.02), 0 0 0 66px rgba(37, 99, 235, 0.016);
-      pointer-events: none;
-    }
-    #projects > .container { position: relative; z-index: 1; }
-    #projects .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.75fr);
-      gap: clamp(30px, 8vw, 100px);
-      align-items: start;
-      margin-bottom: 34px;
-    }
-    #projects .section-label {
-      margin: 0 0 14px;
-      font-size: 12px;
-      line-height: 1.2;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 800;
-    }
-    #projects .section-head h2 {
-      margin: 0;
-      max-width: 760px;
-      font-size: clamp(40px, 5vw, 70px);
-      line-height: 0.98;
-      letter-spacing: -0.035em;
-      font-weight: 860;
-    }
-    #projects .section-head > p {
-      margin: 40px 0 0;
-      color: var(--muted);
-      font-size: clamp(16px, 1.35vw, 19px);
-      line-height: 1.8;
-      max-width: 580px;
-    }
-    #projectFilters.project-toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    #projectFilters .filter-btn {
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.74);
-      color: #233047;
-      border-radius: 999px;
-      padding: 12px 24px;
-      min-height: 44px;
-      font-weight: 720;
-      box-shadow: none;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-    }
-    #projectFilters .filter-btn:hover {
-      transform: translateY(-1px);
-      border-color: rgba(37, 99, 235, 0.28);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-    }
-    #projectFilters .filter-btn.active {
-      background: var(--fg);
-      border-color: var(--fg);
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(7, 17, 31, 0.16);
-    }
-    #projectGrid.project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      align-items: stretch;
-    }
-    #projects .project-card {
-      min-width: 0;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      overflow: hidden;
-      color: inherit;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.84);
-      box-shadow: 0 16px 50px rgba(15, 23, 42, 0.06);
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-      outline: none;
-    }
-    #projects .project-card:hover,
-    #projects .project-card:focus-visible {
-      transform: translateY(-5px);
-      border-color: rgba(37, 99, 235, 0.24);
-      box-shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
-    }
-    #projects .project-preview,
-    #projects .project-card > .project-image {
-      position: relative;
-      display: block;
-      margin: 18px 18px 0;
-      width: calc(100% - 36px);
-      height: 192px;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 0;
-      background: #f4f7fb;
-      aspect-ratio: auto;
-    }
-    #projects .project-preview img,
-    #projects .project-card > .project-image {
-      width: calc(100% - 36px);
-      max-width: calc(100% - 36px);
-      height: 192px;
-      object-fit: cover;
-      transition: transform 300ms ease;
-    }
-    #projects .project-preview img {
-      width: 100%;
-      max-width: 100%;
-      height: 100%;
-      margin: 0;
-    }
-    #projects .project-card:hover .project-preview img,
-    #projects .project-card:hover > .project-image {
-      transform: scale(1.035);
-    }
-    #projects .project-card > .industry,
-    #projects .project-card > span:first-of-type:not(.project-link) {
-      margin: 22px 24px 8px;
-      color: var(--accent);
-      font-size: 14px;
-      line-height: 1.4;
-      font-weight: 760;
-      letter-spacing: 0;
-      text-transform: none;
-    }
-    #projects .project-card h3 {
-      margin: 0 24px 10px;
-      font-size: 25px;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-    #projects .project-card p {
-      margin: 0 24px 18px;
-      min-height: 58px;
-      color: var(--muted);
-      font-size: 15.5px;
-      line-height: 1.68;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    #projects .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: auto 24px 26px;
-      padding-top: 0;
-      color: var(--accent);
-      font-weight: 780;
-      font-size: 15px;
-    }
-    #projects .project-link::after {
-      content: "->";
-      transition: transform 180ms ease;
-    }
-    #projects .project-card:hover .project-link::after { transform: translateX(4px); }
-    @media (max-width: 1120px) {
-      #projectGrid.project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 820px) {
-      #projects { padding-inline: 0; }
-      #projects::before,
-      #projects::after { display: none; }
-      #projects .section-head { grid-template-columns: 1fr; gap: 16px; }
-      #projects .section-head > p { margin-top: 0; }
-      #projectFilters.project-toolbar {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding-bottom: 8px;
-        margin-inline: -16px;
-        padding-inline: 16px;
-        scrollbar-width: none;
-      }
-      #projectFilters.project-toolbar::-webkit-scrollbar { display: none; }
-      #projectFilters .filter-btn { flex: 0 0 auto; }
-      #projectGrid.project-grid { grid-template-columns: 1fr; gap: 18px; }
-      #projects .project-preview,
-      #projects .project-card > .project-image,
-      #projects .project-preview img { height: 230px; }
-    }
-    @media (max-width: 560px) {
-      #projects { padding-top: 52px; padding-bottom: 72px; }
-      #projects .section-head h2 { font-size: 40px; line-height: 1.02; }
-      #projects .section-head > p { font-size: 16px; line-height: 1.72; }
-      #projects .project-card > .industry,
-      #projects .project-card > span:first-of-type:not(.project-link) { margin: 20px 20px 8px; }
-      #projects .project-card h3 { margin-inline: 20px; font-size: 23px; }
-      #projects .project-card p { margin-inline: 20px; min-height: unset; }
-      #projects .project-link { margin: auto 20px 22px; }
-    }
-    /* Experience section component */
-    .exp-section { position: relative; overflow: hidden; padding: clamp(72px, 8vw, 126px) 0; background: radial-gradient(circle at 4% 0%, rgba(37,99,235,.07), transparent 28%), radial-gradient(circle at 96% 92%, rgba(37,99,235,.08), transparent 30%), linear-gradient(180deg, #fff 0%, #f8fbff 100%); }
-    .exp-section::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(37,99,235,.20) 1px, transparent 1px); background-size: 22px 22px; mask-image: linear-gradient(90deg, transparent 0%, #000 18%, transparent 58%); opacity: .22; }
-    .exp-shell { position: relative; z-index: 1; }
-    .exp-grid { display: grid; grid-template-columns: minmax(300px, .82fr) minmax(520px, 1.18fr); gap: clamp(42px, 6vw, 86px); align-items: center; }
-    .exp-pill { display: inline-flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 18px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.82); color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 14px 34px rgba(37,99,235,.07); }
-    .exp-pill svg { width: 18px; height: 18px; }
-    .exp-title { margin: 28px 0 0; max-width: 660px; font-size: clamp(36px, 4.8vw, 68px); line-height: 1; letter-spacing: -.03em; font-weight: 800; color: var(--text); }
-    .exp-title span { color: var(--accent); }
-    .exp-timeline { position: relative; margin-top: clamp(36px, 5vw, 58px); padding-left: 54px; display: grid; gap: 34px; }
-    .exp-timeline::before { content: ""; position: absolute; left: 17px; top: 16px; bottom: 16px; width: 1px; background: linear-gradient(180deg, rgba(37,99,235,.42), rgba(37,99,235,.06)); }
-    .exp-time-item { position: relative; }
-    .exp-dot { position: absolute; left: -51px; top: 2px; width: 28px; height: 28px; border-radius: 50%; background: #eaf2ff; border: 7px solid #f8fbff; box-shadow: inset 0 0 0 2px rgba(37,99,235,.22), 0 12px 28px rgba(37,99,235,.12); }
-    .exp-time-item.is-active .exp-dot { background: var(--accent); box-shadow: inset 0 0 0 5px #dcebff, 0 12px 30px rgba(37,99,235,.22); }
-    .exp-kicker { margin: 0 0 9px; color: var(--accent); font-size: 12px; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
-    .exp-time-item h3 { margin: 0; font-size: clamp(20px, 2vw, 27px); line-height: 1.2; letter-spacing: -.02em; font-weight: 760; color: var(--text); }
-    .exp-time-item p:last-child { max-width: 520px; margin: 12px 0 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
-    .exp-role-card { position: relative; overflow: hidden; padding: clamp(32px, 4vw, 56px); border-radius: 30px; color: #eef6ff; background: radial-gradient(circle at 88% 12%, rgba(96,165,250,.22), transparent 34%), linear-gradient(135deg, #071021 0%, #0d1d33 100%); box-shadow: 0 34px 90px rgba(5,13,28,.22); }
-    .exp-role-card::before { content: ""; position: absolute; inset: 1px; border-radius: 29px; border: 1px solid rgba(255,255,255,.09); pointer-events: none; }
-    .exp-company { display: flex; align-items: center; gap: 20px; }
-    .exp-company-icon { width: 58px; height: 58px; border-radius: 18px; display: grid; place-items: center; color: #cfe0ff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); flex: none; }
-    .exp-company-icon svg { width: 30px; height: 30px; }
-    .exp-company small { display: block; margin-bottom: 6px; color: #72a8ff; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
-    .exp-company h3 { margin: 0; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.08; letter-spacing: -.03em; color: #fff; }
-    .exp-summary { margin: 30px 0 0; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,.12); color: rgba(238,246,255,.84); font-size: clamp(16px, 1.25vw, 20px); line-height: 1.72; }
-    .exp-list { display: grid; gap: 18px; margin: 30px 0 0; padding: 0; list-style: none; }
-    .exp-list li { position: relative; padding-left: 48px; color: rgba(255,255,255,.9); font-size: 16px; line-height: 1.58; }
-    .exp-list li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-weight: 850; background: linear-gradient(135deg, var(--accent), #60a5fa); box-shadow: 0 10px 24px rgba(37,99,235,.28); }
-    .exp-education { margin-top: clamp(42px, 5vw, 68px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
-    .exp-edu-card { min-height: 205px; padding: 26px; border: 1px solid var(--border); border-radius: 22px; background: rgba(255,255,255,.9); box-shadow: 0 18px 45px rgba(15,35,60,.07); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
-    .exp-edu-card:hover { transform: translateY(-4px); border-color: rgba(37,99,235,.26); box-shadow: 0 24px 60px rgba(37,99,235,.10); }
-    .exp-course-icon { width: 54px; height: 54px; margin-bottom: 22px; border-radius: 16px; display: grid; place-items: center; color: var(--accent); background: var(--blue-soft); border: 1px solid rgba(37,99,235,.09); font-size: 17px; font-weight: 900; letter-spacing: -.03em; }
-    .exp-edu-card .exp-line { display: block; width: 40px; height: 2px; margin-bottom: 18px; background: var(--accent); border-radius: 999px; }
-    .exp-edu-card h3 { margin: 0; font-size: clamp(19px, 1.35vw, 24px); line-height: 1.18; letter-spacing: -.02em; color: var(--text); }
-    .exp-edu-card p { margin: 14px 0 0; color: var(--muted); font-size: 15px; line-height: 1.58; }
-    @media (max-width: 1180px) { .exp-grid { grid-template-columns: 1fr; gap: 40px; } .exp-title { max-width: 840px; } .exp-timeline { grid-template-columns: repeat(2, minmax(0,1fr)); padding-left: 0; gap: 24px; } .exp-timeline::before { display: none; } .exp-dot { position: static; display: block; margin-bottom: 13px; } .exp-education { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-    @media (max-width: 760px) { .exp-section { padding: 58px 0 66px; } .exp-pill { min-height: 40px; padding-inline: 15px; font-size: 11px; } .exp-title { margin-top: 24px; font-size: clamp(34px, 10vw, 48px); } .exp-timeline { margin-top: 32px; grid-template-columns: 1fr; gap: 26px; } .exp-role-card { padding: 26px 20px; border-radius: 22px; } .exp-company { align-items: flex-start; gap: 14px; } .exp-company-icon { width: 50px; height: 50px; border-radius: 15px; } .exp-company h3 { font-size: 26px; } .exp-summary { margin-top: 22px; padding-bottom: 22px; font-size: 15px; } .exp-list { gap: 16px; margin-top: 22px; } .exp-list li { padding-left: 40px; font-size: 15px; } .exp-list li::before { width: 26px; height: 26px; } .exp-education { grid-template-columns: 1fr; gap: 14px; } .exp-edu-card { min-height: unset; padding: 22px; } }
-
-
-/* About section component */
-#about.about-section{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)}
-.about-shell{position:relative;max-width:1180px;margin:0 auto;padding:96px 24px 104px}
-.about-pattern{position:absolute;right:24px;top:92px;width:174px;height:220px;opacity:.42;pointer-events:none;background-image:radial-gradient(rgba(37,99,235,.24) 1.7px,transparent 1.7px);background-size:20px 20px}
-.about-header-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.78fr);gap:56px;align-items:start}
-.about-copy .section-label{margin:0 0 18px;color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.about-title{margin:0;max-width:760px;font-size:clamp(40px,5vw,68px);line-height:1.02;letter-spacing:-.03em;font-weight:760;color:var(--text)}
-.about-title span{color:var(--accent)}
-.about-title-accent{width:64px;height:3px;margin-top:28px;border-radius:99px;background:var(--accent)}
-.about-text{max-width:740px;margin-top:30px;color:var(--muted);font-size:18px;line-height:1.7}
-.about-text p{margin:0 0 18px}
-.approach-card{position:relative;z-index:2;border:1px solid var(--border);background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-radius:28px;padding:30px;box-shadow:0 24px 60px rgba(15,23,42,.08)}
-.approach-card-head{display:flex;align-items:center;gap:16px;margin-bottom:16px}
-.quote-mark{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:32px;font-weight:800;line-height:1}
-.approach-card h3{margin:0;font-size:22px;letter-spacing:-.02em;color:var(--text)}
-.approach-list{list-style:none;padding:0;margin:0}
-.approach-list li{display:flex;gap:13px;align-items:flex-start;padding:15px 0;border-top:1px solid var(--border);color:#273449;font-size:15px;line-height:1.48}
-.approach-list li:first-child{border-top:0}
-.approach-list strong{color:var(--accent);font-weight:750}
-.check-icon{flex:0 0 auto;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;color:var(--accent);border:1px solid rgba(37,99,235,.25);background:#eff6ff;font-size:13px;font-weight:800;margin-top:-1px}
-.about-cards-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:34px}
-.about-card{position:relative;display:grid;gap:14px;padding:22px;border:1px solid var(--border);background:rgba(255,255,255,.92);border-radius:22px;box-shadow:0 12px 28px rgba(15,23,42,.045);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
-.about-card:hover{transform:translateY(-3px);border-color:rgba(37,99,235,.35);box-shadow:0 18px 36px rgba(15,23,42,.075)}
-.about-card-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:var(--accent-soft);color:var(--accent);font-size:20px;font-weight:800}
-.about-card h3{margin:0 0 6px;font-size:18px;line-height:1.2;letter-spacing:-.015em;color:var(--text)}
-.about-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
-.about-card-arrow{position:absolute;right:18px;top:18px;color:var(--accent);font-size:22px;line-height:1;opacity:.7}
-@media (max-width: 980px){.about-shell{padding:76px 20px 84px}.about-header-grid{grid-template-columns:1fr;gap:28px}.approach-card{max-width:760px}.about-cards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-pattern{display:none}}
-@media (max-width: 640px){.about-shell{padding:56px 18px 64px}.about-title{font-size:clamp(34px,10vw,46px)}.about-text{font-size:16px;line-height:1.65}.approach-card{padding:22px;border-radius:22px}.approach-list li{font-size:14px}.about-cards-grid{grid-template-columns:1fr;gap:12px}.about-card{padding:18px}.about-card h3{font-size:17px}}
-
-</style>
-<style id="mobile-menu-fix">
-.mobile-panel,
-.detail-mobile {
-  display: none !important;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-@media (max-width: 1040px) {
-  .mobile-panel.open,
-  .detail-mobile.is-open {
-    display: grid !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    z-index: 999 !important;
-  }
-  .menu-btn,
-  .detail-menu {
-    position: relative;
-    z-index: 1001;
-    touch-action: manipulation;
-  }
-}
-
-</style>
-  <link rel="icon" type="image/png" href="../favicon.png?v=photo" />
-  <link rel="alternate" hreflang="uz" href="https://akbarshohdev.netlify.app/uz/" />
-  <link rel="alternate" hreflang="ru" href="https://akbarshohdev.netlify.app/ru/" />
-  <link rel="alternate" hreflang="en" href="https://akbarshohdev.netlify.app/en/" />
-  <link rel="alternate" hreflang="x-default" href="https://akbarshohdev.netlify.app/" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Akbarshoh Toshpolatov — ERP & Digital Transformation Consultant, Odoo implementation, business analysis and business automation portfolio." />
+    <title>Akbarshoh Toshpolatov — ERP & Digital Transformation Consultant</title>
+    <link rel="preload" href="../akbarshoh-toshpolatov-hero-portrait.png" as="image" />
+    <link rel="icon" type="image/png" href="../favicon.png?v=photo" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
+    <link rel="alternate" hreflang="uz" href="https://akbarshohdev.netlify.app/uz/" />
+    <link rel="alternate" hreflang="ru" href="https://akbarshohdev.netlify.app/ru/" />
+    <link rel="alternate" hreflang="en" href="https://akbarshohdev.netlify.app/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://akbarshohdev.netlify.app/" />
+    <script type="application/ld+json">
     {
-      "@type": "Person",
-      "@id": "https://akbarshohdev.netlify.app/#person",
-      "name": "Akbarshoh Toshpolatov",
-      "url": "https://akbarshohdev.netlify.app/",
-      "image": "https://akbarshohdev.netlify.app/akbarshoh-toshpolatov-portrait.jpg",
-      "jobTitle": "ERP Consultant & Digital Transformation Project Manager",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Rakat Systems"
-      },
-      "knowsAbout": [
-        "Odoo ERP",
-        "AppSheet",
-        "Glide",
-        "Bitrix24",
-        "amoCRM",
-        "1C integration",
-        "Didox",
-        "E-IMZO",
-        "Online payments",
-        "HH integrations",
-        "AI tools",
-        "Business Analysis",
-        "Project Management",
-        "Business Process Automation",
-        "SEO",
-        "Google Workspace"
-      ],
-      "knowsLanguage": [
-        "uz",
-        "ru",
-        "en"
-      ],
-      "sameAs": [
-        "https://uz.linkedin.com/in/akbarshoh-toshpo-latov-3b1685274",
-        "https://t.me/akbarshoh_dev",
-        "https://github.com/SaadYucuf"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "UZ"
-      }
-    },
-    {
-      "@type": "ProfilePage",
-      "@id": "https://akbarshohdev.netlify.app/#profile-page",
-      "url": "https://akbarshohdev.netlify.app/",
-      "name": "Akbarshoh Toshpolatov ? ERP & Digital Transformation Portfolio",
-      "description": "Personal portfolio of Toshpolatov Akbarshoh, ERP and digital transformation project manager, business analyst and ERP consultant.",
-      "about": {
-        "@id": "https://akbarshohdev.netlify.app/#person"
-      },
-      "inLanguage": [
-        "en",
-        "uz",
-        "ru"
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://akbarshohdev.netlify.app/#person",
+          "name": "Akbarshoh Toshpolatov",
+          "url": "https://akbarshohdev.netlify.app/",
+          "image": "https://akbarshohdev.netlify.app/akbarshoh-toshpolatov-portrait.jpg",
+          "jobTitle": "ERP Consultant & Digital Transformation Project Manager",
+          "worksFor": { "@type": "Organization", "name": "Rakat Systems" },
+          "knowsAbout": ["Odoo ERP", "AppSheet", "Glide", "Bitrix24", "amoCRM", "1C integration", "Didox", "E-IMZO", "Online payments", "HH integrations", "AI tools", "Business Analysis", "Project Management", "SEO", "Google Workspace"],
+          "knowsLanguage": ["uz", "ru", "en"],
+          "sameAs": ["https://uz.linkedin.com/in/akbarshoh-toshpo-latov-3b1685274", "https://t.me/akbarshoh_dev", "https://github.com/SaadYucuf"],
+          "address": { "@type": "PostalAddress", "addressCountry": "UZ" }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://akbarshohdev.netlify.app/#profile-page",
+          "url": "https://akbarshohdev.netlify.app/",
+          "name": "Akbarshoh Toshpolatov Portfolio",
+          "about": { "@id": "https://akbarshohdev.netlify.app/#person" }
+        }
       ]
     }
-  ]
-}
-</script>
-  <meta name="theme-color" content="#ffffff" /></head>
-<body>
-  <script>try{localStorage.setItem('portfolio-lang','uz');}catch(_){}</script>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-  <div class="nav-shell" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="Akbarshoh Toshpolatov home">
-      <img class="brand-mark" src="../akbarshoh-toshpolatov-portrait.jpg" alt="" aria-hidden="true">
-      <span class="brand-text"><strong>Akbarshoh Toshpolatov</strong><small>ERP &amp; Digital Transformation Consultant</small></span>
-    </a>
-    <nav class="nav-links" aria-label="Main menu">
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
-      <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#process" data-i18n="nav.process">Process</a>
-      <a href="#skills" data-i18n="nav.skills">Skills</a>
-      <a href="#experience" data-i18n="nav.experience">Experience</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <div class="lang-switcher" aria-label="Language switcher">
-        <button type="button" class="active" data-lang="en">EN</button>
-        <button type="button" data-lang="uz">UZ</button>
-        <button type="button" data-lang="ru">RU</button>
-      </div>
-      <a class="nav-cta" href="#contact" data-i18n="nav.cta">Contact Me</a>
-      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-  </div>
-  <nav class="mobile-panel" id="mobile-menu" aria-label="Mobile menu">
-    <a href="#about" data-i18n="nav.about">About</a>
-    <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
-    <a href="#projects" data-i18n="nav.projects">Projects</a>
-    <a href="#process" data-i18n="nav.process">Process</a>
-    <a href="#skills" data-i18n="nav.skills">Skills</a>
-    <a href="#experience" data-i18n="nav.experience">Experience</a>
-    <a href="#contact" data-i18n="nav.contact">Contact</a>
-  </nav>
-</header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero-grid">
-        <div class="reveal">
-          <h1 data-i18n="hero.title">I help companies digitize ERP, operations and business processes.</h1>
-          <p class="lead" data-i18n="hero.subtitle">ERP & Digital Transformation Project Manager | Business Analyst | ERP Consultant with experience in Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online payments, HH integrations, AI tools and business process automation, AS-IS / TO-BE analysis, and project coordination across manufacturing, export, logistics, distribution, travel, and consulting projects.</p>
-          <div class="hero-actions" aria-label="Hero actions">
-            <a class="btn primary" href="mailto:akbarshohdev@gmail.com" data-i18n="cta.contact">Contact Me</a>
-            <a class="btn" href="../akbarshoh-toshpolatov-cv.pdf" data-i18n="cta.cv">Download CV</a>
-          </div>
-          <a class="hero-text-link" href="#projects" data-i18n="cta.projects">View Projects</a>
-          <ul class="trust-list" id="trustList"></ul>
-        </div>
-        <aside class="photo-card reveal" aria-label="Professional profile photo">
-          <img class="profile-photo" src="../akbarshoh-toshpolatov-hero-portrait.png" alt="Akbarshoh Toshpolatov - ERP, CRM and digital transformation project manager" loading="eager">
-          <div class="availability">
-            <div class="profile-meta"><span data-i18n="photo.status">Positioning</span><strong>ERP / BA / PM</strong></div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-
-    <section id="about" class="about-section">
-      <div class="about-shell">
-        <div class="about-pattern" aria-hidden="true"></div>
-        <div class="about-header-grid">
-          <div class="about-copy">
-            <p class="section-label" data-i18n="sections.about.label">About Me</p>
-            <h2 class="about-title">Business logic first,<br><span>implementation</span> second.</h2>
-            <div class="about-title-accent" aria-hidden="true"></div>
-            <div class="about-text">
-              <p data-i18n="sections.about.body">I specialize in ERP implementation, business analysis and digital transformation. My work is focused on understanding how a company operates, identifying weak points, describing AS-IS and TO-BE processes, and turning business needs into practical digital solutions.</p>
-              <p>I have worked on sales, warehouse, production, logistics, document workflow, corporate websites, CRM automation, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online payments, HH integrations and AI-assisted business tools.</p>
-            </div>
-          </div>
-          <aside class="approach-card" aria-label="My approach">
-            <div class="approach-card-head"><div class="quote-mark">“</div><h3>My Approach</h3></div>
-            <ul class="approach-list">
-              <li><span class="check-icon">✓</span><span>Understand the <strong>real business logic</strong> before choosing a system.</span></li>
-              <li><span class="check-icon">✓</span><span>Map <strong>AS-IS</strong> processes and identify weak points.</span></li>
-              <li><span class="check-icon">✓</span><span>Design <strong>TO-BE</strong> workflows, responsibilities and automation logic.</span></li>
-              <li><span class="check-icon">✓</span><span>Coordinate ERP, CRM, business app and integration implementation.</span></li>
-              <li><span class="check-icon">✓</span><span>Support launch, user adoption and practical documentation.</span></li>
-            </ul>
-          </aside>
-        </div>
-        <div class="about-cards-grid">
-          <article class="about-card"><div class="about-card-icon">ERP</div><div><h3>ERP + CRM + Apps</h3><p>Odoo, AppSheet, Glide, Bitrix24 and amoCRM workflows for real operations.</p></div><span class="about-card-arrow">›</span></article>
-          <article class="about-card"><div class="about-card-icon">AS</div><div><h3>AS-IS</h3><p>Current-state process mapping, bottleneck discovery and documentation.</p></div><span class="about-card-arrow">›</span></article>
-          <article class="about-card"><div class="about-card-icon">TO</div><div><h3>TO-BE</h3><p>Future-state process design, automation logic and responsibility models.</p></div><span class="about-card-arrow">›</span></article>
-          <article class="about-card"><div class="about-card-icon">~10</div><div><h3>Team coordination</h3><p>Coordinated project teams across ERP, website and automation projects.</p></div><span class="about-card-arrow">›</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="expertise" class="soft-band">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label" data-i18n="sections.expertise.label">Core Expertise</p>
-            <h2 data-i18n="sections.expertise.title">ERP, analysis, delivery and automation.</h2>
-          </div>
-          <p data-i18n="sections.expertise.copy">A practical operating range across business discovery, requirements, project coordination, implementation support and digital presence.</p>
-        </div>
-        <div class="card-grid" id="expertiseGrid">
-          <article class="expertise-card reveal visible"><h3>ERP Implementation & Configuration</h3><p>Odoo and business-system configuration aligned with real workflows: module setup, automation logic, data migration support and user adoption.</p></article>
-          <article class="expertise-card reveal visible"><h3>Business Process Analysis (AS-IS / TO-BE)</h3><p>Current-state analysis and future-state process design across documentation, approvals, sales, warehouse, production and management workflows.</p></article>
-          <article class="expertise-card reveal visible"><h3>Automation & Integration</h3><p>Internal process automation using Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online payments, HH integrations and AI tools, with CRM/ERP handoffs and operational visibility.</p></article>
-          <article class="expertise-card reveal visible"><h3>Digital Presence & SEO</h3><p>Corporate websites, multilingual content structure, Google Workspace setup and SEO-ready digital presence for business teams.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label" data-i18n="sections.projects.label">Projects / Case Studies</p>
-            <h2 data-i18n="sections.projects.title">Selected work across ERP, websites and automation.</h2>
-          </div>
-          <p data-i18n="sections.projects.copy">Each case focuses on the industry context, business processes, Akbarshoh's role and practical business value without inflated claims.</p>
-        </div>
-        <div class="project-toolbar" id="projectFilters" aria-label="Project filters"></div>
-        <div class="project-grid" id="projectGrid">
-          <a class="project-card reveal visible" href="../project-infinity-copper-group.html"><img class="project-image" src="../infinity-copper-group-case-study-01.png" alt="Infinity Copper Group ERP ecosystem dashboard preview" loading="lazy"><span>Copper processing / export</span><h3>Infinity Copper Group</h3><p>Production, warehouse, purchasing and sales processes were adapted into one ERP-ready operating ecosystem.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-softam.html"><img class="project-image" src="../softam-case-study-01.jpg" alt="Softam business digitalization project preview" loading="lazy"><span>Business digitalization</span><h3>Softam</h3><p>Internal operations and workflows were structured into clearer digital management flows.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-diran.html"><img class="project-image" src="../diran-case-study-01.png" alt="Diran furniture manufacturing workflow preview" loading="lazy"><span>Furniture manufacturing</span><h3>Diran</h3><p>Furniture production processes were systematized and Face ID integration was added for operational control.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-medicom.html"><img class="project-image" src="../medicom-case-study-01.png" alt="Medicom Odoo documentation and registration workflow preview" loading="lazy"><span>Medical / distribution</span><h3>Medicom</h3><p>Equipment registration, documentation management, custom Odoo app and 1C integration context.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-warmix.html"><img class="project-image" src="../warmix-case-study-01.png" alt="Warmix website and Odoo lead automation preview" loading="lazy"><span>Engineering / HVAC equipment</span><h3>Warmix</h3><p>Website leads were connected to Odoo and internal business processes were automated.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-fayz-oil-imports.html"><img class="project-image" src="../fayz-oil-imports-case-study-01.png" alt="Fayz Oil Imports corporate website preview" loading="lazy"><span>Food oil / import / export</span><h3>Fayz Oil Imports</h3><p>Corporate website, product presentation, multilingual content and SEO-ready digital presence.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-apvo.html"><img class="project-image" src="../apvo-case-study-01.png" alt="APVO website and event workflow preview" loading="lazy"><span>Association / vegetable oil producers</span><h3>APVO</h3><p>Website, Odoo event, email notifications and multilingual content workflow.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-taewoong-travel.html"><span>Travel company</span><h3>Taewoong Travel</h3><p>Website and automation support for customer requests and service presentation.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-novikov-cafe-tashkent.html"><span>Restaurant / cafe</span><h3>Novikov Cafe Tashkent</h3><p>Website case for menu structure, brand presentation and customer communication.</p><span class="project-link">Open case study</span></a>
-          <a class="project-card reveal visible" href="../project-ftos.html"><img class="project-image" src="../ftos-case-study-01.png" alt="FTOS logistics website and automation preview" loading="lazy"><span>Logistics</span><h3>FTOS</h3><p>Logistics request flow, service presentation and operational communication were clarified through a digital solution.</p><span class="project-link">Open case study</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="soft-band work-process-section">
-      <div class="process-decoration process-decoration-top"></div>
-      <div class="process-decoration process-decoration-bottom"></div>
-      <div class="container process-container">
-        <div class="section-head process-heading">
-          <div>
-            <p class="section-label" data-i18n="sections.process.label">Work Process</p>
-            <h2 data-i18n="sections.process.title">A clear path from business need to digital workflow.</h2>
-          </div>
-          <p class="process-intro">From first discovery to launch support, every project follows a clear business-analysis path: understand the current process, design the future workflow, coordinate implementation, and help the team adopt it.</p>
-        </div>
-        <div class="process-flow" id="processGrid" aria-label="Akbarshoh Toshpolatov work process">
-          <article class="process-step process-card reveal visible">
-            <span class="process-number">01</span>
-            <div class="process-icon" aria-hidden="true">D</div>
-            <h3>Business Discovery</h3>
-            <span class="card-accent"></span>
-            <p>Interview stakeholders, understand goals, problems and current AS-IS processes.</p>
-          </article>
-          <span class="flow-arrow" aria-hidden="true"></span>
-          <article class="process-step process-card reveal visible">
-            <span class="process-number">02</span>
-            <div class="process-icon" aria-hidden="true">A</div>
-            <h3>AS-IS Analysis</h3>
-            <span class="card-accent"></span>
-            <p>Map bottlenecks, manual work, duplicated actions, responsibility gaps and risks.</p>
-          </article>
-          <span class="flow-arrow" aria-hidden="true"></span>
-          <article class="process-step process-card reveal visible">
-            <span class="process-number">03</span>
-            <div class="process-icon" aria-hidden="true">T</div>
-            <h3>TO-BE Design</h3>
-            <span class="card-accent"></span>
-            <p>Design improved future processes, automation logic, ERP or CRM flows and responsibilities.</p>
-          </article>
-          <span class="flow-arrow" aria-hidden="true"></span>
-          <article class="process-step process-card reveal visible">
-            <span class="process-number">04</span>
-            <div class="process-icon" aria-hidden="true">I</div>
-            <h3>Implementation Coordination</h3>
-            <span class="card-accent"></span>
-            <p>Prepare requirements, coordinate the technical team, track tasks and control delivery.</p>
-          </article>
-          <span class="flow-arrow" aria-hidden="true"></span>
-          <article class="process-step process-card reveal visible">
-            <span class="process-number">05</span>
-            <div class="process-icon" aria-hidden="true">L</div>
-            <h3>Launch &amp; Improvement</h3>
-            <span class="card-accent"></span>
-            <p>Support launch, gather feedback, improve workflows and help users adapt.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label" data-i18n="sections.skills.label">Skills & Tools</p>
-            <h2 data-i18n="sections.skills.title">Business, project, technical and AI-assisted work.</h2>
-          </div>
-        </div>
-        <div class="skills-layout" id="skillsGrid">
-          <article class="skill-card reveal visible"><h3>ERP & Business Systems</h3><div class="chips"><span class="chip">Odoo</span><span class="chip">AppSheet</span><span class="chip">Glide</span><span class="chip">Bitrix24</span><span class="chip">amoCRM</span><span class="chip">1C</span><span class="chip">Didox</span><span class="chip">E-IMZO</span><span class="chip">Online payments</span><span class="chip">HH</span></div></article>
-          <article class="skill-card reveal visible"><h3>Project Management</h3><div class="chips"><span class="chip">Agile / Scrum basics</span><span class="chip">Jira / Trello</span><span class="chip">Task planning</span><span class="chip">Stakeholder coordination</span></div></article>
-          <article class="skill-card reveal visible"><h3>Web & Digital</h3><div class="chips"><span class="chip">Technical SEO</span><span class="chip">Google Workspace admin</span><span class="chip">HTML / CSS basics</span><span class="chip">Multilingual content</span></div></article>
-          <article class="skill-card reveal visible"><h3>Languages</h3><div class="chips"><span class="chip">Uzbek: native</span><span class="chip">Russian: professional</span><span class="chip">English: professional</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="exp-section">
-      <div class="container exp-shell">
-        <div class="exp-grid">
-          <div class="exp-intro reveal">
-            <div class="exp-pill"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 7V5.6C9 4.72 9.72 4 10.6 4h2.8c.88 0 1.6.72 1.6 1.6V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5.5 8h13A2.5 2.5 0 0 1 21 10.5v6A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-6A2.5 2.5 0 0 1 5.5 8Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 13h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span data-i18n="sections.experience.label">Experience</span></div>
-            <h2 class="exp-title" data-i18n="sections.experience.title">ERP, CRM, business apps and transformation work with business and technical teams.</h2>
-            <div class="exp-timeline" aria-label="Experience timeline">
-              <article class="exp-time-item is-active"><span class="exp-dot" aria-hidden="true"></span><div><p class="exp-kicker">Current role</p><h3>Rakat Systems</h3><p>ERP & Digital Transformation Project Manager / Business Analyst / ERP Consultant</p></div></article>
-              <article class="exp-time-item"><span class="exp-dot" aria-hidden="true"></span><div><p class="exp-kicker">Professional education</p><h3>Odoo ERP, Full Stack and Google PM</h3><p>Applied courses supporting implementation logic, technical coordination and delivery discipline.</p></div></article>
-            </div>
-          </div>
-          <article class="exp-role-card reveal" aria-label="Rakat Systems experience details">
-            <div class="exp-company"><div class="exp-company-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6 20V8.5A1.5 1.5 0 0 1 7.5 7h3A1.5 1.5 0 0 1 12 8.5V20" stroke="currentColor" stroke-width="1.8"/><path d="M12 20V5.5A1.5 1.5 0 0 1 13.5 4h3A1.5 1.5 0 0 1 18 5.5V20" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h2M8 14h2M14 8h2M14 11h2M14 14h2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><small>Current role</small><h3>Rakat Systems</h3></div></div>
-            <p class="exp-summary">Worked on ERP implementation, CRM and business app setup, process automation, website projects, AS-IS / TO-BE analysis, project coordination, client communication and digital transformation solutions for companies in manufacturing, export, logistics, travel, consulting, distribution and corporate sectors.</p>
-            <ul class="exp-list"><li>Coordinated project teams of around 10 people across business and technical workstreams.</li><li>Worked with business owners, managers, users and technical teams to clarify real operational needs.</li><li>Prepared requirements, process notes, project documentation and implementation follow-up.</li><li>Helped automate sales, warehouse, production, logistics, document workflow and integration processes.</li></ul>
-          </article>
-        </div>
-        <div class="exp-education reveal" aria-label="Courses and education">
-          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">Odoo</div><span class="exp-line"></span><h3>Odoo ERP course</h3><p>ERP implementation logic, process configuration and business workflow understanding.</p></article>
-          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">&lt;/&gt;</div><span class="exp-line"></span><h3>Full Stack Development course</h3><p>Technical foundation for communicating with developers and coordinating implementation work.</p></article>
-          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">PM</div><span class="exp-line"></span><h3>Google Project Management course</h3><p>Project planning, stakeholder communication, delivery tracking and risk control.</p></article>
-          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">EDU</div><span class="exp-line"></span><h3>Formal education</h3><p>Chirchik State Pedagogical University - History / World History.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label" data-i18n="sections.contact.label">Contact</p>
-            <h2 data-i18n="sections.contact.title">Let's discuss how I can help your company improve ERP, operations and digital workflows.</h2>
-          </div>
-          <p data-i18n="sections.contact.copy">Choose the channel that is most convenient for you.</p>
-        </div>
-        <div class="contact-grid" id="contactGrid"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="footer-contact">
-  <div class="pf-shell">
-    <div class="pf-main">
-      <div class="pf-brand">
-        <a class="pf-lockup" href="../index.html" aria-label="Akbarshoh Toshpolatov home">
-          <span class="pf-avatar" aria-hidden="true"><img src="../akbarshoh-toshpolatov-portrait.jpg" alt=""></span>
-          <span>
+    </script>
+    <link rel="stylesheet" href="../portfolio-complete.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="brand" href="#hero" aria-label="Go to homepage">
+          <span class="brand-avatar" aria-hidden="true"><img src="../akbarshoh-toshpolatov-portrait.jpg" alt=""></span>
+          <span class="brand-copy">
             <strong>Akbarshoh Toshpolatov</strong>
-            <small>ERP & Digital Transformation Project Manager</small>
+            <span>ERP & Digital Transformation Consultant</span>
           </span>
         </a>
-        <p class="pf-intro">Helping companies digitize ERP, operations, CRM workflows, integrations and internal business processes.</p>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">Process</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="language-switch" aria-label="Language switcher">
+            <button class="is-active" type="button" data-lang="en">EN</button><span></span><button type="button" data-lang="uz">UZ</button><span></span><button type="button" data-lang="ru">RU</button>
+          </div>
+          <a class="nav-cta" href="#contact">Let’s Talk</a>
+          <button class="mobile-toggle" data-mobile-toggle aria-label="Open menu" aria-expanded="false" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
 
-      <nav class="pf-nav" aria-label="Footer navigation">
-        <p class="pf-eyebrow">Navigation</p>
-        <a href="../index.html#about">About <span aria-hidden="true">?</span></a>
-        <a href="../index.html#expertise">Expertise <span aria-hidden="true">?</span></a>
-        <a href="../index.html#projects">Projects <span aria-hidden="true">?</span></a>
-        <a href="../index.html#process">Process <span aria-hidden="true">?</span></a>
-        <a href="../index.html#skills">Skills <span aria-hidden="true">?</span></a>
-        <a href="../index.html#contact">Contact <span aria-hidden="true">?</span></a>
-      </nav>
-
-      <div class="pf-connect" aria-label="Contact links">
-        <p class="pf-eyebrow">Connect</p>
-        <a class="pf-contact-row" href="mailto:akbarshohdev@gmail.com">
-          <span class="pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span>
-          <span><strong>Email</strong><small>akbarshohdev@gmail.com</small></span>
-        </a>
-        <a class="pf-contact-row" href="https://t.me/akbarshoh_dev" target="_blank" rel="noreferrer">
-          <span class="pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 4 3.5 11.2c-.7.3-.7 1.3.1 1.5l4.4 1.3 1.6 5.1c.2.7 1.1.8 1.5.2l2.5-3.3 4.6 3.4c.6.4 1.4.1 1.5-.7L22 5.1c.1-.8-.4-1.3-1-1.1Z"/><path d="M8 14 21.5 4.5"/></svg></span>
-          <span><strong>Telegram</strong><small>@akbarshoh_dev</small></span>
-        </a>
-        <a class="pf-contact-row" href="https://uz.linkedin.com/in/akbarshoh-toshpo-latov-3b1685274" target="_blank" rel="noreferrer">
-          <span class="pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 10v8"/><path d="M6.5 6.5v.1"/><path d="M11 18v-8"/><path d="M11 13.8c0-2 1.1-3.8 3.4-3.8s3.1 1.6 3.1 4V18"/></svg></span>
-          <span><strong>LinkedIn</strong><small>linkedin.com/in/akbarshoh</small></span>
-        </a>
+      <div class="mobile-panel" data-mobile-panel>
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a class="mobile-panel__cta" href="#contact">Let’s Talk</a>
       </div>
+    </header>
 
-      <div class="pf-cta">
-        <p class="pf-eyebrow">Let?s work together</p>
-        <h3>Have an ERP or automation project in mind?</h3>
-        <p>Let?s discuss how I can help improve your company?s operations and digital workflows.</p>
-        <a class="pf-button" href="mailto:akbarshohdev@gmail.com">Let?s Talk <span aria-hidden="true">?</span></a>
+    <main>
+      <section class="hero section-bg" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="pill"><span></span>ERP • Odoo • Business Automation</div>
+            <h1>I design and implement ERP systems that make businesses <em>work smarter.</em></h1>
+            <div class="hero-desc">
+              <i></i>
+              <p>ERP Project Manager & Business Analyst specializing in Odoo implementation, AS-IS / TO-BE modeling, business process automation, and digital transformation across manufacturing, export, logistics, distribution, travel and consulting projects.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16c1.1 0 2 .9 2 2v7c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2v-7c0-1.1.9-2 2-2Z"/><path d="m3 8 7.65 5.78c.8.6 1.9.6 2.7 0L21 8"/></svg>
+                Contact Me
+              </a>
+              <a class="btn btn-secondary" href="#projects">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h8"/></svg>
+                View Projects
+              </a>
+              <a class="btn btn-secondary" href="../akbarshoh-toshpolatov-cv.pdf" download>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M5 20h14"/></svg>
+                Download CV
+              </a>
+            </div>
+            <div class="hero-skills">
+              <strong>What I do best</strong>
+              <div>
+                <span>Odoo ERP Implementation</span>
+                <span>Business Process Automation</span>
+                <span>AS-IS / TO-BE Modeling</span>
+                <span>Manufacturing & Logistics Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="portrait-card">
+              <div class="portrait-bg"></div>
+              <img src="../akbarshoh-toshpolatov-hero-portrait.png" alt="Akbarshoh Toshpolatov portrait" />
+              <div class="floating-badges" aria-label="Position badges">
+                <span><b>▣</b> ERP Project<br />Manager</span>
+                <span><b>◉</b> Business<br />Analyst</span>
+                <span><b>od</b> Odoo<br />Consultant</span>
+              </div>
+              <div class="position-card">
+                <small>Position</small>
+                <strong>ERP Project Manager</strong>
+                <span>Business Analyst / Odoo Consultant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container hero-stats reveal">
+          <article><span>✓</span><strong>ERP</strong><p>Implementation experience</p></article>
+          <article><span>◇</span><strong>CRM</strong><p>Business apps and automation</p></article>
+          <article><span>◎</span><strong>AS-IS</strong><p>Process analysis</p></article>
+          <article><span>↗</span><strong>TO-BE</strong><p>Workflow design</p></article>
+        </div>
+      </section>
+
+      <section class="about section-bg" id="about">
+        <div class="container about-head">
+          <div class="reveal">
+            <p class="section-kicker">About me</p>
+            <h2>Business logic first, <span>implementation</span> second.</h2>
+          </div>
+          <div class="approach-card reveal">
+            <div class="approach-title"><span>“</span><strong>My Approach</strong></div>
+            <ul>
+              <li>Understand the <b>real business logic</b></li>
+              <li>Analyze processes and identify <b>weak points</b></li>
+              <li>Design <b>AS-IS</b> and <b>TO-BE</b> processes</li>
+              <li>Build <b>practical and scalable</b> digital solutions</li>
+              <li>Deliver <b>measurable results</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container about-body reveal">
+          <div class="about-text">
+            <p>I specialize in ERP implementation, business analysis and digital transformation. My work is focused on understanding how a company operates, identifying weak points, describing AS-IS and TO-BE processes, and turning business needs into practical digital solutions.</p>
+            <p>I have worked on projects involving sales, warehouse, production, logistics, document workflow, websites and internal business automation.</p>
+          </div>
+          <div class="about-cards">
+            <article><span>✚</span><strong>Odoo + CRM + Apps</strong><p>ERP modules, no-code apps and CRM workflow setup and customization.</p></article>
+            <article><span>▦</span><strong>AS-IS</strong><p>Current-state process mapping and documentation.</p></article>
+            <article><span>◎</span><strong>TO-BE</strong><p>Future-state automation and responsibility design.</p></article>
+            <article><span>👥</span><strong>~10</strong><p>Coordinated project team members across relevant projects.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="expertise section-bg" id="expertise">
+        <div class="container section-head reveal">
+          <div>
+            <p class="section-kicker">Core expertise</p>
+            <h2>ERP, analysis, delivery and <span>automation.</span></h2>
+          </div>
+          <p>A practical operating range across business discovery, requirements, project coordination, implementation support and digital presence.</p>
+        </div>
+        <div class="container expertise-grid">
+          <article class="expertise-card reveal"><span>✚</span><h3>ERP Implementation</h3><p>Odoo ERP, ERP logic, process setup, access rights, workflows, business requirements and user adoption.</p></article>
+          <article class="expertise-card reveal"><span>↗</span><h3>Business Analysis</h3><p>AS-IS / TO-BE process modelling, requirements gathering, stakeholder interviews, process optimization and documentation.</p></article>
+          <article class="expertise-card reveal"><span>👥</span><h3>Project Management</h3><p>Task planning, project coordination, team communication, risk control, timeline management and delivery follow-up.</p></article>
+          <article class="expertise-card reveal"><span>⚙</span><h3>Business Process Automation</h3><p>Automation of sales, warehouse, production, logistics, document workflow, reporting and custom business processes.</p></article>
+          <article class="expertise-card reveal"><span>◎</span><h3>Website & Digital Presence</h3><p>Corporate websites, product catalog structures, landing pages, digital brand presence and customer-facing digital solutions.</p></article>
+          <article class="expertise-card reveal"><span>∞</span><h3>Integration & Technical Coordination</h3><p>ERP integrations, API-based workflows, 1C-related integration tasks and communication between business and technical teams.</p></article>
+        </div>
+      </section>
+
+      <section class="projects section-bg" id="projects">
+        <div class="container section-head reveal">
+          <div>
+            <p class="section-kicker">Projects / Case studies</p>
+            <h2>Selected work across ERP, websites and <span>automation.</span></h2>
+          </div>
+          <p>Each case focuses on industry context, business processes, Akbarshoh’s role and practical business value without inflated claims.</p>
+        </div>
+        <div class="container projects-list" data-projects-list>
+          <div class="filters" data-project-filters></div>
+          <div class="project-grid" data-project-grid>
+            <a class="project-card reveal is-visible" href="../project-infinity-copper-group.html"><div class="project-card__image"><img src="../infinity-copper-group-case-study-01.png" alt="Infinity Copper Group case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Copper processing / export</p><h3>Infinity Copper Group</h3><p>ERP ecosystem for production, warehouse, purchasing, sales and operational control.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-softam.html"><div class="project-card__image"><img src="../softam-case-study-01.jpg" alt="Softam case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Business digitalization</p><h3>Softam</h3><p>Internal operations and workflow digitalization for clearer management visibility.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-diran.html"><div class="project-card__image"><img src="../diran-case-study-01.png" alt="Diran case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Furniture manufacturing</p><h3>Diran</h3><p>Production process systematization with Face ID integration context.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-medicom.html"><div class="project-card__image"><img src="../medicom-case-study-01.png" alt="Medicom case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Medical / pharmaceutical distribution</p><h3>Medicom</h3><p>Registration, documentation management, custom Odoo app and 1C integration.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-warmix.html"><div class="project-card__image"><img src="../warmix-case-study-02.png" alt="Warmix case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">HVAC / website + Odoo leads</p><h3>Warmix</h3><p>Corporate website, lead capture into Odoo and business process automation.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-fayz-oil-imports.html"><div class="project-card__image"><img src="../fayz-oil-imports-case-study-01.png" alt="Fayz Oil Imports case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Food oil / import / export</p><h3>Fayz Oil Imports</h3><p>Corporate website and product presentation for a food oil import/export brand.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-apvo.html"><div class="project-card__image"><img src="../apvo-case-study-01.png" alt="APVO case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Association / event workflow</p><h3>APVO</h3><p>Website, Odoo event registration, email notifications and multilingual content.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-taewoong-travel.html"><div class="project-card__image"><img src="../assets/projects/taewoong-main.svg" alt="Taewoong Travel case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Travel company</p><h3>Taewoong Travel</h3><p>Website and automation solution for travel requests and service presentation.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-novikov-cafe-tashkent.html"><div class="project-card__image"><img src="../assets/projects/fayz-visual-2.svg" alt="Novikov Cafe Tashkent case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Restaurant website</p><h3>Novikov Cafe Tashkent</h3><p>Premium restaurant website case for digital presentation and customer communication.</p><span class="project-card__link">Open case study -></span></div></a>
+            <a class="project-card reveal is-visible" href="../project-ftos.html"><div class="project-card__image"><img src="../ftos-case-study-01.png" alt="FTOS case study preview" loading="lazy"></div><div class="project-card__body"><p class="project-card__eyebrow">Logistics</p><h3>FTOS</h3><p>Website and automation-ready flow for logistics requests and operational communication.</p><span class="project-card__link">Open case study -></span></div></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="process section-bg" id="process">
+        <div class="container process-head reveal">
+          <p class="section-kicker">Work process</p>
+          <h2>A clear path from business need to digital workflow<span>.</span></h2>
+          <p>A proven 5-step methodology to analyze, design, and deliver ERP & automation solutions that create measurable business impact.</p>
+        </div>
+        <div class="container process-row">
+          <article class="process-card reveal"><b>01</b><span>☷</span><h3>Business Discovery</h3><i></i><p>Interview stakeholders, understand goals, problems and current processes.</p></article>
+          <article class="process-card reveal"><b>02</b><span>⌕</span><h3>AS-IS Analysis</h3><i></i><p>Map current processes, bottlenecks, manual work, risks and duplicated actions.</p></article>
+          <article class="process-card reveal"><b>03</b><span>▧</span><h3>TO-BE Design</h3><i></i><p>Design improved future processes, automation logic, ERP flows and responsibilities.</p></article>
+          <article class="process-card reveal"><b>04</b><span>⚙</span><h3>Implementation Coordination</h3><i></i><p>Prepare requirements, coordinate the technical team, track tasks and control delivery.</p></article>
+          <article class="process-card reveal"><b>05</b><span>⇧</span><h3>Launch & Improvement</h3><i></i><p>Support implementation, gather feedback, improve workflows and help users adapt.</p></article>
+        </div>
+      </section>
+
+      <section class="skills section-bg" id="skills">
+        <div class="container section-head reveal">
+          <div>
+            <p class="section-kicker">Skills & Tools</p>
+            <h2>Business, project, technical and <span>AI-assisted work.</span></h2>
+          </div>
+          <p>A summary of my experience and the tools I use to deliver business value, manage projects, solve problems and work smarter with AI.</p>
+        </div>
+        <div class="container skills-grid">
+          <article class="skill-panel reveal"><span>✚</span><h3>ERP & Business</h3><div class="tag-cloud"><b>Odoo ERP</b><b>AppSheet</b><b>Glide</b><b>Bitrix24</b><b>amoCRM</b><b>1C integration</b><b>Didox</b><b>E-IMZO</b><b>Online payments</b><b>HH integrations</b><b>ERP Implementation</b><b>CRM setup</b><b>Business Analysis</b><b>Digital Transformation</b><b>AS-IS / TO-BE</b><b>Process Optimization</b><b>Business Process Automation</b><b>Requirements Gathering</b><b>Technical Documentation</b></div></article>
+          <article class="skill-panel reveal"><span>👥</span><h3>Project Management</h3><div class="tag-cloud"><b>Project Management</b><b>Task Management</b><b>Team Coordination</b><b>Stakeholder Management</b><b>Risk Management</b><b>Change Management</b><b>Reporting</b><b>Documentation</b></div></article>
+          <article class="skill-panel reveal"><span>&lt;/&gt;</span><h3>Technical / Tools</h3><div class="tag-cloud"><b>Python basics / backend understanding</b><b>SQL</b><b>PostgreSQL</b><b>REST API</b><b>API integrations</b><b>Git</b><b>Linux</b><b>Docker</b><b>Jira</b><b>Notion</b><b>Google Workspace</b><b>MS Excel</b><b>PowerPoint</b></div></article>
+          <article class="skill-panel reveal"><span>◌</span><h3>AI Tools</h3><div class="tag-cloud"><b>ChatGPT</b><b>Claude.ai</b><b>Google AI Studio</b><b>Codex</b><b>Claude Code</b><b>AI-assisted analysis</b><b>AI-assisted documentation</b><b>AI-assisted automation planning</b><b>AI tools adoption for business teams</b></div></article>
+          <article class="skill-panel skill-panel-wide reveal"><span>◎</span><h3>Languages</h3><div class="tag-cloud"><b>Uzbek: Native / Advanced</b><b>English: Advanced</b><b>Russian: Intermediate / Working level</b></div></article>
+        </div>
+      </section>
+
+      <section class="experience section-bg" id="experience">
+        <div class="container experience-layout">
+          <div class="experience-left reveal">
+            <p class="section-kicker badge-kicker">Experience</p>
+            <h2>ERP and transformation work with business and technical teams<span>.</span></h2>
+            <div class="timeline">
+              <div class="timeline-item is-active"><b>Current</b><strong>Rakat Systems</strong><p>ERP & Digital Transformation Project Manager / Business Analyst / ERP Consultant</p></div>
+              <div class="timeline-item"><b>Education</b><strong>Chirchik State Pedagogical University</strong><p>History / World History</p></div>
+            </div>
+          </div>
+          <div class="experience-card reveal">
+            <div class="experience-card-head"><span>▥</span><h3>Rakat Systems</h3></div>
+            <p>Worked on ERP implementation, business process automation, website projects, AS-IS / TO-BE analysis, project coordination, client communication, and digital transformation solutions for companies in manufacturing, export, logistics, travel, consulting, distribution and corporate sectors.</p>
+            <ul>
+              <li>Coordinated project teams of around 10 people.</li>
+              <li>Worked with business owners, managers, users and technical teams.</li>
+              <li>Prepared requirements and project documentation.</li>
+              <li>Helped automate sales, warehouse, production, logistics and document workflow processes.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="container course-grid">
+          <article class="course-card reveal"><span>odoo</span><h3>Odoo ERP course</h3><p>ERP implementation logic and Odoo process configuration.</p></article>
+          <article class="course-card reveal"><span>&lt;/&gt;</span><h3>Full Stack Development course</h3><p>Technical foundation for implementation and coordination.</p></article>
+          <article class="course-card reveal"><span>G</span><h3>Google Project Management course</h3><p>Project planning, delivery and stakeholder coordination.</p></article>
+          <article class="course-card reveal"><span>🎓</span><h3>Formal education</h3><p>Chirchik State Pedagogical University — History / World History.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container footer-card reveal">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="brand" href="#hero" aria-label="Go to top">
+              <span class="brand-avatar" aria-hidden="true"><img src="../akbarshoh-toshpolatov-portrait.jpg" alt=""></span>
+              <span class="brand-copy">
+                <strong>Akbarshoh Toshpolatov</strong>
+                <span>ERP & Digital Transformation Consultant</span>
+              </span>
+            </a>
+            <p>Helping businesses streamline operations and implement ERP solutions that drive measurable impact.</p>
+          </div>
+          <div class="footer-nav">
+            <h4>Navigation</h4>
+            <a href="#about">About <span>›</span></a>
+            <a href="#expertise">Expertise <span>›</span></a>
+            <a href="#projects">Projects <span>›</span></a>
+            <a href="#process">Process <span>›</span></a>
+            <a href="#skills">Skills <span>›</span></a>
+            <a href="#experience">Experience <span>›</span></a>
+            <a href="#contact">Contact <span>›</span></a>
+          </div>
+          <div class="footer-connect">
+            <h4>Connect</h4>
+            <a href="mailto:akbarshohdev@gmail.com"><span>✉</span><b>Email</b><small>akbarshohdev@gmail.com</small></a>
+            <a href="https://t.me/akbarshoh_dev" target="_blank" rel="noreferrer"><span>↗</span><b>Telegram</b><small>@akbarshoh_dev</small></a>
+            <a href="https://uz.linkedin.com/in/akbarshoh-toshpo-latov-3b1685274" target="_blank" rel="noreferrer"><span>in</span><b>LinkedIn</b><small>linkedin.com/in/akbarshoh-toshpolatov</small></a>
+          </div>
+          <div class="footer-cta">
+            <h4>Let’s work together</h4>
+            <p>Have a project in mind?<br />I’d love to hear about it.</p>
+            <a class="btn btn-primary" href="mailto:akbarshohdev@gmail.com">Let’s Talk <span>→</span></a>
+            <a class="footer-cv" href="../akbarshoh-toshpolatov-cv.pdf" download>Download CV</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Akbarshoh Toshpolatov. All rights reserved.</span>
+          <span>Built with focus. Designed for impact.</span>
+        </div>
       </div>
-    </div>
-    <div class="pf-bottom">
-      <p>? <span id="year"></span> Akbarshoh Toshpolatov. All rights reserved.</p>
-      <p>Built for ERP, business analysis and digital transformation work.</p>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-  <script>
-    const copy = {
-      en: {"nav.about":"About","nav.expertise":"Expertise","nav.projects":"Projects","nav.process":"Process","nav.skills":"Skills","nav.experience":"Experience","nav.contact":"Contact","cta.contact":"Contact Me","cta.cv":"Download CV","cta.projects":"View Projects","cta.telegram":"Telegram","cta.portfolio":"Portfolio PDF","hero.title":"I help companies digitize ERP, operations and business processes.","hero.subtitle":"ERP and digital transformation project manager, business analyst and ERP consultant.","photo.caption":"Professional portrait.","photo.status":"Positioning","sections.about.label":"About Me","sections.about.title":"Business logic first, implementation second.","sections.about.copy":"I specialize in ERP implementation, business analysis, CRM setup, no-code business apps and digital transformation.","sections.expertise.label":"Core Expertise","sections.expertise.title":"ERP, CRM, business apps, integrations, analysis and automation.","sections.expertise.copy":"A practical operating range across discovery, requirements, coordination and implementation support.","sections.projects.label":"Projects / Case Studies","sections.projects.title":"Selected work across ERP, CRM, business apps, websites and automation.","sections.projects.copy":"Each case focuses on industry context, business processes, role and practical value.","sections.process.label":"Work Process","sections.process.title":"A clear path from business need to digital workflow.","sections.skills.label":"Skills & Tools","sections.skills.title":"Business, project, CRM, no-code, integrations, technical and AI-assisted work.","sections.experience.label":"Experience","sections.experience.title":"ERP and transformation work with business and technical teams.","sections.contact.label":"Contact","sections.contact.title":"Let's discuss how I can help your company improve ERP, operations and digital workflows.","sections.contact.copy":"Choose the channel that is most convenient for you."},
-      uz: {"nav.about":"Men haqimda","nav.expertise":"Ekspertiza","nav.projects":"Loyihalar","nav.process":"Jarayon","nav.skills":"Ko'nikmalar","nav.experience":"Tajriba","nav.contact":"Aloqa","cta.contact":"Bog'lanish","cta.cv":"CV yuklab olish","cta.projects":"Loyihalarni ko'rish","cta.telegram":"Telegram","cta.portfolio":"Portfolio PDF","hero.title":"Kompaniyalarga ERP, operatsiyalar va biznes jarayonlarini raqamlashtirishda yordam beraman.","hero.subtitle":"ERP va raqamli transformatsiya loyiha menejeri, biznes analitik va ERP konsultant.","photo.caption":"Professional portret.","photo.status":"Pozitsiya","sections.about.label":"Men haqimda","sections.about.title":"Avval biznes mantiqi, keyin implementatsiya.","sections.about.copy":"Men ERP joriy etish, biznes analiz, CRM sozlash, no-code biznes ilovalar va raqamli transformatsiya yo'nalishida ishlayman.","sections.expertise.label":"Asosiy ekspertiza","sections.expertise.title":"ERP, CRM, biznes ilovalar, integratsiyalar, analiz va avtomatlashtirish.","sections.expertise.copy":"Biznes discovery, talablar, loyiha koordinatsiyasi va implementatsiya bo'yicha amaliy tajriba.","sections.projects.label":"Loyihalar / Case studies","sections.projects.title":"ERP, CRM, biznes ilovalar, saytlar va avtomatlashtirish bo'yicha tanlangan ishlar.","sections.projects.copy":"Har bir case sanoat konteksti, biznes jarayonlar, rol va real biznes qiymatiga qaratilgan.","sections.process.label":"Ish jarayoni","sections.process.title":"Biznes ehtiyojidan raqamli jarayongacha aniq yo'l.","sections.skills.label":"Ko'nikmalar va vositalar","sections.skills.title":"Biznes, loyiha, CRM, no-code, integratsiyalar, texnik va AI yordamidagi ishlar.","sections.experience.label":"Tajriba","sections.experience.title":"Biznes va texnik jamoalar bilan ERP va transformatsiya ishlari.","sections.contact.label":"Aloqa","sections.contact.title":"Kompaniyangiz ERP, operatsiyalar va digital workflowlarini yaxshilashi haqida gaplashamiz.","sections.contact.copy":"Sizga qulay kanal orqali bog'laning."},
-      ru: {"nav.about":"About","nav.expertise":"Expertise","nav.projects":"Projects","nav.process":"Process","nav.skills":"Skills","nav.experience":"Experience","nav.contact":"Contact","cta.contact":"Contact Me","cta.cv":"Download CV","cta.projects":"View Projects","cta.telegram":"Telegram","cta.portfolio":"Portfolio PDF","hero.title":"I help companies digitize ERP, operations and business processes.","hero.subtitle":"ERP and digital transformation project manager, business analyst and ERP consultant.","photo.caption":"Professional portrait.","photo.status":"Positioning","sections.about.label":"About Me","sections.about.title":"Business logic first, implementation second.","sections.about.copy":"I specialize in ERP implementation, business analysis, CRM setup, no-code business apps and digital transformation.","sections.expertise.label":"Core Expertise","sections.expertise.title":"ERP, CRM, business apps, integrations, analysis and automation.","sections.expertise.copy":"A practical operating range across discovery, requirements, coordination and implementation support.","sections.projects.label":"Projects / Case Studies","sections.projects.title":"Selected work across ERP, CRM, business apps, websites and automation.","sections.projects.copy":"Each case focuses on industry context, business processes, role and practical value.","sections.process.label":"Work Process","sections.process.title":"A clear path from business need to digital workflow.","sections.skills.label":"Skills & Tools","sections.skills.title":"Business, project, CRM, no-code, integrations, technical and AI-assisted work.","sections.experience.label":"Experience","sections.experience.title":"ERP and transformation work with business and technical teams.","sections.contact.label":"Contact","sections.contact.title":"Let's discuss how I can help your company improve ERP, operations and digital workflows.","sections.contact.copy":"Choose the channel that is most convenient for you."}
-    };
-    const trust = ["ERP / Odoo implementation experience", "Business process automation", "AS-IS / TO-BE modelling", "Project team coordination", "Manufacturing, export and logistics projects"];
-    const expertise = [
-      ["ERP Implementation", "Odoo ERP, ERP logic, process setup, access rights, workflows, business requirements, and user adoption.", "M4 6h16M4 12h16M4 18h10"],
-      ["Business Analysis", "AS-IS / TO-BE process modelling, requirements gathering, stakeholder interviews, process optimization, and documentation.", "M5 5h14v14H5zM8 9h8M8 13h8M8 17h5"],
-      ["Project Management", "Task planning, project coordination, team communication, risk control, timeline management, and delivery follow-up.", "M7 4v4M17 4v4M5 8h14M6 12h5M6 16h8"],
-      ["Business Process Automation", "Automation of sales, warehouse, production, logistics, document workflow, reporting, and custom business processes.", "M12 3v4M12 17v4M4.2 7.5l3.5 2M16.3 14l3.5 2M4.2 16.5l3.5-2M16.3 10l3.5-2M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0z"],
-      ["Website & Digital Presence", "Corporate websites, product catalog structures, landing pages, digital brand presence, and customer-facing digital solutions.", "M4 5h16v14H4zM4 9h16M8 14h8"],
-      ["Integration & Technical Coordination", "ERP/CRM integrations, API-based workflows, 1C, Didox, E-IMZO, online payment and HH integration tasks, plus communication between business and technical teams.", "M8 12h8M7 7a5 5 0 0 0 0 10M17 7a5 5 0 0 1 0 10"]
-    ];
-    window.projects = [
-      ["Infinity Copper Group", "Copper processing / export", "End-to-end ERP adaptation and implementation for a copper processing and export company, including the ICG website/dashboard concept and the full operational business-process ecosystem.", "Production, warehouse, purchasing, sales, product movement, operational control, business-process flows and ERP ecosystem alignment.", "Business analysis, AS-IS / TO-BE process modelling, ERP process adaptation, automation coordination and implementation support.", "Core manufacturing, warehouse, purchasing and sales processes were structured into one ERP-ready operating ecosystem with clearer control across the business.", "ERP", ["infinity-copper-group-case-study-01.png", "infinity-copper-group-case-study-02.png", "infinity-copper-group-case-study-03.png"]],
-      ["Softam", "Business digitalization", "Full business digitalization project for the company.", "Internal operations, business workflows, process management, digital tools.", "ERP/digital transformation project coordination and business process analysis.", "More structured, transparent, and manageable business operations.", "ERP", ["softam-case-study-01.jpg", "softam-case-study-02.jpg", "softam-case-study-03.jpg"]],
-      ["Diran", "Furniture manufacturing", "Furniture manufacturing workflow systematization project with Face ID integration for operational control.", "Production planning, furniture orders, workshop operations, warehouse movement, internal process control and Face ID integration.", "Business analysis, AS-IS / TO-BE modelling, production workflow systematization and technical coordination for Face ID integration.", "Improved visibility and control across the furniture manufacturing workflow, with operations structured into a clearer digital process.", "Manufacturing", "diran-case-study-01.png"],
-      ["Medicom", "Medical / pharmaceutical / distribution", "Odoo ERP project with 1C integration, custom equipment state-registration workflow, documentation control and an internal document-management application.", "CRM, sales, warehouse, import, multi-company logic, equipment state registration, documentation workflow, internal document management and 1C integration.", "ERP/business analysis, custom business-process design, documentation workflow coordination, Odoo implementation support and 1C integration planning.", "Improved control over regulated equipment documentation, operational visibility and ERP-based document/process management.", "ERP", "medicom-case-study-01.png"],
-      ["Warmix", "Engineering / HVAC equipment", "Website project for HVAC equipment with lead capture connected to Odoo and automated internal business processes.", "Website, product presentation, lead capture, Odoo CRM/ERP connection, customer request routing and business-process automation.", "Website/ERP coordination, lead-flow planning, Odoo process alignment and business automation support.", "Improved online lead handling and a clearer automated path from website inquiry to internal business process follow-up.", "Website", "warmix-case-study-01.png"],
-      ["Fayz Oil Imports", "Food oil / import / export", "Corporate website project for Fayz Oil Imports.", "Website structure, product sections, brand presentation, SEO, media and product content.", "Website project coordination, content structuring, digital presence.", "Improved online brand presence and product presentation.", "Website", "fayz-oil-imports-case-study-01.png"],
-      ["APVO", "Association / vegetable oil producers", "Website, Odoo event, email notification and multilingual content project.", "Event registration, email notifications, conference pages, multilingual content.", "Odoo/website coordination, event process setup, content structuring.", "More organized event communication and registration workflow.", "Website", "apvo-case-study-01.png"],
-      ["Taewoong Travel", "Travel company", "Website and business automation solutions for a travel company.", "Customer requests, service presentation, internal process simplification.", "Website and automation solution coordination.", "Improved client interaction and digital workflow.", "Website"],
-      ["Novikov Cafe Tashkent", "Restaurant / cafe", "Website project for a premium cafe in Tashkent with a focus on digital presence, menu presentation and customer communication.", "Website structure, menu sections, brand presentation, customer requests, content organization.", "Website project coordination, content structuring and digital presence support.", "Improved online presentation and a clearer digital touchpoint for customers.", "Website"],
-      ["FTOS", "Logistics", "Website solution and automation project for a logistics company.", "Client requests, logistics operations, digital presence, process automation.", "Website and business automation coordination.", "Improved online presence and operational communication.", "Logistics", "ftos-case-study-01.png"]
-    ];
-    const process = [
-      ["Business Discovery", "Interview stakeholders, understand goals, problems, and current processes."],
-      ["AS-IS Analysis", "Map current processes, bottlenecks, manual work, risks, and duplicated actions."],
-      ["TO-BE Design", "Design improved future processes, automation logic, ERP flows, and responsibilities."],
-      ["Implementation Coordination", "Prepare requirements, coordinate the technical team, track tasks, and control delivery."],
-      ["Launch & Improvement", "Support implementation, gather feedback, improve workflows, and help users adapt."]
-    ];
-    const skills = {
-      "ERP & Business": ["Odoo ERP", "ERP Implementation", "Business Analysis", "Digital Transformation", "AS-IS / TO-BE", "Process Optimization", "Business Process Automation", "Requirements Gathering", "Technical Documentation"],
-      "Project Management": ["Project Management", "Task Management", "Team Coordination", "Stakeholder Management", "Risk Management", "Change Management", "Reporting", "Documentation"],
-      "Technical / Tools": ["Python basics / backend understanding", "SQL", "PostgreSQL", "REST API", "Git", "Linux", "Docker", "Jira", "Notion", "Google Workspace", "MS Excel", "PowerPoint"],
-      "AI Tools": ["ChatGPT", "Claude.ai", "Google AI Studio", "Codex", "Claude Code", "AI-assisted analysis", "AI-assisted documentation", "AI-assisted automation planning"],
-      "Languages": ["Uzbek: Native / Advanced", "English: Advanced", "Russian: Intermediate / Working level"]
-    };
-    const contacts = [["Telegram", "@akbarshoh_dev", "https://t.me/akbarshoh_dev"], ["Email", "akbarshohdev@gmail.com", "mailto:akbarshohdev@gmail.com"], ["Phone", "+998 99 644 04 25", "tel:+998996440425"], ["LinkedIn", "linkedin.com/in/akbarshoh-toshpolatov", "https://uz.linkedin.com/in/akbarshoh-toshpo-latov-3b1685274"], ["GitHub", "github.com/SaadYucuf", "https://github.com/SaadYucuf"], ["HH.ru Resume", "tashkent.hh.ru/resume", "https://tashkent.hh.uz/resume/1432ae66ff108955b50039ed1f4a6864336a7a"], ["Portfolio PDF", "Toshpolatov-Akbarshoh.pdf", "akbarshoh-toshpolatov-cv.pdf"]];
-
-    function icon(path) {
-      return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${path}"/></svg>`;
-    }
-    function renderStaticData() {
-      document.getElementById("trustList").innerHTML = trust.map(item => `<li><span class="dot"></span>${item}</li>`).join("");
-      document.getElementById("expertiseGrid").innerHTML = expertise.map(item => `<article class="expertise-card reveal"><div class="card-icon">${icon(item[2])}</div><h3>${item[0]}</h3><p>${item[1]}</p></article>`).join("");
-      document.getElementById("processGrid").innerHTML = process.map(item => `<article class="process-step reveal"><h3>${item[0]}</h3><p>${item[1]}</p></article>`).join("");
-      document.getElementById("skillsGrid").innerHTML = Object.entries(skills).map(([group, list]) => `<article class="skill-card reveal"><h3>${group}</h3><div class="chips">${list.map(s => `<span class="chip">${s}</span>`).join("")}</div></article>`).join("");
-      document.getElementById("contactGrid").innerHTML = contacts.map(c => `<a class="contact-card reveal" href="${c[2] || c[1]}"><strong>${c[0]}</strong><span>${c[1]}</span></a>`).join("");
-      renderFilters();
-      renderProjects("All");
-    }
-    function renderFilters() {
-      const filters = ["All", ...Array.from(new Set(projects.map(p => p[6])))] ;
-      document.getElementById("projectFilters").innerHTML = filters.map((f, i) => `<button class="filter-btn ${i === 0 ? "active" : ""}" type="button" data-filter="${f}">${f}</button>`).join("");
-      document.querySelectorAll(".filter-btn").forEach(btn => btn.addEventListener("click", () => {
-        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        renderProjects(btn.dataset.filter);
-      }));
-    }
-    function projectHref(name) {
-      return "project-" + name.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") + ".html";
-    }
-    function renderProjects(filter) {
-      const selected = filter === "All" ? projects : projects.filter(p => p[6] === filter);
-      document.getElementById("projectGrid").innerHTML = selected.map(p => `
-        <a class="project-card reveal" href="${projectHref(p[0])}" aria-label="Open ${p[0]} case study">
-          ${Array.isArray(p[7]) ? `<img class="project-image" src="../${p[7][0]}" alt="${p[0]} project visual" loading="lazy">` : p[7] ? `<img class="project-image" src="../${p[7]}" alt="${p[0]} project visual" loading="lazy">` : ""}
-          <div class="industry">${p[1]}</div>
-          <h3>${p[0]}</h3>
-          <p>${p[2]}</p>
-          <span class="project-link">Open case study</span>
-        </a>`).join("");
-      observeReveals();
-    }    function applyLanguage(lang) {
-      const dict = copy[lang] || copy.en;
-      document.documentElement.lang = lang;
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const value = dict[el.dataset.i18n];
-        if (value) el.textContent = value;
-      });
-      document.querySelectorAll("[data-lang]").forEach(btn => btn.classList.toggle("active", btn.dataset.lang === lang));
-      localStorage.setItem("portfolio-language", lang);
-    }
-    let observer;
-    function observeReveals() {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
-        return;
-      }
-      if (!observer) {
-        observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12 });
-      }
-      document.querySelectorAll(".reveal:not(.visible)").forEach(el => observer.observe(el));
-    }
-    renderStaticData();
-    applyLanguage(localStorage.getItem("portfolio-language") || "en");
-    observeReveals();
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.querySelectorAll("[data-lang]").forEach(btn => btn.addEventListener("click", () => applyLanguage(btn.dataset.lang)));
-  </script>
-  <script>
-    (function(){
-      const i18n = {
-        en: {
-          trust: ["ERP / Odoo implementation experience","Business process automation","AS-IS / TO-BE modelling","Project team coordination","Manufacturing, export and logistics projects"],
-          meta: ["Key processes","Role","Business value","Open case study"],
-          filters: {All:"All",ERP:"ERP",Manufacturing:"Manufacturing",Website:"Website",Logistics:"Logistics"},
-          expertise: [
-            ["ERP Implementation","Odoo ERP, ERP logic, process setup, access rights, workflows, business requirements and user adoption."],
-            ["Business Analysis","AS-IS / TO-BE process modelling, requirements gathering, stakeholder interviews, process optimization and documentation."],
-            ["Project Management","Task planning, project coordination, team communication, risk control, timeline management and delivery follow-up."],
-            ["Business Process Automation","Automation of sales, warehouse, production, logistics, document workflow, reporting and custom business processes."],
-            ["Website & Digital Presence","Corporate websites, product catalog structures, landing pages, digital brand presence and customer-facing digital solutions."],
-            ["Integration & Technical Coordination","ERP integrations, API-based workflows, 1C-related integration tasks and communication between business and technical teams."]
-          ],
-          process: [
-            ["Business Discovery","Interview stakeholders, understand goals, problems and current processes."],
-            ["AS-IS Analysis","Map current processes, bottlenecks, manual work, risks and duplicated actions."],
-            ["TO-BE Design","Design improved future processes, automation logic, ERP flows and responsibilities."],
-            ["Implementation Coordination","Prepare requirements, coordinate the technical team, track tasks and control delivery."],
-            ["Launch & Improvement","Support implementation, gather feedback, improve workflows and help users adapt."]
-          ],
-          skills: ["ERP & Business","Project Management","Technical / Tools","AI Tools","Languages"],
-          fixed: {
-            current:"Current", education:"Education",
-            role:"ERP & Digital Transformation Project Manager / Business Analyst / ERP Consultant",
-            rakat:"Worked on ERP implementation, business process automation, website projects, AS-IS / TO-BE analysis, project coordination, client communication and digital transformation solutions for companies in manufacturing, export, logistics, travel, consulting, distribution and corporate sectors.",
-            university:"University", universityText:"Chirchik State Pedagogical University - History / World History",
-            odoo:"ERP course focused on Odoo implementation logic", fullstack:"Development course for technical understanding", pm:"Google Project Management course"
-          },
-          projects: [
-            ["Infinity Copper Group","Copper processing / export","End-to-end ERP adaptation and implementation for a copper processing and export company, including the ICG website/dashboard concept and the full operational business-process ecosystem.","Production, warehouse, purchasing, sales, product movement, operational control, business-process flows and ERP ecosystem alignment.","Business analysis, AS-IS / TO-BE process modelling, ERP process adaptation, automation coordination and implementation support.","Core manufacturing, warehouse, purchasing and sales processes were structured into one ERP-ready operating ecosystem with clearer control across the business."],
-            ["Softam","Business digitalization","Full business digitalization project for the company.","Internal operations, business workflows, process management and digital tools.","ERP/digital transformation project coordination and business process analysis.","More structured, transparent and manageable business operations."],
-            ["Diran","Furniture manufacturing","Furniture manufacturing workflow systematization project with Face ID integration for operational control.","Production planning, furniture orders, workshop operations, warehouse movement, internal process control and Face ID integration.","Business analysis, AS-IS / TO-BE modelling, production workflow systematization and technical coordination for Face ID integration.","Improved visibility and control across the furniture manufacturing workflow, with operations structured into a clearer digital process."],
-            ["Medicom","Medical / pharmaceutical / distribution","Odoo ERP project with 1C integration, custom equipment state-registration workflow, documentation control and an internal document-management application.","CRM, sales, warehouse, import, multi-company logic, equipment state registration, documentation workflow, internal document management and 1C integration.","ERP/business analysis, custom business-process design, documentation workflow coordination, Odoo implementation support and 1C integration planning.","Improved control over regulated equipment documentation, operational visibility and ERP-based document/process management."],
-            ["Warmix","Engineering / HVAC equipment","Website project for HVAC equipment with lead capture connected to Odoo and automated internal business processes.","Website, product presentation, lead capture, Odoo CRM/ERP connection, customer request routing and business-process automation.","Website/ERP coordination, lead-flow planning, Odoo process alignment and business automation support.","Improved online lead handling and a clearer automated path from website inquiry to internal business process follow-up."],
-            ["Fayz Oil Imports","Food oil / import / export","Corporate website project for Fayz Oil Imports.","Website structure, product sections, brand presentation, SEO, media and product content.","Website project coordination, content structuring and digital presence.","Improved online brand presence and product presentation."],
-            ["APVO","Association / vegetable oil producers","Website, Odoo event, email notification and multilingual content project.","Event registration, email notifications, conference pages and multilingual content.","Odoo/website coordination, event process setup and content structuring.","More organized event communication and registration workflow."],
-            ["Taewoong Travel","Travel company","Website and business automation solutions for a travel company.","Customer requests, service presentation and internal process simplification.","Website and automation solution coordination.","Improved client interaction and digital workflow."],
-            ["Novikov Cafe Tashkent","Restaurant / cafe","Website project for a premium cafe in Tashkent with a focus on digital presence, menu presentation and customer communication.","Website structure, menu sections, brand presentation, customer requests and content organization.","Website project coordination, content structuring and digital presence support.","Improved online presentation and a clearer digital touchpoint for customers."],
-            ["FTOS","Logistics","Website solution and automation project for a logistics company.","Client requests, logistics operations, digital presence and process automation.","Website and business automation coordination.","Improved online presence and operational communication."]
-          ]
-        },
-        uz: {
-          trust: ["ERP / Odoo joriy etish tajribasi","Biznes jarayonlarini avtomatlashtirish","AS-IS / TO-BE modellashtirish","Loyiha jamoasini koordinatsiya qilish","Ishlab chiqarish, eksport va logistika loyihalari"],
-          meta: ["Asosiy jarayonlar","Rol","Biznes qiymati","Case study ochish"],
-          filters: {All:"Hammasi",ERP:"ERP",Manufacturing:"Ishlab chiqarish",Website:"Veb-sayt",Logistics:"Logistika"},
-          expertise: [
-            ["ERP joriy etish","Odoo ERP, ERP mantiqi, jarayon sozlamalari, access rights, workflow, biznes talablar va foydalanuvchilarni moslashtirish."],
-            ["Biznes tahlil","AS-IS / TO-BE jarayon modellashtirish, talablarni yig'ish, stakeholder intervyulari, jarayon optimizatsiyasi va dokumentatsiya."],
-            ["Loyiha boshqaruvi","Task rejalashtirish, loyiha koordinatsiyasi, jamoa kommunikatsiyasi, risk nazorati, timeline boshqaruvi va delivery monitoring."],
-            ["Biznes jarayonlarni avtomatlashtirish","Savdo, ombor, ishlab chiqarish, logistika, hujjat aylanishi, hisobot va custom biznes jarayonlarni avtomatlashtirish."],
-            ["Veb-sayt va digital presence","Korporativ saytlar, product catalog strukturalari, landing page, digital brand presence va mijozga yo'naltirilgan raqamli yechimlar."],
-            ["Integratsiya va texnik koordinatsiya","ERP integratsiyalari, API workflowlar, 1C bilan bog'liq integratsiya vazifalari va biznes hamda texnik jamoalar o'rtasidagi kommunikatsiya."]
-          ],
-          process: [
-            ["Business Discovery","Stakeholderlar bilan suhbat, maqsadlar, muammolar va joriy jarayonlarni tushunish."],
-            ["AS-IS tahlil","Joriy jarayonlar, bottlenecklar, manual ishlar, risklar va takroriy harakatlarni xaritalash."],
-            ["TO-BE dizayn","Yaxshilangan kelajak jarayonlari, avtomatlashtirish logikasi, ERP flowlar va mas'uliyatlarni loyihalash."],
-            ["Joriy etish koordinatsiyasi","Talablarni tayyorlash, texnik jamoani koordinatsiya qilish, tasklarni kuzatish va delivery nazorati."],
-            ["Launch va yaxshilash","Joriy etishni qo'llab-quvvatlash, feedback yig'ish, workflowlarni yaxshilash va foydalanuvchilar moslashuviga yordam berish."]
-          ],
-          skills: ["ERP va biznes","Loyiha boshqaruvi","Texnik / vositalar","AI vositalar","Tillar"],
-          fixed: {
-            current:"Hozirgi", education:"Ta'lim",
-            role:"ERP va raqamli transformatsiya loyiha menejeri / Biznes analitik / ERP konsultant",
-            rakat:"Ishlab chiqarish, eksport, logistika, turizm, konsalting, distribyutsiya va korporativ sektorlar uchun ERP joriy etish, biznes jarayonlarni avtomatlashtirish, veb-sayt loyihalari, AS-IS / TO-BE tahlil, loyiha koordinatsiyasi, mijozlar bilan kommunikatsiya va raqamli transformatsiya yechimlarida ishlagan.",
-            university:"Universitet", universityText:"Chirchiq davlat pedagogika universiteti - Tarix / Jahon tarixi",
-            odoo:"Odoo joriy etish mantiqiga yo'naltirilgan ERP kursi", fullstack:"Texnik tushunchani kuchaytirgan Full Stack dasturlash kursi", pm:"Google Project Management kursi"
-          },
-          projects: [
-            ["Infinity Copper Group","Misni qayta ishlash / eksport","Misni qayta ishlash va eksport kompaniyasi uchun ICG sayt/dashboard konsepti hamda to'liq operatsion biznes jarayonlar ekotizimini qamrab olgan ERP moslashtirish va joriy etish loyihasi.","Ishlab chiqarish, ombor, xarid, sotuv, mahsulot harakati, operatsion nazorat, biznes jarayon oqimlari va ERP ekotizimiga moslashtirish.","Biznes tahlil, AS-IS / TO-BE jarayon modellashtirish, ERP jarayonlarini moslashtirish, avtomatlashtirish koordinatsiyasi va joriy etishni qo'llab-quvvatlash.","Ishlab chiqarish, ombor, xarid va sotuv jarayonlari yagona ERP-ready operatsion ekotizimga tizimlashtirildi va biznes bo'yicha nazorat aniqroq bo'ldi."],
-            ["Softam","Biznesni raqamlashtirish","Kompaniya uchun to'liq biznesni raqamlashtirish loyihasi.","Ichki operatsiyalar, biznes workflowlar, jarayon boshqaruvi va raqamli vositalar.","ERP/raqamli transformatsiya loyihasini koordinatsiya qilish va biznes jarayonlarni tahlil qilish.","Operatsiyalar yanada strukturalashgan, shaffof va boshqariladigan holatga keldi."],
-            ["Diran","Mebel ishlab chiqarish","Mebel ishlab chiqarish workflowlarini tizimlashtirish va operatsion nazorat uchun Face ID integratsiyasi loyihasi.","Ishlab chiqarish rejalashtirish, mebel buyurtmalari, sex operatsiyalari, ombor harakati, ichki jarayon nazorati va Face ID integratsiyasi.","Biznes tahlil, AS-IS / TO-BE modellashtirish, ishlab chiqarish workflowlarini tizimlashtirish va Face ID integratsiyasi bo'yicha texnik koordinatsiya.","Mebel ishlab chiqarish jarayonida ko'rinish va nazorat yaxshilandi, operatsiyalar aniqroq raqamli jarayonga keltirildi."],
-            ["Medicom","Tibbiyot / farmatsevtika / distribyutsiya","1C integratsiyasi, uskunalarni davlat ro'yxatidan o'tkazish workflowi, dokumentatsiya nazorati va ichki hujjat boshqaruv dasturi bilan Odoo ERP loyihasi.","CRM, sotuv, ombor, import, multi-company logika, uskunalarni davlat ro'yxatidan o'tkazish, dokumentatsiya workflowi, ichki hujjat boshqaruvi va 1C integratsiyasi.","ERP/biznes tahlil, custom biznes jarayon dizayni, dokumentatsiya workflow koordinatsiyasi, Odoo joriy etishni qo'llab-quvvatlash va 1C integratsiya rejalashtirish.","Regulyator hujjatlar, operatsion ko'rinish va ERP asosidagi hujjat/jarayon boshqaruvi ustidan nazorat yaxshilandi."],
-            ["Warmix","Muhandislik / HVAC uskunalari","HVAC uskunalari uchun sayt loyihasi, leadlarni Odoo'ga ulash va ichki biznes jarayonlarni avtomatlashtirish.","Sayt, product presentation, lead capture, Odoo CRM/ERP ulanishi, mijoz so'rovlarini yo'naltirish va biznes jarayon avtomatlashtirish.","Sayt/ERP koordinatsiyasi, lead-flow rejalashtirish, Odoo jarayon moslashuvi va biznes avtomatlashtirishni qo'llab-quvvatlash.","Saytdan kelgan leadlar bilan ishlash yaxshilandi va inquiry'dan ichki follow-up jarayonigacha aniq avtomatlashtirilgan yo'l shakllandi."],
-            ["Fayz Oil Imports","Oziq-ovqat yog'i / import / eksport","Fayz Oil Imports uchun korporativ sayt loyihasi.","Sayt strukturasi, mahsulot bo'limlari, brand presentation, SEO, media va product content.","Sayt loyihasini koordinatsiya qilish, kontent strukturalash va digital presence.","Online brand presence va mahsulot taqdimoti yaxshilandi."],
-            ["APVO","O'simlik yog'i ishlab chiqaruvchilar assotsiatsiyasi","Sayt, Odoo event, email notification va ko'p tilli kontent loyihasi.","Event registration, email notificationlar, conference pages va ko'p tilli kontent.","Odoo/sayt koordinatsiyasi, event jarayon sozlash va kontent strukturalash.","Event kommunikatsiyasi va ro'yxatdan o'tish workflowi tartibliroq bo'ldi."],
-            ["Taewoong Travel","Turizm kompaniyasi","Turizm kompaniyasi uchun sayt va biznes avtomatlashtirish yechimlari.","Mijoz so'rovlari, xizmatlar taqdimoti va ichki jarayonlarni soddalashtirish.","Sayt va avtomatlashtirish yechimlarini koordinatsiya qilish.","Mijoz bilan ishlash va digital workflow yaxshilandi."],
-            ["Novikov Cafe Tashkent","Restoran / kafe","Toshkentdagi premium kafe uchun digital presence, menu presentation va customer communicationga fokuslangan sayt loyihasi.","Sayt strukturasi, menu bo'limlari, brand presentation, customer requests va kontent tashkil qilish.","Sayt loyihasini koordinatsiya qilish, kontent strukturalash va digital presence support.","Mijozlar uchun online taqdimot va digital touchpoint aniqroq bo'ldi."],
-            ["FTOS","Logistika","Logistika kompaniyasi uchun sayt yechimi va avtomatlashtirish loyihasi.","Mijoz so'rovlari, logistika operatsiyalari, digital presence va jarayon avtomatlashtirish.","Sayt va biznes avtomatlashtirish koordinatsiyasi.","Online presence va operatsion kommunikatsiya yaxshilandi."]
-          ]
-        },
-        ru: {
-          trust: ["Опыт внедрения ERP / Odoo","Автоматизация бизнес-процессов","Моделирование AS-IS / TO-BE","Координация проектной команды","Проекты в производстве, экспорте и логистике"],
-          meta: ["Ключевые процессы","Роль","Бизнес-ценность","Открыть кейс"],
-          filters: {All:"Все",ERP:"ERP",Manufacturing:"Производство",Website:"Сайт",Logistics:"Логистика"},
-          expertise: [
-            ["Внедрение ERP","Odoo ERP, ERP-логика, настройка процессов, права доступа, workflow, бизнес-требования и адаптация пользователей."],
-            ["Бизнес-анализ","Моделирование процессов AS-IS / TO-BE, сбор требований, интервью со стейкхолдерами, оптимизация процессов и документация."],
-            ["Управление проектами","Планирование задач, координация проекта, коммуникация команды, контроль рисков, управление сроками и сопровождение delivery."],
-            ["Автоматизация бизнес-процессов","Автоматизация продаж, склада, производства, логистики, документооборота, отчетности и custom бизнес-процессов."],
-            ["Сайты и digital presence","Корпоративные сайты, структуры продуктовых каталогов, landing pages, цифровое присутствие бренда и клиентские digital-решения."],
-            ["Интеграции и техническая координация","ERP-интеграции, API-based workflow, задачи интеграции с 1C и коммуникация между бизнесом и техническими командами."]
-          ],
-          process: [
-            ["Business Discovery","Интервью со стейкхолдерами, понимание целей, проблем и текущих процессов."],
-            ["AS-IS анализ","Карта текущих процессов, bottleneck, ручной работы, рисков и дублирующихся действий."],
-            ["TO-BE дизайн","Проектирование улучшенных процессов, логики автоматизации, ERP-flow и зон ответственности."],
-            ["Координация внедрения","Подготовка требований, координация технической команды, контроль задач и delivery."],
-            ["Запуск и улучшение","Поддержка внедрения, сбор feedback, улучшение workflow и помощь пользователям в адаптации."]
-          ],
-          skills: ["ERP и бизнес","Управление проектами","Технические инструменты","AI-инструменты","Языки"],
-          fixed: {
-            current:"Текущий опыт", education:"Образование",
-            role:"ERP & Digital Transformation Project Manager / Business Analyst / ERP Consultant",
-            rakat:"Работал над внедрением ERP, автоматизацией бизнес-процессов, сайтами, AS-IS / TO-BE анализом, координацией проектов, коммуникацией с клиентами и решениями цифровой трансформации для компаний из производства, экспорта, логистики, туризма, консалтинга, дистрибуции и корпоративного сектора.",
-            university:"Университет", universityText:"Чирчикский государственный педагогический университет - История / Всемирная история",
-            odoo:"Курс по ERP с фокусом на логику внедрения Odoo", fullstack:"Курс Full Stack Development для технического понимания", pm:"Курс Google Project Management"
-          },
-          projects: [
-            ["Infinity Copper Group","Переработка меди / экспорт","ERP-адаптация и внедрение для компании по переработке и экспорту меди, включая концепт сайта/dashboard ICG и полную экосистему операционных бизнес-процессов.","Производство, склад, закупки, продажи, движение продукции, операционный контроль, потоки бизнес-процессов и адаптация под ERP-экосистему.","Бизнес-анализ, моделирование AS-IS / TO-BE, адаптация ERP-процессов, координация автоматизации и поддержка внедрения.","Производство, склад, закупки и продажи были структурированы в единую ERP-ready операционную экосистему с более прозрачным контролем бизнеса."],
-            ["Softam","Цифровизация бизнеса","Проект полной цифровизации бизнеса компании.","Внутренние операции, бизнес-workflow, управление процессами и цифровые инструменты.","Координация ERP/digital transformation проекта и анализ бизнес-процессов.","Операции стали более структурированными, прозрачными и управляемыми."],
-            ["Diran","Мебельное производство","Систематизация workflow мебельного производства с интеграцией Face ID для операционного контроля.","Планирование производства, мебельные заказы, операции цеха, движение склада, внутренний контроль процессов и интеграция Face ID.","Бизнес-анализ, моделирование AS-IS / TO-BE, систематизация производственных workflow и техническая координация интеграции Face ID.","Улучшилась видимость и управляемость мебельного производства, операции были переведены в более понятный цифровой процесс."],
-            ["Medicom","Медицина / фармацевтика / дистрибуция","Проект Odoo ERP с интеграцией 1C, workflow государственной регистрации оборудования, контролем документации и внутренним приложением для управления документами.","CRM, продажи, склад, импорт, multi-company логика, государственная регистрация оборудования, workflow документации, внутреннее управление документами и интеграция 1C.","ERP/бизнес-анализ, дизайн custom бизнес-процессов, координация документационного workflow, поддержка внедрения Odoo и планирование интеграции 1C.","Улучшился контроль регуляторной документации, операционная видимость и ERP-based управление документами и процессами."],
-            ["Warmix","Инжиниринг / HVAC оборудование","Сайт для HVAC оборудования с передачей лидов в Odoo и автоматизацией внутренних бизнес-процессов.","Сайт, презентация продуктов, lead capture, подключение к Odoo CRM/ERP, маршрутизация заявок и автоматизация бизнес-процессов.","Координация сайта/ERP, планирование lead-flow, согласование процессов Odoo и поддержка бизнес-автоматизации.","Улучшилась обработка лидов с сайта и появился понятный автоматизированный путь от заявки до внутреннего follow-up."],
-            ["Fayz Oil Imports","Пищевое масло / импорт / экспорт","Корпоративный сайт для Fayz Oil Imports.","Структура сайта, разделы продуктов, презентация бренда, SEO, медиа и product content.","Координация проекта сайта, структурирование контента и digital presence.","Улучшились онлайн-присутствие бренда и презентация продуктов."],
-            ["APVO","Ассоциация производителей растительного масла","Проект сайта, Odoo event, email-уведомлений и многоязычного контента.","Регистрация на event, email-уведомления, страницы конференции и многоязычный контент.","Координация Odoo/сайта, настройка event-процесса и структурирование контента.","Коммуникация по event и регистрационный workflow стали более организованными."],
-            ["Taewoong Travel","Туристическая компания","Сайт и решения бизнес-автоматизации для туристической компании.","Заявки клиентов, презентация услуг и упрощение внутренних процессов.","Координация сайта и решений автоматизации.","Улучшились взаимодействие с клиентами и digital workflow."],
-            ["Novikov Cafe Tashkent","Ресторан / кафе","Сайт для премиального кафе в Ташкенте с фокусом на digital presence, презентацию меню и коммуникацию с клиентами.","Структура сайта, разделы меню, презентация бренда, заявки клиентов и организация контента.","Координация проекта сайта, структурирование контента и поддержка digital presence.","Улучшилась онлайн-презентация и появился более понятный digital touchpoint для клиентов."],
-            ["FTOS","Логистика","Сайт и проект автоматизации для логистической компании.","Заявки клиентов, логистические операции, digital presence и автоматизация процессов.","Координация сайта и бизнес-автоматизации.","Улучшились онлайн-присутствие и операционная коммуникация."]
-          ]
-        }
-      };
-      const staticText = {
-        en: {"nav.about":"About","nav.expertise":"Expertise","nav.projects":"Projects","nav.process":"Process","nav.skills":"Skills","nav.experience":"Experience","nav.contact":"Contact","cta.contact":"Contact Me","cta.cv":"Download CV","cta.projects":"View Projects","cta.telegram":"Telegram","cta.portfolio":"Portfolio PDF","hero.title":"I help companies digitize ERP, operations and business processes.","hero.subtitle":"ERP & Digital Transformation Project Manager | Business Analyst | ERP Consultant with experience in Odoo, business process automation, AS-IS / TO-BE analysis, and project coordination across manufacturing, export, logistics, distribution, travel and consulting projects.","photo.status":"Positioning","sections.about.label":"About Me","sections.about.title":"Business logic first, implementation second.","sections.about.copy":"I specialize in ERP implementation, business analysis and digital transformation. My work is focused on understanding how a company operates, identifying weak points, describing AS-IS and TO-BE processes, and turning business needs into practical digital solutions. I have worked on projects involving sales, warehouse, production, logistics, document workflow, websites and internal business automation.","sections.expertise.label":"Core Expertise","sections.expertise.title":"ERP, analysis, delivery and automation.","sections.expertise.copy":"A practical operating range across business discovery, requirements, project coordination, implementation support and digital presence.","sections.projects.label":"Projects / Case Studies","sections.projects.title":"Selected work across ERP, websites and automation.","sections.projects.copy":"Each case focuses on industry context, business processes, Akbarshoh's role and practical business value without inflated claims.","sections.process.label":"Work Process","sections.process.title":"A clear path from business need to digital workflow.","sections.skills.label":"Skills & Tools","sections.skills.title":"Business, project, technical and AI-assisted work.","sections.experience.label":"Experience","sections.experience.title":"ERP and transformation work with business and technical teams.","sections.contact.label":"Contact","sections.contact.title":"Let's discuss how I can help your company improve ERP, operations and digital workflows.","sections.contact.copy":"Choose the channel that is most convenient for you."},
-        uz: {"nav.about":"Men haqimda","nav.expertise":"Ekspertiza","nav.projects":"Loyihalar","nav.process":"Jarayon","nav.skills":"Ko'nikmalar","nav.experience":"Tajriba","nav.contact":"Aloqa","cta.contact":"Bog'lanish","cta.cv":"CV yuklab olish","cta.projects":"Loyihalarni ko'rish","cta.telegram":"Telegram","cta.portfolio":"Portfolio PDF","hero.title":"Kompaniyalarga ERP, operatsiyalar va biznes jarayonlarini raqamlashtirishda yordam beraman.","hero.subtitle":"ERP va raqamli transformatsiya loyiha menejeri | Biznes analitik | ERP konsultant. Odoo, biznes jarayonlarini avtomatlashtirish, AS-IS / TO-BE tahlili hamda ishlab chiqarish, eksport, logistika, distribyutsiya, turizm va konsalting loyihalarida koordinatsiya tajribasiga egaman.","photo.status":"Yo'nalish","sections.about.label":"Men haqimda","sections.about.title":"Avval biznes mantiq, keyin joriy etish.","sections.about.copy":"Men ERP joriy etish, biznes tahlil va raqamli transformatsiya yo'nalishlariga ixtisoslashganman. Ishim kompaniya qanday ishlashini tushunish, zaif nuqtalarni aniqlash, AS-IS va TO-BE jarayonlarini tasvirlash hamda biznes ehtiyojlarini amaliy raqamli yechimlarga aylantirishga qaratilgan. Savdo, ombor, ishlab chiqarish, logistika, hujjat aylanishi, veb-saytlar va ichki avtomatlashtirish loyihalarida ishlaganman.","sections.expertise.label":"Asosiy ekspertiza","sections.expertise.title":"ERP, tahlil, delivery va avtomatlashtirish.","sections.expertise.copy":"Biznesni o'rganish, talablarni shakllantirish, loyiha koordinatsiyasi, joriy etishni qo'llab-quvvatlash va digital presence bo'yicha amaliy tajriba.","sections.projects.label":"Loyihalar / Case study","sections.projects.title":"ERP, veb-sayt va avtomatlashtirish bo'yicha tanlangan ishlar.","sections.projects.copy":"Har bir case sanoat konteksti, biznes jarayonlar, Akbarshohning roli va real biznes qiymatini oshirib ko'rsatmasdan yoritadi.","sections.process.label":"Ish jarayoni","sections.process.title":"Biznes ehtiyojdan raqamli workflowgacha aniq yo'l.","sections.skills.label":"Ko'nikmalar va vositalar","sections.skills.title":"Biznes, loyiha, texnik va AI yordamidagi ishlar.","sections.experience.label":"Tajriba","sections.experience.title":"Biznes va texnik jamoalar bilan ERP hamda transformatsiya ishlari.","sections.contact.label":"Aloqa","sections.contact.title":"Kompaniyangiz ERP, operatsiyalar va raqamli workflowlarini yaxshilash haqida gaplashamiz.","sections.contact.copy":"Sizga qulay bo'lgan kanal orqali bog'laning."},
-        ru: {"nav.about":"Обо мне","nav.expertise":"Экспертиза","nav.projects":"Проекты","nav.process":"Процесс","nav.skills":"Навыки","nav.experience":"Опыт","nav.contact":"Контакты","cta.contact":"Связаться","cta.cv":"Скачать CV","cta.projects":"Смотреть проекты","cta.telegram":"Telegram","cta.portfolio":"Portfolio PDF","hero.title":"Помогаю компаниям цифровизировать ERP, операционные процессы и бизнес-процессы.","hero.subtitle":"ERP & Digital Transformation Project Manager | Business Analyst | ERP Consultant с опытом работы с Odoo, автоматизацией бизнес-процессов, AS-IS / TO-BE анализом и координацией проектов в производстве, экспорте, логистике, дистрибуции, туризме и консалтинге.","photo.status":"Позиционирование","sections.about.label":"Обо мне","sections.about.title":"Сначала бизнес-логика, затем внедрение.","sections.about.copy":"Я специализируюсь на внедрении ERP, бизнес-анализе и цифровой трансформации. Моя работа начинается с понимания того, как работает компания, поиска слабых мест, описания процессов AS-IS и TO-BE и перевода бизнес-потребностей в практичные цифровые решения. У меня есть опыт проектов в продажах, складе, производстве, логистике, документообороте, сайтах и внутренней автоматизации.","sections.expertise.label":"Ключевая экспертиза","sections.expertise.title":"ERP, анализ, delivery и автоматизация.","sections.expertise.copy":"Практический опыт на стыке бизнес-обследования, требований, координации проекта, поддержки внедрения и цифрового присутствия.","sections.projects.label":"Проекты / Кейсы","sections.projects.title":"Избранные работы в ERP, сайтах и автоматизации.","sections.projects.copy":"Каждый кейс показывает отраслевой контекст, бизнес-процессы, роль Акбаршоха и практическую ценность без преувеличений.","sections.process.label":"Рабочий процесс","sections.process.title":"Понятный путь от бизнес-потребности к цифровому workflow.","sections.skills.label":"Навыки и инструменты","sections.skills.title":"Бизнес, проектная, техническая и AI-assisted работа.","sections.experience.label":"Опыт","sections.experience.title":"ERP и трансформация вместе с бизнесом и техническими командами.","sections.contact.label":"Контакты","sections.contact.title":"Обсудим, как я могу помочь вашей компании улучшить ERP, операции и цифровые workflow.","sections.contact.copy":"Выберите удобный канал для связи."}
-      };
-      function translateVisible(){
-        const lang = document.documentElement.lang || localStorage.getItem("portfolio-language") || "en";
-        const d = i18n[lang] || i18n.en;
-        const s = staticText[lang] || staticText.en;
-        document.querySelectorAll("[data-i18n]").forEach(el=>{ if(s[el.dataset.i18n]) el.textContent = s[el.dataset.i18n]; });
-        document.querySelectorAll("#trustList li").forEach((el,i)=>{ if(d.trust[i]) el.innerHTML = `<span class="dot"></span>${d.trust[i]}`; });
-        document.querySelectorAll(".expertise-card").forEach((el,i)=>{ if(d.expertise[i]){ el.querySelector("h3").textContent=d.expertise[i][0]; el.querySelector("p").textContent=d.expertise[i][1]; }});
-        document.querySelectorAll(".process-step").forEach((el,i)=>{ if(d.process[i]){ el.querySelector("h3").textContent=d.process[i][0]; el.querySelector("p").textContent=d.process[i][1]; }});
-        document.querySelectorAll(".skill-card").forEach((el,i)=>{ if(d.skills[i]) el.querySelector("h3").textContent=d.skills[i]; });
-        document.querySelectorAll(".filter-btn").forEach(btn=>{ btn.textContent = d.filters[btn.dataset.filter] || btn.dataset.filter; });
-        const bySlug = Object.fromEntries(d.projects.map(p=>["project-"+p[0].toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+".html", p]));
-        document.querySelectorAll(".project-card").forEach((card,i)=>{
-          const href = (card.getAttribute("href") || "").split("/").pop();
-          const p = bySlug[href] || d.projects[i]; if(!p) return;
-          card.querySelector(".industry").textContent = p[1];
-          card.querySelector("h3").textContent = p[0];
-          card.querySelector("p").textContent = p[2];
-          const dd = card.querySelectorAll("dd"); const dt = card.querySelectorAll("dt");
-          [p[3],p[4],p[5]].forEach((v,n)=>{ if(dd[n]) dd[n].textContent=v; if(dt[n]) dt[n].textContent=d.meta[n]; });
-          const link = card.querySelector(".project-link"); if(link) link.textContent=d.meta[3];
-        });
-        const t=document.querySelectorAll(".timeline-item");
-        if(t[0]){ t[0].querySelector("time").textContent=d.fixed.current; t[0].querySelector("p").textContent=d.fixed.role; }
-        if(t[1]) t[1].querySelector("time").textContent=d.fixed.education;
-        const exp=document.querySelector(".experience-card p"); if(exp) exp.textContent=d.fixed.rakat;
-        const edu=document.querySelectorAll(".education-card");
-        if(edu[0]){ edu[0].querySelector("h3").textContent=d.fixed.university; edu[0].querySelector("span").textContent=d.fixed.universityText; }
-        if(edu[1]) edu[1].querySelector("span").textContent=d.fixed.odoo;
-        if(edu[2]) edu[2].querySelector("span").textContent=d.fixed.fullstack;
-        if(edu[3]) edu[3].querySelector("span").textContent=d.fixed.pm;
-      }
-      window.addEventListener("load", translateVisible);
-      document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>setTimeout(translateVisible,0)));
-    })();
-  </script>
-<script>
-(function () {
-  function bindMenu(buttonSelector, panelSelector, openClass) {
-    var buttons = Array.prototype.slice.call(document.querySelectorAll(buttonSelector));
-    var panels = Array.prototype.slice.call(document.querySelectorAll(panelSelector));
-    if (!buttons.length || !panels.length) return;
-    buttons.forEach(function (button, index) {
-      var panel = panels[index] || panels[0];
-      if (button.dataset.menuBound === 'true') return;
-      button.dataset.menuBound = 'true';
-      button.addEventListener('click', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        var willOpen = !panel.classList.contains(openClass);
-        panels.forEach(function (item) { item.classList.remove(openClass); });
-        buttons.forEach(function (item) { item.setAttribute('aria-expanded', 'false'); });
-        panel.classList.toggle(openClass, willOpen);
-        button.setAttribute('aria-expanded', String(willOpen));
-        document.body.classList.toggle('nav-open', willOpen);
-      });
-      panel.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          panel.classList.remove(openClass);
-          button.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('nav-open');
-        });
-      });
-    });
-  }
-  function bindAllMenus() {
-    bindMenu('.menu-btn', '.mobile-panel', 'open');
-    bindMenu('.detail-menu', '.detail-mobile', 'is-open');
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bindAllMenus);
-  } else {
-    bindAllMenus();
-  }
-  window.addEventListener('pageshow', bindAllMenus);
-})();
-</script>
-<script id="portfolio-language-controller-v5">
-(function(){
-  var T = {"en":{"nav":["About","Expertise","Projects","Process","Skills","Experience","Contact"],"cta":{"contact":"Contact Me","cv":"Download CV","projects":"View Projects","telegram":"Telegram","portfolio":"Portfolio PDF"},"hero":{"title":"I help companies digitize ERP, operations and business processes.","subtitle":"ERP & Digital Transformation Project Manager | Business Analyst | ERP Consultant with experience in Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online payments, HH integrations, AI tools and business process automation, AS-IS / TO-BE analysis, and project coordination across manufacturing, export, logistics, distribution, travel, and consulting projects.","status":"Positioning"},"sections":{"about":["About Me","Business logic first, implementation second.","I specialize in ERP implementation, business analysis, CRM setup, no-code business apps and digital transformation. My work is focused on understanding how a company operates, identifying weak points, describing AS-IS and TO-BE processes, and turning business needs into practical digital solutions across Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online payments, HH integrations, AI tools, websites and internal automation."],"expertise":["Core Expertise","ERP, CRM, business apps, integrations, analysis and automation.","A practical operating range across business discovery, requirements, project coordination, ERP/CRM setup, no-code app implementation and digital presence."],"projects":["Projects / Case Studies","Selected work across ERP, CRM, business apps, websites and automation.","Each case focuses on industry context, business processes, Akbarshoh's role and practical business value."],"process":["Work Process","A clear path from business need to digital workflow."],"skills":["Skills & Tools","Business, project, CRM, no-code, integrations, technical and AI-assisted work."],"experience":["Experience","ERP, CRM, business apps and transformation work with business and technical teams."],"contact":["Contact","Let's discuss how I can help your company improve ERP, CRM, operations and digital workflows.","Direct contact links for job opportunities, project-based roles and business automation conversations."]},"filters":{"All":"All","ERP":"ERP","Website":"Website","Manufacturing":"Manufacturing","Automation":"Automation","Logistics":"Logistics"},"projectCta":"Open case study","expertise":[["ERP Implementation & Configuration","Odoo and business-system configuration aligned with real workflows: module setup, automation logic, access rights, data migration support and user adoption."],["Business Process Analysis (AS-IS / TO-BE)","Current-state analysis and future-state process design across documentation, approvals, sales, warehouse, production and management workflows."],["Automation & Integration","Internal process automation using Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online payments, HH integrations and AI tools, with CRM/ERP handoffs and operational visibility."],["Digital Presence & SEO","Corporate websites, multilingual content structure, Google Workspace setup and SEO-ready digital presence for business teams."]],"process":[["Discovery","Study the client business, goals and current AS-IS processes through stakeholder conversations."],["Analysis","Identify bottlenecks, manual work, responsibility gaps and design the TO-BE process model."],["Implementation","Coordinate ERP, CRM, website or automation setup and support testing before launch."],["Training & Handover","Prepare documentation, explain the workflow and help the team adopt the new process."],["Support","Collect feedback, improve workflows and support ongoing optimization after launch."]],"skills":{"ERP & Business Systems":["Odoo","AppSheet","Glide","Bitrix24","amoCRM","1C","Didox","E-IMZO","Online payments","HH integrations"],"Project Management":["Agile / Scrum basics","Jira / Trello","Task planning","Stakeholder coordination"],"Web & Digital":["Technical SEO","Google Workspace admin","HTML / CSS basics","Multilingual content"],"AI Tools":["ChatGPT","Claude.ai","Google AI Studio","Codex","Claude Code","AI-assisted analysis"],"Languages":["Uzbek: native","Russian: professional","English: professional"]},"projects":{"Infinity Copper Group":["Copper processing / export","Production, warehouse, purchasing and sales processes were adapted into one ERP-ready operating ecosystem."],"Softam":["Business digitalization","Internal operations and workflows were structured into clearer digital management flows."],"Diran":["Furniture manufacturing","Furniture production processes were systematized and Face ID integration was added for operational control."],"Medicom":["Medical / distribution","Equipment state registration, documentation management, a custom Odoo internal app and 1C integration were covered."],"Warmix":["Engineering / HVAC equipment","A website was built, leads were connected to Odoo and business processes were automated."],"Fayz Oil Imports":["Food oil / import / export","Corporate website, product presentation, multilingual content and SEO-ready digital presence."],"APVO":["Association / vegetable oil producers","Website, Odoo event, email notification and multilingual content project."],"Taewoong Travel":["Travel company","Website and automation support for customer requests and service presentation."],"Novikov Cafe Tashkent":["Restaurant / cafe","Website case for menu structure, brand presentation and customer communication."],"FTOS":["Logistics","Logistics request flow, service presentation and operational communication were clarified through a digital solution."]}},"uz":{"nav":["Men haqimda","Ekspertiza","Loyihalar","Jarayon","Ko'nikmalar","Tajriba","Aloqa"],"cta":{"contact":"Bog'lanish","cv":"CV yuklab olish","projects":"Loyihalarni ko'rish","telegram":"Telegram","portfolio":"Portfolio PDF"},"hero":{"title":"Kompaniyalarga ERP, operatsiyalar va biznes jarayonlarini raqamlashtirishda yordam beraman.","subtitle":"ERP va raqamli transformatsiya loyiha menejeri, biznes analitik va ERP konsultant. Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online tolovlar, HH integratsiyalari va AI tools bilan biznes jarayonlarini avtomatlashtirish tajribasi.","status":"Pozitsiya"},"sections":{"about":["Men haqimda","Avval biznes mantiqi, keyin implementatsiya.","Men ERP joriy etish, biznes analiz, CRM sozlash, no-code biznes ilovalar va raqamli transformatsiya yo'nalishida ishlayman. Kompaniya jarayonlarini tushunish, zaif nuqtalarni aniqlash, AS-IS va TO-BE jarayonlarni tasvirlash hamda biznes ehtiyojlarini amaliy raqamli yechimlarga aylantirishga e'tibor beraman."],"expertise":["Asosiy ekspertiza","ERP, CRM, biznes ilovalar, integratsiyalar, analiz va avtomatlashtirish.","Business discovery, talablar, loyiha koordinatsiyasi, ERP/CRM sozlash, no-code ilovalar va digital presence bo'yicha amaliy tajriba."],"projects":["Loyihalar / Case studies","ERP, CRM, biznes ilovalar, saytlar va avtomatlashtirish bo'yicha tanlangan ishlar.","Har bir case sanoat konteksti, biznes jarayonlar, Akbarshohning roli va amaliy biznes qiymatini ko'rsatadi."],"process":["Ish jarayoni","Biznes ehtiyojidan raqamli jarayongacha aniq yo'l."],"skills":["Ko'nikmalar va vositalar","Biznes, loyiha, CRM, no-code, integratsiyalar, texnik va AI yordamidagi ishlar."],"experience":["Tajriba","Biznes va texnik jamoalar bilan ERP, CRM, biznes ilovalar va transformatsiya ishlari."],"contact":["Aloqa","Kompaniyangiz ERP, CRM, operatsiyalar va digital workflowlarini yaxshilashi haqida gaplashamiz.","Ish imkoniyatlari, loyiha asosidagi rollar va biznes avtomatlashtirish bo'yicha to'g'ridan-to'g'ri kontaktlar."]},"filters":{"All":"Barchasi","ERP":"ERP","Website":"Sayt","Manufacturing":"Ishlab chiqarish","Automation":"Avtomatlashtirish","Logistics":"Logistika"},"projectCta":"Case study ochish","expertise":[["ERP implementatsiya va konfiguratsiya","Odoo va biznes tizimlarini real jarayonlarga moslash: modul sozlash, avtomatlashtirish mantiqi, access rights, data migration support va user adoption."],["Biznes jarayonlar analizi (AS-IS / TO-BE)","Hujjat aylanishi, approval, sotuv, ombor, ishlab chiqarish va boshqaruv jarayonlari bo'yicha mavjud holatni tahlil qilish va TO-BE yechim loyihalash."],["Avtomatlashtirish va integratsiya","Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, online tolovlar, HH integratsiyalari va AI tools orqali ichki jarayonlarni avtomatlashtirish."],["Digital presence va SEO","Korporativ saytlar, ko'p tilli kontent tuzilmasi, Google Workspace va SEO-ready digital presence."]],"process":[["Discovery","Mijoz biznesi, maqsadlari va mavjud AS-IS jarayonlarini stakeholder suhbatlari orqali o'rganish."],["Analysis","Bottleneck, qo'l mehnati, mas'uliyat bo'shliqlari va TO-BE process modelini aniqlash."],["Implementation","ERP, CRM, sayt yoki avtomatlashtirish sozlamalarini koordinatsiya qilish va launch oldidan testni qo'llab-quvvatlash."],["Training & Handover","Dokumentatsiya tayyorlash, workflow tushuntirish va jamoani yangi jarayonga moslashtirish."],["Support","Feedback yig'ish, workflowlarni yaxshilash va launchdan keyingi optimallashtirish."]],"skills":{"ERP & Business Systems":["Odoo","AppSheet","Glide","Bitrix24","amoCRM","1C","Didox","E-IMZO","Online payments","HH integrations"],"Project Management":["Agile / Scrum basics","Jira / Trello","Task planning","Stakeholder coordination"],"Web & Digital":["Technical SEO","Google Workspace admin","HTML / CSS basics","Multilingual content"],"AI Tools":["ChatGPT","Claude.ai","Google AI Studio","Codex","Claude Code","AI-assisted analysis"],"Languages":["Uzbek: native","Russian: professional","English: professional"]},"projects":{"Infinity Copper Group":["Copper processing / export","Production, warehouse, purchasing and sales processes were adapted into one ERP-ready operating ecosystem."],"Softam":["Business digitalization","Internal operations and workflows were structured into clearer digital management flows."],"Diran":["Furniture manufacturing","Furniture production processes were systematized and Face ID integration was added for operational control."],"Medicom":["Medical / distribution","Equipment state registration, documentation management, a custom Odoo internal app and 1C integration were covered."],"Warmix":["Engineering / HVAC equipment","A website was built, leads were connected to Odoo and business processes were automated."],"Fayz Oil Imports":["Food oil / import / export","Corporate website, product presentation, multilingual content and SEO-ready digital presence."],"APVO":["Association / vegetable oil producers","Website, Odoo event, email notification and multilingual content project."],"Taewoong Travel":["Travel company","Website and automation support for customer requests and service presentation."],"Novikov Cafe Tashkent":["Restaurant / cafe","Website case for menu structure, brand presentation and customer communication."],"FTOS":["Logistics","Logistics request flow, service presentation and operational communication were clarified through a digital solution."]}},"ru":{"nav":["\u041e\u0431\u043e \u043c\u043d\u0435","\u042d\u043a\u0441\u043f\u0435\u0440\u0442\u0438\u0437\u0430","\u041f\u0440\u043e\u0435\u043a\u0442\u044b","\u041f\u0440\u043e\u0446\u0435\u0441\u0441","\u041d\u0430\u0432\u044b\u043a\u0438","\u041e\u043f\u044b\u0442","\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b"],"cta":{"contact":"\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f","cv":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c CV","projects":"\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043f\u0440\u043e\u0435\u043a\u0442\u044b","telegram":"Telegram","portfolio":"Portfolio PDF"},"hero":{"title":"\u041f\u043e\u043c\u043e\u0433\u0430\u044e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f\u043c \u043e\u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0432\u0430\u0442\u044c ERP, \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0438 \u0438 \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u043e\u0446\u0435\u0441\u0441\u044b.","subtitle":"\u041c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432 ERP \u0438 \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0439 \u0442\u0440\u0430\u043d\u0441\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438, \u0431\u0438\u0437\u043d\u0435\u0441-\u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a \u0438 ERP-\u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u043d\u0442 \u0441 \u043e\u043f\u044b\u0442\u043e\u043c Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, \u043e\u043d\u043b\u0430\u0439\u043d-\u043f\u043b\u0430\u0442\u0435\u0436\u0435\u0439, HH-\u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0439, AI tools \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432.","status":"\u041f\u043e\u0437\u0438\u0446\u0438\u043e\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435"},"sections":{"about":["\u041e\u0431\u043e \u043c\u043d\u0435","\u0421\u043d\u0430\u0447\u0430\u043b\u0430 \u0431\u0438\u0437\u043d\u0435\u0441-\u043b\u043e\u0433\u0438\u043a\u0430, \u0437\u0430\u0442\u0435\u043c \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u0435.","\u042f \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0437\u0438\u0440\u0443\u044e\u0441\u044c \u043d\u0430 \u0432\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u0438 ERP, \u0431\u0438\u0437\u043d\u0435\u0441-\u0430\u043d\u0430\u043b\u0438\u0437\u0435, \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435 CRM, no-code \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0445 \u0438 \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0439 \u0442\u0440\u0430\u043d\u0441\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438. \u041c\u043e\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u0441\u0444\u043e\u043a\u0443\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0430 \u043d\u0430 \u043f\u043e\u043d\u0438\u043c\u0430\u043d\u0438\u0438 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438, \u0432\u044b\u044f\u0432\u043b\u0435\u043d\u0438\u0438 \u0441\u043b\u0430\u0431\u044b\u0445 \u043c\u0435\u0441\u0442, \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0438 AS-IS \u0438 TO-BE \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0438 \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0435\u043d\u0438\u0438 \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u043e\u0442\u0440\u0435\u0431\u043d\u043e\u0441\u0442\u0435\u0439 \u0432 \u043f\u0440\u0430\u043a\u0442\u0438\u0447\u043d\u044b\u0435 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f."],"expertise":["\u041a\u043b\u044e\u0447\u0435\u0432\u0430\u044f \u044d\u043a\u0441\u043f\u0435\u0440\u0442\u0438\u0437\u0430","ERP, CRM, \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f, \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438, \u0430\u043d\u0430\u043b\u0438\u0437 \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f.","\u041f\u0440\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043e\u043f\u044b\u0442 \u0432 business discovery, \u0442\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044f\u0445, \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0446\u0438\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432, \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0435 ERP/CRM, no-code \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0445 \u0438 digital presence."],"projects":["\u041f\u0440\u043e\u0435\u043a\u0442\u044b / \u041a\u0435\u0439\u0441\u044b","\u0418\u0437\u0431\u0440\u0430\u043d\u043d\u044b\u0435 \u0440\u0430\u0431\u043e\u0442\u044b \u0432 ERP, CRM, \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u0445, \u0441\u0430\u0439\u0442\u0430\u0445 \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438.","\u041a\u0430\u0436\u0434\u044b\u0439 \u043a\u0435\u0439\u0441 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u043e\u0442\u0440\u0430\u0441\u043b\u0435\u0432\u043e\u0439 \u043a\u043e\u043d\u0442\u0435\u043a\u0441\u0442, \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u043e\u0446\u0435\u0441\u0441\u044b, \u0440\u043e\u043b\u044c \u0410\u043a\u0431\u0430\u0440\u0448\u043e\u0445\u0430 \u0438 \u043f\u0440\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u0431\u0438\u0437\u043d\u0435\u0441-\u0446\u0435\u043d\u043d\u043e\u0441\u0442\u044c."],"process":["\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u043f\u0440\u043e\u0446\u0435\u0441\u0441","\u041f\u043e\u043d\u044f\u0442\u043d\u044b\u0439 \u043f\u0443\u0442\u044c \u043e\u0442 \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u043e\u0442\u0440\u0435\u0431\u043d\u043e\u0441\u0442\u0438 \u043a \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u043c\u0443 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u0443."],"skills":["\u041d\u0430\u0432\u044b\u043a\u0438 \u0438 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b","\u0411\u0438\u0437\u043d\u0435\u0441, \u043f\u0440\u043e\u0435\u043a\u0442\u044b, CRM, no-code, \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438, \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u0438 AI-assisted \u0440\u0430\u0431\u043e\u0442\u0430."],"experience":["\u041e\u043f\u044b\u0442","ERP, CRM, \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0438 \u0442\u0440\u0430\u043d\u0441\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u0432\u043c\u0435\u0441\u0442\u0435 \u0441 \u0431\u0438\u0437\u043d\u0435\u0441- \u0438 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u043a\u043e\u043c\u0430\u043d\u0434\u0430\u043c\u0438."],"contact":["\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b","\u041e\u0431\u0441\u0443\u0434\u0438\u043c, \u043a\u0430\u043a \u044f \u043c\u043e\u0433\u0443 \u043f\u043e\u043c\u043e\u0447\u044c \u0432\u0430\u0448\u0435\u0439 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u0443\u043b\u0443\u0447\u0448\u0438\u0442\u044c ERP, CRM, \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0438 \u0438 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0435 workflow.","\u041f\u0440\u044f\u043c\u044b\u0435 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b \u0434\u043b\u044f \u0432\u0430\u043a\u0430\u043d\u0441\u0438\u0439, \u043f\u0440\u043e\u0435\u043a\u0442\u043d\u044b\u0445 \u0440\u043e\u043b\u0435\u0439 \u0438 \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u0439 \u043f\u043e \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 \u0431\u0438\u0437\u043d\u0435\u0441\u0430."]},"filters":{"All":"\u0412\u0441\u0435","ERP":"ERP","Website":"\u0421\u0430\u0439\u0442","Manufacturing":"\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u043e","Automation":"\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f","Logistics":"\u041b\u043e\u0433\u0438\u0441\u0442\u0438\u043a\u0430"},"projectCta":"\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u043a\u0435\u0439\u0441","expertise":[["\u0412\u043d\u0435\u0434\u0440\u0435\u043d\u0438\u0435 \u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 ERP","\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 Odoo \u0438 \u0431\u0438\u0437\u043d\u0435\u0441-\u0441\u0438\u0441\u0442\u0435\u043c \u043f\u043e\u0434 \u0440\u0435\u0430\u043b\u044c\u043d\u044b\u0435 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u044b: \u043c\u043e\u0434\u0443\u043b\u0438, \u043b\u043e\u0433\u0438\u043a\u0430 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438, \u043f\u0440\u0430\u0432\u0430 \u0434\u043e\u0441\u0442\u0443\u043f\u0430, \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u043c\u0438\u0433\u0440\u0430\u0446\u0438\u0438 \u0434\u0430\u043d\u043d\u044b\u0445 \u0438 \u0430\u0434\u0430\u043f\u0442\u0430\u0446\u0438\u044f \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0435\u0439."],["\u0410\u043d\u0430\u043b\u0438\u0437 \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 (AS-IS / TO-BE)","\u0410\u043d\u0430\u043b\u0438\u0437 \u0442\u0435\u043a\u0443\u0449\u0438\u0445 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0431\u0443\u0434\u0443\u0449\u0435\u0433\u043e \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f \u0434\u043b\u044f \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u043e\u0431\u043e\u0440\u043e\u0442\u0430, \u0441\u043e\u0433\u043b\u0430\u0441\u043e\u0432\u0430\u043d\u0438\u0439, \u043f\u0440\u043e\u0434\u0430\u0436, \u0441\u043a\u043b\u0430\u0434\u0430, \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u0430 \u0438 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f."],["\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f \u0438 \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438","\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044f \u0432\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0438\u0445 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0447\u0435\u0440\u0435\u0437 Odoo, AppSheet, Glide, Bitrix24, amoCRM, 1C, Didox, E-IMZO, \u043e\u043d\u043b\u0430\u0439\u043d-\u043f\u043b\u0430\u0442\u0435\u0436\u0438, HH-\u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438 \u0438 AI tools."],["Digital presence \u0438 SEO","\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0435 \u0441\u0430\u0439\u0442\u044b, \u043c\u043d\u043e\u0433\u043e\u044f\u0437\u044b\u0447\u043d\u0430\u044f \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430 \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u0430, Google Workspace \u0438 SEO-ready digital presence."]],"process":[["Discovery","\u0418\u0437\u0443\u0447\u0435\u043d\u0438\u0435 \u0431\u0438\u0437\u043d\u0435\u0441\u0430 \u043a\u043b\u0438\u0435\u043d\u0442\u0430, \u0446\u0435\u043b\u0435\u0439 \u0438 \u0442\u0435\u043a\u0443\u0449\u0438\u0445 AS-IS \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0447\u0435\u0440\u0435\u0437 \u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0441\u043e stakeholders."],["Analysis","\u0412\u044b\u044f\u0432\u043b\u0435\u043d\u0438\u0435 bottleneck, \u0440\u0443\u0447\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b, \u043f\u0440\u043e\u0431\u0435\u043b\u043e\u0432 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 TO-BE \u043c\u043e\u0434\u0435\u043b\u0438."],["Implementation","\u041a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0446\u0438\u044f \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 ERP, CRM, \u0441\u0430\u0439\u0442\u0430 \u0438\u043b\u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043f\u0435\u0440\u0435\u0434 \u0437\u0430\u043f\u0443\u0441\u043a\u043e\u043c."],["Training & Handover","\u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u0438, \u043e\u0431\u044a\u044f\u0441\u043d\u0435\u043d\u0438\u0435 workflow \u0438 \u043f\u043e\u043c\u043e\u0449\u044c \u043a\u043e\u043c\u0430\u043d\u0434\u0435 \u0432 \u0430\u0434\u0430\u043f\u0442\u0430\u0446\u0438\u0438."],["Support","\u0421\u0431\u043e\u0440 feedback, \u0443\u043b\u0443\u0447\u0448\u0435\u043d\u0438\u0435 workflow \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u043e\u043f\u0442\u0438\u043c\u0438\u0437\u0430\u0446\u0438\u0438 \u043f\u043e\u0441\u043b\u0435 \u0437\u0430\u043f\u0443\u0441\u043a\u0430."]],"skills":{"ERP & Business Systems":["Odoo","AppSheet","Glide","Bitrix24","amoCRM","1C","Didox","E-IMZO","Online payments","HH integrations"],"Project Management":["Agile / Scrum basics","Jira / Trello","Task planning","Stakeholder coordination"],"Web & Digital":["Technical SEO","Google Workspace admin","HTML / CSS basics","Multilingual content"],"AI Tools":["ChatGPT","Claude.ai","Google AI Studio","Codex","Claude Code","AI-assisted analysis"],"Languages":["\u0423\u0437\u0431\u0435\u043a\u0441\u043a\u0438\u0439: \u0440\u043e\u0434\u043d\u043e\u0439","\u0420\u0443\u0441\u0441\u043a\u0438\u0439: \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0439","\u0410\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439: \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0439"]},"projects":{"Infinity Copper Group":["\u041f\u0435\u0440\u0435\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u043c\u0435\u0434\u0438 / \u044d\u043a\u0441\u043f\u043e\u0440\u0442","\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u043e, \u0441\u043a\u043b\u0430\u0434, \u0437\u0430\u043a\u0443\u043f\u043a\u0438 \u0438 \u043f\u0440\u043e\u0434\u0430\u0436\u0438 \u0431\u044b\u043b\u0438 \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u044b \u0432 \u0435\u0434\u0438\u043d\u0443\u044e ERP-ready \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u0443\u044e \u044d\u043a\u043e\u0441\u0438\u0441\u0442\u0435\u043c\u0443."],"Softam":["\u0426\u0438\u0444\u0440\u043e\u0432\u0438\u0437\u0430\u0446\u0438\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430","\u0412\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0438\u0435 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0438 \u0438 workflow \u0431\u044b\u043b\u0438 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u044b \u0432 \u0431\u043e\u043b\u0435\u0435 \u043f\u043e\u043d\u044f\u0442\u043d\u044b\u0435 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0447\u0435\u0441\u043a\u0438\u0435 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u044b."],"Diran":["\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043c\u0435\u0431\u0435\u043b\u0438","\u041f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u043f\u0440\u043e\u0446\u0435\u0441\u0441 \u0431\u044b\u043b \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d, \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0430 \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f Face ID \u0434\u043b\u044f \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0433\u043e \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044f."],"Medicom":["\u041c\u0435\u0434\u0438\u0446\u0438\u043d\u0430 / \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0446\u0438\u044f","\u041f\u0440\u043e\u0446\u0435\u0441\u0441 \u0433\u043e\u0441\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438 \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u044f, \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430\u0446\u0438\u0435\u0439, \u0432\u043d\u0443\u0442\u0440\u0435\u043d\u043d\u0435\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 Odoo \u0438 \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f \u0441 1C."],"Warmix":["\u0418\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u043e\u0435 / HVAC \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u0435","\u0421\u043e\u0437\u0434\u0430\u043d \u0441\u0430\u0439\u0442, \u043b\u0438\u0434\u044b \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u044b \u043a Odoo, \u0431\u0438\u0437\u043d\u0435\u0441-\u043f\u0440\u043e\u0446\u0435\u0441\u0441\u044b \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u044b."],"Fayz Oil Imports":["\u041f\u0438\u0449\u0435\u0432\u043e\u0435 \u043c\u0430\u0441\u043b\u043e / \u0438\u043c\u043f\u043e\u0440\u0442 / \u044d\u043a\u0441\u043f\u043e\u0440\u0442","\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0441\u0430\u0439\u0442, \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u043e\u0432, \u043c\u043d\u043e\u0433\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0439 \u043a\u043e\u043d\u0442\u0435\u043d\u0442 \u0438 SEO-ready digital presence."],"APVO":["\u0410\u0441\u0441\u043e\u0446\u0438\u0430\u0446\u0438\u044f / \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u0438 \u0440\u0430\u0441\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u043c\u0430\u0441\u043b\u0430","\u0421\u0430\u0439\u0442, Odoo event, email notifications \u0438 \u043c\u043d\u043e\u0433\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0439 \u043a\u043e\u043d\u0442\u0435\u043d\u0442."],"Taewoong Travel":["\u0422\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f","\u0421\u0430\u0439\u0442 \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 \u0434\u043b\u044f \u043a\u043b\u0438\u0435\u043d\u0442\u0441\u043a\u0438\u0445 \u0437\u0430\u043f\u0440\u043e\u0441\u043e\u0432 \u0438 \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u0438 \u0443\u0441\u043b\u0443\u0433."],"Novikov Cafe Tashkent":["\u0420\u0435\u0441\u0442\u043e\u0440\u0430\u043d / \u043a\u0430\u0444\u0435","Website case \u0434\u043b\u044f \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b \u043c\u0435\u043d\u044e, \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u0438 \u0431\u0440\u0435\u043d\u0434\u0430 \u0438 \u043a\u043e\u043c\u043c\u0443\u043d\u0438\u043a\u0430\u0446\u0438\u0438 \u0441 \u043a\u043b\u0438\u0435\u043d\u0442\u0430\u043c\u0438."],"FTOS":["\u041b\u043e\u0433\u0438\u0441\u0442\u0438\u043a\u0430","\u041f\u043e\u0442\u043e\u043a \u043b\u043e\u0433\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0437\u0430\u044f\u0432\u043e\u043a, \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u044f \u0443\u0441\u043b\u0443\u0433 \u0438 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u043a\u043e\u043c\u043c\u0443\u043d\u0438\u043a\u0430\u0446\u0438\u044f \u0431\u044b\u043b\u0438 \u0443\u0442\u043e\u0447\u043d\u0435\u043d\u044b \u0447\u0435\u0440\u0435\u0437 \u0446\u0438\u0444\u0440\u043e\u0432\u043e\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u0435."]}}};
-  var KEY = {'nav.about':['nav',0],'nav.expertise':['nav',1],'nav.projects':['nav',2],'nav.process':['nav',3],'nav.skills':['nav',4],'nav.experience':['nav',5],'nav.contact':['nav',6],'cta.contact':['cta','contact'],'cta.cv':['cta','cv'],'cta.projects':['cta','projects'],'cta.telegram':['cta','telegram'],'cta.portfolio':['cta','portfolio'],'hero.title':['hero','title'],'hero.subtitle':['hero','subtitle'],'photo.status':['hero','status'],'sections.about.label':['sections','about',0],'sections.about.title':['sections','about',1],'sections.about.copy':['sections','about',2],'sections.expertise.label':['sections','expertise',0],'sections.expertise.title':['sections','expertise',1],'sections.expertise.copy':['sections','expertise',2],'sections.projects.label':['sections','projects',0],'sections.projects.title':['sections','projects',1],'sections.projects.copy':['sections','projects',2],'sections.process.label':['sections','process',0],'sections.process.title':['sections','process',1],'sections.skills.label':['sections','skills',0],'sections.skills.title':['sections','skills',1],'sections.experience.label':['sections','experience',0],'sections.experience.title':['sections','experience',1],'sections.contact.label':['sections','contact',0],'sections.contact.title':['sections','contact',1],'sections.contact.copy':['sections','contact',2]};
-  function get(o,p){return p.reduce(function(v,k){return v&&v[k];},o);}
-  function slug(name){return 'project-'+name.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.html';}
-  function imgMarkup(img){if(!img)return '';var src=Array.isArray(img)?img[0]:img;return '<div class="project-preview"><img class="project-image" src="'+src+'" alt="Project preview" loading="lazy"></div>';}
-  function apply(lang){var d=T[lang]||T.en;document.documentElement.lang=lang;try{localStorage.setItem('portfolio-language',lang);}catch(_){}
-    document.querySelectorAll('[data-lang]').forEach(function(b){b.classList.toggle('active',b.dataset.lang===lang);});
-    document.querySelectorAll('[data-i18n]').forEach(function(el){var v=get(d,KEY[el.dataset.i18n]||[]);if(v)el.textContent=v;});
-    document.querySelectorAll('#projectFilters .filter-btn').forEach(function(btn){var key=btn.dataset.filter||btn.textContent.trim();if(d.filters[key])btn.textContent=d.filters[key];});
-    var eg=document.getElementById('expertiseGrid'); if(eg){eg.innerHTML=d.expertise.map(function(x){return '<article class="expertise-card reveal visible"><h3>'+x[0]+'</h3><p>'+x[1]+'</p></article>';}).join('');}
-    var pg=document.getElementById('processGrid'); if(pg){pg.innerHTML=d.process.map(function(x){return '<article class="process-step reveal visible"><h3>'+x[0]+'</h3><p>'+x[1]+'</p></article>';}).join('');}
-    var sg=document.getElementById('skillsGrid'); if(sg){sg.innerHTML=Object.keys(d.skills).map(function(k){return '<article class="skill-card reveal visible"><h3>'+k+'</h3><div class="chips">'+d.skills[k].map(function(s){return '<span class="chip">'+s+'</span>';}).join('')+'</div></article>';}).join('');}
-    var active=document.querySelector('#projectFilters .filter-btn.active'); var filter=active?(active.dataset.filter||'All'):'All'; var grid=document.getElementById('projectGrid');
-    if(grid && window.projects){var selected=filter==='All'?window.projects:window.projects.filter(function(p){return p[6]===filter;});grid.innerHTML=selected.map(function(p){var tr=d.projects[p[0]]||[p[1],p[2]];return '<a class="project-card reveal visible" href="'+slug(p[0])+'" aria-label="'+d.projectCta+': '+p[0]+'">'+imgMarkup(p[7])+'<span>'+tr[0]+'</span><h3>'+p[0]+'</h3><p>'+tr[1]+'</p><span class="project-link">'+d.projectCta+'</span></a>';}).join('');}
-    if(typeof observeReveals==='function'){observeReveals();}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});}
-  }
-  window.setPortfolioLanguage=apply;
-  document.addEventListener('click',function(e){if(!e.target.closest('#projectFilters .filter-btn'))return;setTimeout(function(){var lang='en';try{lang=localStorage.getItem('portfolio-language')||document.documentElement.lang||'en';}catch(_){lang=document.documentElement.lang||'en';}apply(lang);},0);},true);
-  document.addEventListener('click',function(e){var b=e.target.closest('[data-lang]');if(!b)return;e.preventDefault();apply(b.dataset.lang||'en');},true);
-  var start=document.documentElement.lang||'en';try{start=localStorage.getItem('portfolio-language')||start;}catch(_){}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){apply(start);});else apply(start);
-})();
-</script>
-</body>
+    <button class="back-to-top" data-back-to-top aria-label="Back to top">↑</button>
+    <script src="../portfolio-complete.js"></script>
+  </body>
 </html>
-
-
-
-
-
