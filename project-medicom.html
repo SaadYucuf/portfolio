@@ -39,6 +39,233 @@
   .lightbox{padding:14px}
   .lightbox img{max-width:94vw;max-height:82vh;border-radius:16px}
 }
+
+
+/* Portfolio footer component */
+:root {
+  --pf-bg: #f8fafc;
+  --pf-card: #ffffff;
+  --pf-text: #0b0f19;
+  --pf-muted: #5b6472;
+  --pf-border: #e5e7eb;
+  --pf-border-strong: #d6dde8;
+  --pf-blue: #2563eb;
+  --pf-blue-dark: #1d4ed8;
+  --pf-soft: #eff6ff;
+}
+.site-footer {
+  margin-top: clamp(56px, 8vw, 112px);
+  padding: clamp(22px, 4vw, 54px);
+  background: radial-gradient(circle at 8% 10%, rgba(37, 99, 235, 0.055), transparent 30%), var(--pf-bg);
+  color: var(--pf-text);
+}
+.pf-shell {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 58px);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--pf-border);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+}
+.pf-main {
+  display: grid;
+  grid-template-columns: minmax(250px, 1.45fr) minmax(140px, 0.85fr) minmax(240px, 1.05fr) minmax(230px, 1fr);
+  gap: clamp(26px, 4vw, 54px);
+  align-items: start;
+}
+.pf-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: inherit;
+  text-decoration: none;
+}
+.pf-avatar {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px var(--pf-border), 0 10px 24px rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+.pf-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.pf-lockup strong {
+  display: block;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+.pf-lockup small {
+  display: block;
+  margin-top: 7px;
+  color: var(--pf-muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.pf-intro {
+  max-width: 520px;
+  margin: 24px 0 0;
+  color: var(--pf-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.pf-eyebrow {
+  margin: 0 0 16px;
+  color: var(--pf-muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.pf-nav,
+.pf-connect {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.pf-nav a {
+  display: flex;
+  width: max-content;
+  min-width: 118px;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--pf-text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.3;
+  transition: color 160ms ease, transform 160ms ease;
+}
+.pf-nav a span {
+  color: var(--pf-blue);
+}
+.pf-nav a:hover,
+.pf-nav a:focus-visible {
+  color: var(--pf-blue);
+  transform: translateX(2px);
+}
+.pf-contact-row {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+.pf-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--pf-blue);
+  background: var(--pf-soft);
+  border: 1px solid #dbeafe;
+  transition: transform 160ms ease, background 160ms ease;
+}
+.pf-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.pf-contact-row strong {
+  display: block;
+  color: var(--pf-text);
+  font-size: 14px;
+  font-weight: 800;
+}
+.pf-contact-row small {
+  display: block;
+  margin-top: 3px;
+  color: var(--pf-muted);
+  font-size: 13px;
+  line-height: 1.3;
+  word-break: break-word;
+}
+.pf-contact-row:hover .pf-icon,
+.pf-contact-row:focus-visible .pf-icon {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+.pf-cta h3,
+.pf-cta p { margin: 0; }
+.pf-cta h3 {
+  color: var(--pf-text);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.pf-cta p:not(.pf-eyebrow) {
+  margin-top: 9px;
+  color: var(--pf-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.pf-button {
+  margin-top: 22px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 18px;
+  border-radius: 12px;
+  background: var(--pf-blue);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 16px 28px rgba(37, 99, 235, 0.2);
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+.pf-button:hover,
+.pf-button:focus-visible {
+  background: var(--pf-blue-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 20px 34px rgba(37, 99, 235, 0.24);
+}
+.pf-bottom {
+  margin-top: clamp(34px, 5vw, 58px);
+  padding-top: 22px;
+  border-top: 1px solid var(--pf-border-strong);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  color: var(--pf-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.pf-bottom p { margin: 0; }
+@media (max-width: 1040px) {
+  .pf-main { grid-template-columns: 1fr 1fr; }
+  .pf-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 680px) {
+  .site-footer { padding: 16px; margin-top: 56px; }
+  .pf-shell { padding: 24px 18px 20px; border-radius: 20px; }
+  .pf-main { grid-template-columns: 1fr; gap: 28px; }
+  .pf-lockup { align-items: flex-start; }
+  .pf-avatar { width: 42px; height: 42px; flex-basis: 42px; }
+  .pf-nav a { width: 100%; }
+  .pf-contact-row { width: 100%; }
+  .pf-button { width: 100%; }
+  .pf-bottom { align-items: flex-start; flex-direction: column; }
+}
+
 </style>
 <style id="mobile-menu-fix">
 .mobile-panel,
@@ -89,20 +316,57 @@ html,body{max-width:100%;overflow-x:hidden}.topbar{z-index:100}.nav{height:72px!
 <section class="narrative"><h2>Case study context</h2><p>The project required more than standard ERP configuration. Medicom needed an Odoo-based workflow for managing equipment state-registration processes and the related documentation lifecycle, plus integration with 1C for connected accounting and operational data flows.</p><ul class="list"><li>Added a custom business process for managing additional equipment registration with state authorities.</li><li>Built a separate internal Odoo application for managing large documentation flows inside the company.</li><li>Connected Odoo with 1C integration logic so ERP operations and existing accounting workflows could work together.</li></ul></section>
 </main>
 <div class="lightbox" id="lightbox" aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt="" /></div>
-<footer class="footer">
-  <div class="wrap footer-grid">
-    <div>
-      <strong>Toshpolatov Akbarshoh</strong>
-      <span>ERP & Digital Transformation Project Manager</span>
+<footer class="site-footer" id="footer-contact">
+  <div class="pf-shell">
+    <div class="pf-main">
+      <div class="pf-brand">
+        <a class="pf-lockup" href="index.html" aria-label="Akbarshoh Toshpolatov home">
+          <span class="pf-avatar" aria-hidden="true"><img src="akbarshoh-toshpolatov-portrait.jpg" alt=""></span>
+          <span>
+            <strong>Akbarshoh Toshpolatov</strong>
+            <small>ERP & Digital Transformation Project Manager</small>
+          </span>
+        </a>
+        <p class="pf-intro">Helping companies digitize ERP, operations, CRM workflows, integrations and internal business processes.</p>
+      </div>
+
+      <nav class="pf-nav" aria-label="Footer navigation">
+        <p class="pf-eyebrow">Navigation</p>
+        <a href="index.html#about">About <span aria-hidden="true">?</span></a>
+        <a href="index.html#expertise">Expertise <span aria-hidden="true">?</span></a>
+        <a href="index.html#projects">Projects <span aria-hidden="true">?</span></a>
+        <a href="index.html#process">Process <span aria-hidden="true">?</span></a>
+        <a href="index.html#skills">Skills <span aria-hidden="true">?</span></a>
+        <a href="index.html#contact">Contact <span aria-hidden="true">?</span></a>
+      </nav>
+
+      <div class="pf-connect" aria-label="Contact links">
+        <p class="pf-eyebrow">Connect</p>
+        <a class="pf-contact-row" href="mailto:akbarshohdev@gmail.com">
+          <span class="pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></span>
+          <span><strong>Email</strong><small>akbarshohdev@gmail.com</small></span>
+        </a>
+        <a class="pf-contact-row" href="https://t.me/akbarshoh_dev" target="_blank" rel="noreferrer">
+          <span class="pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 4 3.5 11.2c-.7.3-.7 1.3.1 1.5l4.4 1.3 1.6 5.1c.2.7 1.1.8 1.5.2l2.5-3.3 4.6 3.4c.6.4 1.4.1 1.5-.7L22 5.1c.1-.8-.4-1.3-1-1.1Z"/><path d="M8 14 21.5 4.5"/></svg></span>
+          <span><strong>Telegram</strong><small>@akbarshoh_dev</small></span>
+        </a>
+        <a class="pf-contact-row" href="https://uz.linkedin.com/in/akbarshoh-toshpo-latov-3b1685274" target="_blank" rel="noreferrer">
+          <span class="pf-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 10v8"/><path d="M6.5 6.5v.1"/><path d="M11 18v-8"/><path d="M11 13.8c0-2 1.1-3.8 3.4-3.8s3.1 1.6 3.1 4V18"/></svg></span>
+          <span><strong>LinkedIn</strong><small>linkedin.com/in/akbarshoh</small></span>
+        </a>
+      </div>
+
+      <div class="pf-cta">
+        <p class="pf-eyebrow">Let?s work together</p>
+        <h3>Have an ERP or automation project in mind?</h3>
+        <p>Let?s discuss how I can help improve your company?s operations and digital workflows.</p>
+        <a class="pf-button" href="mailto:akbarshohdev@gmail.com">Let?s Talk <span aria-hidden="true">?</span></a>
+      </div>
     </div>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="mailto:akbarshohdev@gmail.com">Email</a>
-      <a href="https://t.me/akbarshoh_dev">Telegram</a>
-      <a href="https://github.com/SaadYucuf">GitHub</a>
-      <a href="https://uz.linkedin.com/in/akbarshoh-toshpo-latov-3b1685274">LinkedIn</a>
-    </nav>
+    <div class="pf-bottom">
+      <p>? <span id="year"></span> Akbarshoh Toshpolatov. All rights reserved.</p>
+      <p>Built for ERP, business analysis and digital transformation work.</p>
+    </div>
   </div>
 </footer>
 <script>
