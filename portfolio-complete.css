@@ -417,6 +417,20 @@ body::after {
   gap: 18px;
   margin-top: 34px;
 }
+
+.hero-project-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 58px;
+  color: var(--blue-dark);
+  font-weight: 800;
+  border-bottom: 2px solid rgba(37, 99, 255, 0.24);
+}
+.hero-project-link:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
 .hero-skills { margin-top: 42px; }
 .hero-skills strong {
   display: block;
