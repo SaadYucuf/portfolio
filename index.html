@@ -1070,6 +1070,43 @@
       #projects .project-card p { margin-inline: 20px; min-height: unset; }
       #projects .project-link { margin: auto 20px 22px; }
     }
+    /* Experience section component */
+    .exp-section { position: relative; overflow: hidden; padding: clamp(72px, 8vw, 126px) 0; background: radial-gradient(circle at 4% 0%, rgba(37,99,235,.07), transparent 28%), radial-gradient(circle at 96% 92%, rgba(37,99,235,.08), transparent 30%), linear-gradient(180deg, #fff 0%, #f8fbff 100%); }
+    .exp-section::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(37,99,235,.20) 1px, transparent 1px); background-size: 22px 22px; mask-image: linear-gradient(90deg, transparent 0%, #000 18%, transparent 58%); opacity: .22; }
+    .exp-shell { position: relative; z-index: 1; }
+    .exp-grid { display: grid; grid-template-columns: minmax(300px, .82fr) minmax(520px, 1.18fr); gap: clamp(42px, 6vw, 86px); align-items: center; }
+    .exp-pill { display: inline-flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 18px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.82); color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 14px 34px rgba(37,99,235,.07); }
+    .exp-pill svg { width: 18px; height: 18px; }
+    .exp-title { margin: 28px 0 0; max-width: 660px; font-size: clamp(36px, 4.8vw, 68px); line-height: 1; letter-spacing: -.03em; font-weight: 800; color: var(--text); }
+    .exp-title span { color: var(--accent); }
+    .exp-timeline { position: relative; margin-top: clamp(36px, 5vw, 58px); padding-left: 54px; display: grid; gap: 34px; }
+    .exp-timeline::before { content: ""; position: absolute; left: 17px; top: 16px; bottom: 16px; width: 1px; background: linear-gradient(180deg, rgba(37,99,235,.42), rgba(37,99,235,.06)); }
+    .exp-time-item { position: relative; }
+    .exp-dot { position: absolute; left: -51px; top: 2px; width: 28px; height: 28px; border-radius: 50%; background: #eaf2ff; border: 7px solid #f8fbff; box-shadow: inset 0 0 0 2px rgba(37,99,235,.22), 0 12px 28px rgba(37,99,235,.12); }
+    .exp-time-item.is-active .exp-dot { background: var(--accent); box-shadow: inset 0 0 0 5px #dcebff, 0 12px 30px rgba(37,99,235,.22); }
+    .exp-kicker { margin: 0 0 9px; color: var(--accent); font-size: 12px; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+    .exp-time-item h3 { margin: 0; font-size: clamp(20px, 2vw, 27px); line-height: 1.2; letter-spacing: -.02em; font-weight: 760; color: var(--text); }
+    .exp-time-item p:last-child { max-width: 520px; margin: 12px 0 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+    .exp-role-card { position: relative; overflow: hidden; padding: clamp(32px, 4vw, 56px); border-radius: 30px; color: #eef6ff; background: radial-gradient(circle at 88% 12%, rgba(96,165,250,.22), transparent 34%), linear-gradient(135deg, #071021 0%, #0d1d33 100%); box-shadow: 0 34px 90px rgba(5,13,28,.22); }
+    .exp-role-card::before { content: ""; position: absolute; inset: 1px; border-radius: 29px; border: 1px solid rgba(255,255,255,.09); pointer-events: none; }
+    .exp-company { display: flex; align-items: center; gap: 20px; }
+    .exp-company-icon { width: 58px; height: 58px; border-radius: 18px; display: grid; place-items: center; color: #cfe0ff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); flex: none; }
+    .exp-company-icon svg { width: 30px; height: 30px; }
+    .exp-company small { display: block; margin-bottom: 6px; color: #72a8ff; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .exp-company h3 { margin: 0; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.08; letter-spacing: -.03em; color: #fff; }
+    .exp-summary { margin: 30px 0 0; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,.12); color: rgba(238,246,255,.84); font-size: clamp(16px, 1.25vw, 20px); line-height: 1.72; }
+    .exp-list { display: grid; gap: 18px; margin: 30px 0 0; padding: 0; list-style: none; }
+    .exp-list li { position: relative; padding-left: 48px; color: rgba(255,255,255,.9); font-size: 16px; line-height: 1.58; }
+    .exp-list li::before { content: "✓"; position: absolute; left: 0; top: -1px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; color: #fff; font-weight: 850; background: linear-gradient(135deg, var(--accent), #60a5fa); box-shadow: 0 10px 24px rgba(37,99,235,.28); }
+    .exp-education { margin-top: clamp(42px, 5vw, 68px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .exp-edu-card { min-height: 205px; padding: 26px; border: 1px solid var(--border); border-radius: 22px; background: rgba(255,255,255,.9); box-shadow: 0 18px 45px rgba(15,35,60,.07); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+    .exp-edu-card:hover { transform: translateY(-4px); border-color: rgba(37,99,235,.26); box-shadow: 0 24px 60px rgba(37,99,235,.10); }
+    .exp-course-icon { width: 54px; height: 54px; margin-bottom: 22px; border-radius: 16px; display: grid; place-items: center; color: var(--accent); background: var(--blue-soft); border: 1px solid rgba(37,99,235,.09); font-size: 17px; font-weight: 900; letter-spacing: -.03em; }
+    .exp-edu-card .exp-line { display: block; width: 40px; height: 2px; margin-bottom: 18px; background: var(--accent); border-radius: 999px; }
+    .exp-edu-card h3 { margin: 0; font-size: clamp(19px, 1.35vw, 24px); line-height: 1.18; letter-spacing: -.02em; color: var(--text); }
+    .exp-edu-card p { margin: 14px 0 0; color: var(--muted); font-size: 15px; line-height: 1.58; }
+    @media (max-width: 1180px) { .exp-grid { grid-template-columns: 1fr; gap: 40px; } .exp-title { max-width: 840px; } .exp-timeline { grid-template-columns: repeat(2, minmax(0,1fr)); padding-left: 0; gap: 24px; } .exp-timeline::before { display: none; } .exp-dot { position: static; display: block; margin-bottom: 13px; } .exp-education { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 760px) { .exp-section { padding: 58px 0 66px; } .exp-pill { min-height: 40px; padding-inline: 15px; font-size: 11px; } .exp-title { margin-top: 24px; font-size: clamp(34px, 10vw, 48px); } .exp-timeline { margin-top: 32px; grid-template-columns: 1fr; gap: 26px; } .exp-role-card { padding: 26px 20px; border-radius: 22px; } .exp-company { align-items: flex-start; gap: 14px; } .exp-company-icon { width: 50px; height: 50px; border-radius: 15px; } .exp-company h3 { font-size: 26px; } .exp-summary { margin-top: 22px; padding-bottom: 22px; font-size: 15px; } .exp-list { gap: 16px; margin-top: 22px; } .exp-list li { padding-left: 40px; font-size: 15px; } .exp-list li::before { width: 26px; height: 26px; } .exp-education { grid-template-columns: 1fr; gap: 14px; } .exp-edu-card { min-height: unset; padding: 22px; } }
 
   </style>
 <style id="mobile-menu-fix">
@@ -1096,6 +1133,7 @@
     touch-action: manipulation;
   }
 }
+
 </style>
   <link rel="icon" type="image/png" href="favicon.png?v=photo" />
   <link rel="alternate" hreflang="uz" href="https://akbarshohdev.netlify.app/uz/" />
@@ -1327,41 +1365,28 @@
       </div>
     </section>
 
-    <section id="experience" class="soft-band">
-      <div class="container experience-layout">
-        <div>
-          <p class="section-label" data-i18n="sections.experience.label">Experience</p>
-          <h2 data-i18n="sections.experience.title">ERP and transformation work with business and technical teams.</h2>
-          <div class="timeline" style="margin-top:34px">
-            <div class="timeline-item reveal">
-              <time>Current</time>
-              <h3>Rakat Systems</h3>
-              <p>ERP & Digital Transformation Project Manager / Business Analyst / ERP Consultant</p>
-            </div>
-            <div class="timeline-item reveal">
-              <time>Education</time>
-              <h3>Chirchik State Pedagogical University</h3>
-              <p>History / World History</p>
+    <section id="experience" class="exp-section">
+      <div class="container exp-shell">
+        <div class="exp-grid">
+          <div class="exp-intro reveal">
+            <div class="exp-pill"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 7V5.6C9 4.72 9.72 4 10.6 4h2.8c.88 0 1.6.72 1.6 1.6V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5.5 8h13A2.5 2.5 0 0 1 21 10.5v6A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-6A2.5 2.5 0 0 1 5.5 8Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 13h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span data-i18n="sections.experience.label">Experience</span></div>
+            <h2 class="exp-title" data-i18n="sections.experience.title">ERP, CRM, business apps and transformation work with business and technical teams.</h2>
+            <div class="exp-timeline" aria-label="Experience timeline">
+              <article class="exp-time-item is-active"><span class="exp-dot" aria-hidden="true"></span><div><p class="exp-kicker">Current role</p><h3>Rakat Systems</h3><p>ERP & Digital Transformation Project Manager / Business Analyst / ERP Consultant</p></div></article>
+              <article class="exp-time-item"><span class="exp-dot" aria-hidden="true"></span><div><p class="exp-kicker">Professional education</p><h3>Odoo ERP, Full Stack and Google PM</h3><p>Applied courses supporting implementation logic, technical coordination and delivery discipline.</p></div></article>
             </div>
           </div>
+          <article class="exp-role-card reveal" aria-label="Rakat Systems experience details">
+            <div class="exp-company"><div class="exp-company-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M6 20V8.5A1.5 1.5 0 0 1 7.5 7h3A1.5 1.5 0 0 1 12 8.5V20" stroke="currentColor" stroke-width="1.8"/><path d="M12 20V5.5A1.5 1.5 0 0 1 13.5 4h3A1.5 1.5 0 0 1 18 5.5V20" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h2M8 14h2M14 8h2M14 11h2M14 14h2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><small>Current role</small><h3>Rakat Systems</h3></div></div>
+            <p class="exp-summary">Worked on ERP implementation, CRM and business app setup, process automation, website projects, AS-IS / TO-BE analysis, project coordination, client communication and digital transformation solutions for companies in manufacturing, export, logistics, travel, consulting, distribution and corporate sectors.</p>
+            <ul class="exp-list"><li>Coordinated project teams of around 10 people across business and technical workstreams.</li><li>Worked with business owners, managers, users and technical teams to clarify real operational needs.</li><li>Prepared requirements, process notes, project documentation and implementation follow-up.</li><li>Helped automate sales, warehouse, production, logistics, document workflow and integration processes.</li></ul>
+          </article>
         </div>
-        <article class="experience-card reveal">
-          <h3>Rakat Systems</h3>
-          <p>Worked on ERP implementation, business process automation, website projects, AS-IS / TO-BE analysis, project coordination, client communication, and digital transformation solutions for companies in manufacturing, export, logistics, travel, consulting, distribution and corporate sectors.</p>
-          <ul>
-            <li>Coordinated project teams of around 10 people.</li>
-            <li>Worked with business owners, managers, users and technical teams.</li>
-            <li>Prepared requirements and project documentation.</li>
-            <li>Helped automate sales, warehouse, production, logistics and document workflow processes.</li>
-          </ul>
-        </article>
-      </div>
-      <div class="container">
-        <div class="education-grid">
-          <article class="education-card reveal"><h3>Odoo ERP course</h3><span>ERP implementation logic and Odoo process configuration</span></article>
-          <article class="education-card reveal"><h3>Full Stack Development course</h3><span>Technical foundation for implementation coordination</span></article>
-          <article class="education-card reveal"><h3>Google Project Management course</h3><span>Project planning, delivery and stakeholder coordination</span></article>
-          <article class="education-card reveal"><h3>Formal education</h3><span>Chirchik State Pedagogical University - History / World History</span></article>
+        <div class="exp-education reveal" aria-label="Courses and education">
+          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">Odoo</div><span class="exp-line"></span><h3>Odoo ERP course</h3><p>ERP implementation logic, process configuration and business workflow understanding.</p></article>
+          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">&lt;/&gt;</div><span class="exp-line"></span><h3>Full Stack Development course</h3><p>Technical foundation for communicating with developers and coordinating implementation work.</p></article>
+          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">PM</div><span class="exp-line"></span><h3>Google Project Management course</h3><p>Project planning, stakeholder communication, delivery tracking and risk control.</p></article>
+          <article class="exp-edu-card"><div class="exp-course-icon" aria-hidden="true">EDU</div><span class="exp-line"></span><h3>Formal education</h3><p>Chirchik State Pedagogical University - History / World History.</p></article>
         </div>
       </div>
     </section>
