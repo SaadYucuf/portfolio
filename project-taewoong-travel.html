@@ -266,6 +266,257 @@
   .pf-bottom { align-items: flex-start; flex-direction: column; }
 }
 
+
+
+/* Navbar component applied from portfolio-navbar-section */
+:root {
+  --nav-card: rgba(255,255,255,.88);
+  --nav-text: var(--fg, #0b0f19);
+  --nav-muted: var(--muted, #5b6472);
+  --nav-border: var(--border, #e5e7eb);
+  --nav-blue: var(--accent, #2563eb);
+  --nav-soft-blue: var(--blue-soft, #eff6ff);
+  --nav-shadow: 0 22px 60px rgba(15,23,42,.07);
+}
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  padding: 14px 0 !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.78)) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border-bottom: 1px solid rgba(229,231,235,.72) !important;
+}
+.site-header .nav-shell {
+  width: min(1180px, calc(100% - 40px)) !important;
+  min-height: 74px !important;
+  margin: 0 auto !important;
+  padding: 10px 14px 10px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  background: var(--nav-card) !important;
+  border: 1px solid var(--nav-border) !important;
+  border-radius: 24px !important;
+  box-shadow: var(--nav-shadow) !important;
+}
+.site-header .brand,
+.site-header .brand-lockup {
+  min-width: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  color: var(--nav-text) !important;
+  text-decoration: none !important;
+  flex: 0 1 auto !important;
+}
+.site-header .brand-mark,
+.site-header .brand-avatar {
+  width: 46px !important;
+  height: 46px !important;
+  flex: 0 0 46px !important;
+  border-radius: 999px !important;
+  object-fit: cover !important;
+  display: block !important;
+  background: #fff !important;
+  border: 1px solid rgba(37,99,235,.16) !important;
+  box-shadow: 0 10px 24px rgba(15,23,42,.10) !important;
+}
+.site-header .brand-text strong,
+.site-header .brand span {
+  display: block !important;
+  color: var(--nav-text) !important;
+  font: 780 16px/1.1 var(--font-display, Manrope, Inter, system-ui, sans-serif) !important;
+  letter-spacing: -.025em !important;
+  white-space: nowrap !important;
+}
+.site-header .brand-text small {
+  display: block !important;
+  margin-top: 4px !important;
+  color: var(--nav-muted) !important;
+  font: 600 12px/1.25 var(--font-body, Inter, system-ui, sans-serif) !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+}
+.site-header .desktop-nav,
+.site-header .detail-actions,
+.site-header .nav-actions {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+.site-header .nav-links,
+.site-header .detail-links {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+.site-header .nav-links a,
+.site-header .detail-links a {
+  min-height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 11px !important;
+  border-radius: 999px !important;
+  color: #263042 !important;
+  font: 700 13px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
+  letter-spacing: -.01em !important;
+  text-decoration: none !important;
+  border: 0 !important;
+  transition: background .18s ease, color .18s ease, transform .18s ease !important;
+}
+.site-header .nav-links a:hover,
+.site-header .detail-links a:hover,
+.site-header .nav-links a.is-active,
+.site-header .detail-links a.is-active {
+  color: var(--nav-blue) !important;
+  background: var(--nav-soft-blue) !important;
+}
+.site-header .lang-switcher,
+.site-header .detail-lang {
+  height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  padding: 3px !important;
+  border: 1px solid var(--nav-border) !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+}
+.site-header .lang-switcher button,
+.site-header .detail-lang button {
+  min-width: 34px !important;
+  height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--nav-muted) !important;
+  font: 760 11px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
+  letter-spacing: .06em !important;
+  cursor: pointer !important;
+}
+.site-header .lang-switcher button.active,
+.site-header .detail-lang button.active {
+  background: var(--nav-text) !important;
+  color: #fff !important;
+}
+.site-header .nav-cta,
+.site-header .detail-contact {
+  min-height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  background: var(--nav-blue) !important;
+  border: 1px solid rgba(37,99,235,.7) !important;
+  color: #fff !important;
+  font: 760 13px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
+  text-decoration: none !important;
+  box-shadow: 0 14px 26px rgba(37,99,235,.18) !important;
+}
+.site-header .menu-btn,
+.site-header .detail-menu {
+  display: none !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  flex: 0 0 42px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid var(--nav-border) !important;
+  border-radius: 14px !important;
+  background: #fff !important;
+  color: var(--nav-text) !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+}
+.site-header .menu-btn svg { width: 20px !important; height: 20px !important; }
+.site-header .detail-menu { flex-direction: column !important; gap: 4px !important; }
+.site-header .detail-menu span,
+.site-header .detail-menu:before,
+.site-header .detail-menu:after {
+  content: "" !important;
+  display: block !important;
+  width: 18px !important;
+  height: 2px !important;
+  background: currentColor !important;
+  border-radius: 99px !important;
+}
+.site-header .mobile-panel,
+.site-header .detail-mobile {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+@media (max-width: 1120px) {
+  .site-header { padding: 10px 0 !important; }
+  .site-header .nav-shell { width: min(100% - 28px, 1180px) !important; min-height: 64px !important; border-radius: 20px !important; }
+  .site-header .desktop-nav,
+  .site-header .nav-links,
+  .site-header .detail-links { display: none !important; }
+  .site-header .menu-btn,
+  .site-header .detail-menu { display: inline-flex !important; }
+  .site-header .mobile-panel.open,
+  .site-header .detail-mobile.is-open {
+    position: fixed !important;
+    inset: 84px 14px auto 14px !important;
+    z-index: 1001 !important;
+    display: grid !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    gap: 8px !important;
+    padding: 14px !important;
+    border: 1px solid var(--nav-border) !important;
+    border-radius: 22px !important;
+    background: rgba(255,255,255,.98) !important;
+    box-shadow: 0 24px 60px rgba(15,23,42,.14) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+  }
+  .site-header .mobile-panel a,
+  .site-header .detail-mobile a {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 12px !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+    color: var(--nav-text) !important;
+    font: 740 14px/1 var(--font-body, Inter, system-ui, sans-serif) !important;
+    text-decoration: none !important;
+  }
+  .site-header .mobile-panel a:hover,
+  .site-header .detail-mobile a:hover { background: var(--nav-soft-blue) !important; color: var(--nav-blue) !important; }
+}
+@media (max-width: 640px) {
+  .site-header .nav-shell { width: min(100% - 20px, 1180px) !important; padding: 9px 10px !important; gap: 8px !important; }
+  .site-header .brand-mark,
+  .site-header .brand-avatar { width: 38px !important; height: 38px !important; flex-basis: 38px !important; }
+  .site-header .brand-text strong,
+  .site-header .brand span { max-width: 162px !important; overflow: hidden !important; text-overflow: ellipsis !important; }
+  .site-header .brand-text small { max-width: 162px !important; overflow: hidden !important; text-overflow: ellipsis !important; font-size: 11px !important; }
+  .site-header .nav-cta,
+  .site-header .detail-contact { display: none !important; }
+  .site-header .lang-switcher,
+  .site-header .detail-lang { height: 38px !important; padding: 2px !important; }
+  .site-header .lang-switcher button,
+  .site-header .detail-lang button { min-width: 30px !important; height: 30px !important; font-size: 10px !important; }
+  .site-header .menu-btn,
+  .site-header .detail-menu { width: 38px !important; height: 38px !important; min-height: 38px !important; flex-basis: 38px !important; }
+  .site-header .mobile-panel.open,
+  .site-header .detail-mobile.is-open { inset: 74px 10px auto 10px !important; }
+}
+
 </style>
 <style id="mobile-menu-fix">
 .mobile-panel,
@@ -309,7 +560,41 @@ html,body{max-width:100%;overflow-x:hidden}.topbar{z-index:100}.nav{height:72px!
 </style>
 </head>
 <body>
-<header class="topbar"><nav class="wrap nav" aria-label="Project navigation"><a class="brand" href="index.html"><img src="akbarshoh-toshpolatov-portrait.jpg" alt="" aria-hidden="true"><span>Akbarshoh Toshpolatov</span></a><div class="detail-links"><a href="index.html#about">About</a><a href="index.html#expertise">Expertise</a><a href="index.html#projects">Projects</a><a href="index.html#process">Process</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></div><div class="detail-actions"><div class="detail-lang" aria-label="Language switcher"><button type="button" class="active" data-project-lang="en">EN</button><button type="button" data-project-lang="uz">UZ</button><button type="button" data-project-lang="ru">RU</button></div><a class="detail-contact" href="mailto:akbarshohdev@gmail.com">Contact Me</a><button class="detail-menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span></button></div></nav><div class="detail-mobile" aria-label="Mobile project menu"><a href="index.html#about">About</a><a href="index.html#expertise">Expertise</a><a href="index.html#projects">Projects</a><a href="index.html#process">Process</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></div></header>
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Project navigation">
+    <a class="brand" href="index.html" aria-label="Akbarshoh Toshpolatov home">
+      <img class="brand-mark" src="akbarshoh-toshpolatov-portrait.jpg" alt="" aria-hidden="true">
+      <span class="brand-text"><strong>Akbarshoh Toshpolatov</strong><small>ERP &amp; Digital Transformation Consultant</small></span>
+    </a>
+    <div class="nav-links detail-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#expertise">Expertise</a>
+      <a href="index.html#projects" class="is-active">Projects</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="detail-actions">
+      <div class="detail-lang" aria-label="Language switcher">
+        <button type="button" class="active" data-project-lang="en">EN</button>
+        <button type="button" data-project-lang="uz">UZ</button>
+        <button type="button" data-project-lang="ru">RU</button>
+      </div>
+      <a class="detail-contact" href="mailto:akbarshohdev@gmail.com">Contact Me</a>
+      <button class="detail-menu" type="button" aria-label="Open menu" aria-controls="project-mobile-menu" aria-expanded="false"><span></span></button>
+    </div>
+  </nav>
+  <div class="detail-mobile" id="project-mobile-menu" aria-label="Mobile project menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#expertise">Expertise</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</header>
 <main class="wrap">
 <section class="hero"><div><p class="eyebrow">Travel company / Website</p><h1>Taewoong Travel</h1><p class="lead">Website and business automation solutions for a travel company.</p><div class="actions"><a class="btn primary" href="index.html#contact">Discuss a similar project</a><a class="btn" href="index.html#projects">View all projects</a></div></div><div class="visual placeholder"><span>Website case study</span></div></section>
 <section class="grid" aria-label="Project details"><article class="panel"><h2>Key processes</h2><p>Customer requests, service presentation and internal process simplification.</p></article><article class="panel"><h2>Role</h2><p>Website and automation solution coordination.</p></article><article class="panel"><h2>Business value</h2><p>Improved client interaction and digital workflow.</p></article></section>
