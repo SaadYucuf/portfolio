@@ -1368,3 +1368,72 @@ body::after {
   .portrait-card { max-height: 440px; }
   .footer-card { padding: 22px; }
 }
+
+
+/* Ship-ready polish pass */
+:root { color-scheme: light; }
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 255, 0.45);
+  outline-offset: 4px;
+}
+.btn:focus-visible,
+.nav-cta:focus-visible,
+.filter-btn:focus-visible,
+.mobile-toggle:focus-visible,
+.project-card:focus-visible,
+.footer-connect a:focus-visible,
+.footer-nav a:focus-visible {
+  box-shadow: 0 0 0 4px rgba(37, 99, 255, 0.16), 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+.about-cards span,
+.expertise-card span,
+.process-card span,
+.skill-panel > span,
+.course-card span {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 850;
+  line-height: 1;
+}
+.project-card__image img {
+  background: #fff;
+}
+.project-card:focus-visible {
+  transform: translateY(-6px);
+  border-color: rgba(37, 99, 255, 0.36);
+}
+.mobile-panel {
+  max-height: min(72vh, 560px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+@media (max-width: 760px) {
+  .site-header { padding: 10px 0; }
+  .hero { padding-top: 14px; }
+  .hero-grid { align-items: start; }
+  .portrait-card {
+    max-height: 430px;
+    overflow: hidden;
+  }
+  .portrait-card img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    object-position: center top;
+  }
+  .hero-stats { margin-top: 18px; }
+  .section-bg { padding: 64px 0; }
+  .project-card__body { padding: 18px 18px 22px; }
+  .project-card h3 { font-size: 22px; }
+  .project-card p { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
