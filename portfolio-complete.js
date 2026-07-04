@@ -313,7 +313,7 @@ function applyLanguage() {
   $('.pill') && ($('.pill').lastChild.textContent = t.heroPill);
   $('.hero-copy h1') && ($('.hero-copy h1').innerHTML = t.heroTitle);
   $('.hero-desc p') && ($('.hero-desc p').textContent = t.heroDesc);
-  setTexts('.hero-actions .btn, .hero-project-link', [t.contact, t.viewProjects, t.downloadCv, t.viewProjects]);
+  setTexts('.hero-actions .btn, .hero-project-link', [t.contact, t.downloadCv, t.viewProjects]);
   $('.hero-skills strong') && ($('.hero-skills strong').textContent = t.best);
   setTexts('.hero-skills span', t.heroSkills);
   $$('.hero-stats article').forEach((card, index) => {
