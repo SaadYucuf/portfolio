@@ -1315,6 +1315,7 @@ body::after {
     order: -1;
     width: min(100%, 360px);
     margin: 0 auto;
+    overflow: visible;
   }
   .pill { font-size: 13px; padding: 10px 14px; }
   .hero h1, .section-head h2, .about-head h2, .process-head h2, .experience-left h2 {
@@ -1328,10 +1329,11 @@ body::after {
   .hero-skills span { width: 100%; }
   .portrait-card {
     min-height: 0;
-    max-height: min(62vh, 500px);
+    max-height: min(58vh, 460px);
     aspect-ratio: 475 / 660;
     border-radius: 24px;
     background: #fff;
+    overflow: hidden;
   }
   .portrait-bg,
   .floating-badges,
@@ -1342,6 +1344,7 @@ body::after {
     object-fit: contain;
     object-position: center;
     mix-blend-mode: normal;
+    max-height: 100%;
   }
   .hero-stats { grid-template-columns: 1fr; }
   .hero-stats article, .hero-stats article:nth-child(3) { border-left: none; }
