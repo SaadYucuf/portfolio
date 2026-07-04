@@ -506,6 +506,18 @@ body::after {
   color: var(--blue);
   background: rgba(37,99,255,.08);
 }
+
+.floating-badges .odoo-badge b {
+  background: #fff;
+  border: 1px solid rgba(219,229,243,.95);
+  padding: 6px;
+}
+.odoo-badge-logo {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
 .position-card {
   position: absolute;
   z-index: 4;
