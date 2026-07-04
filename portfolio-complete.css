@@ -1441,6 +1441,270 @@ body::after {
   .project-card h3 { font-size: 22px; }
   .project-card p { font-size: 15px; }
 }
+
+/* Compact desktop scale pass */
+@media (min-width: 901px) {
+  .container {
+    width: min(1320px, calc(100% - 56px));
+  }
+  .section-bg {
+    padding: 74px 0;
+  }
+  .section-head {
+    gap: 56px;
+    margin-bottom: 34px;
+  }
+  .section-head h2,
+  .about-head h2,
+  .process-head h2,
+  .experience-left h2 {
+    font-size: clamp(34px, 4.2vw, 62px);
+    line-height: 1;
+  }
+  .section-head > p,
+  .process-head > p,
+  .about-text,
+  .hero-desc p {
+    font-size: 17px;
+    line-height: 1.58;
+  }
+  .site-header {
+    padding: 12px 0;
+  }
+  .nav-shell {
+    min-height: 74px;
+    padding: 12px 16px 12px 24px;
+    border-radius: 22px;
+    gap: 24px;
+  }
+  .brand-copy strong { font-size: 19px; }
+  .brand-copy span { font-size: 14px; }
+  .desktop-nav {
+    gap: 24px;
+    font-size: 15px;
+  }
+  .language-switch,
+  .nav-cta,
+  .btn {
+    min-height: 50px;
+    border-radius: 14px;
+  }
+  .nav-cta { padding: 0 22px; }
+  .hero {
+    padding-top: 40px;
+  }
+  .hero-grid {
+    gap: 42px;
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, .86fr);
+  }
+  .hero h1 {
+    margin: 20px 0 22px;
+    font-size: clamp(44px, 4.55vw, 74px);
+    max-width: 760px;
+  }
+  .hero-desc i {
+    min-height: 104px;
+  }
+  .hero-actions {
+    gap: 14px;
+    margin-top: 26px;
+  }
+  .hero-skills {
+    margin-top: 30px;
+  }
+  .hero-skills strong {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .hero-skills span {
+    padding: 10px 13px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+  .portrait-card {
+    min-height: 590px;
+    border-radius: 30px;
+  }
+  .floating-badges {
+    top: 78px;
+    gap: 14px;
+  }
+  .floating-badges span {
+    min-width: 190px;
+    padding: 13px 15px;
+    border-radius: 18px;
+    font-size: 14px;
+  }
+  .floating-badges b {
+    width: 40px;
+    height: 40px;
+  }
+  .position-card {
+    left: 26px;
+    right: 26px;
+    bottom: 24px;
+    padding: 20px 22px;
+    border-radius: 22px;
+  }
+  .position-card strong { font-size: 22px; }
+  .position-card span { font-size: 15px; }
+  .hero-stats {
+    margin-top: 34px;
+    border-radius: 26px;
+  }
+  .hero-stats article {
+    padding: 22px 26px;
+    gap: 14px;
+  }
+  .hero-stats span {
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+  }
+  .hero-stats strong { font-size: 26px; }
+  .hero-stats p { font-size: 15px; }
+  .about-head,
+  .experience-layout,
+  .case-hero {
+    gap: 54px;
+  }
+  .approach-card,
+  .experience-card,
+  .footer-card {
+    padding: 36px;
+  }
+  .approach-title span {
+    width: 56px;
+    height: 56px;
+    font-size: 42px;
+  }
+  .approach-title strong { font-size: 22px; }
+  .approach-card li {
+    padding: 14px 0 14px 40px;
+    font-size: 16px;
+  }
+  .about-body {
+    margin-top: 34px;
+    gap: 28px;
+  }
+  .about-cards article,
+  .course-card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+  .about-cards article {
+    min-height: 140px;
+    grid-template-columns: 68px 1fr;
+  }
+  .about-cards span,
+  .expertise-card span,
+  .skill-panel > span,
+  .course-card span {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+  }
+  .about-cards strong { font-size: 21px; }
+  .about-cards p { font-size: 15px; }
+  .expertise-grid,
+  .skills-grid,
+  .project-grid {
+    gap: 18px;
+  }
+  .expertise-card,
+  .skill-panel {
+    padding: 26px;
+    border-radius: 20px;
+  }
+  .expertise-card {
+    min-height: 220px;
+  }
+  .expertise-card h3,
+  .project-card h3 {
+    font-size: 21px;
+  }
+  .expertise-card p {
+    font-size: 16px;
+    line-height: 1.52;
+  }
+  .project-card {
+    border-radius: 20px;
+  }
+  .project-card__body {
+    padding: 18px 20px 22px;
+  }
+  .project-card__eyebrow {
+    font-size: 12px;
+  }
+  .project-card p {
+    font-size: 15px;
+  }
+  .process-head {
+    margin-bottom: 32px;
+  }
+  .process-row {
+    gap: 28px;
+  }
+  .process-card {
+    min-height: 270px;
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+  .process-card:not(:last-child)::after {
+    right: -28px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  .process-card span {
+    margin: 66px auto 22px;
+    font-size: 42px;
+  }
+  .process-card h3 {
+    font-size: 19px;
+  }
+  .process-card p {
+    font-size: 15px;
+  }
+  .skill-panel h3 {
+    font-size: 22px;
+  }
+  .tag-cloud b {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+  .timeline-item strong {
+    font-size: 20px;
+  }
+  .timeline-item p,
+  .experience-card li {
+    font-size: 16px;
+  }
+  .experience-card h3 {
+    font-size: 28px;
+  }
+  .experience-card p {
+    font-size: 17px;
+  }
+  .course-grid {
+    gap: 18px;
+    margin-top: 38px;
+  }
+  .course-card h3 {
+    font-size: 20px;
+  }
+  .footer {
+    padding: 58px 0 34px;
+  }
+  .footer-main {
+    gap: 46px;
+  }
+  .footer-brand p,
+  .footer-cta p {
+    font-size: 16px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
