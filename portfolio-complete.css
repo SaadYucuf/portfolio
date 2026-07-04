@@ -1484,6 +1484,21 @@ body::after {
   .project-card__body { padding: 18px 18px 22px; }
   .project-card h3 { font-size: 22px; }
   .project-card p { font-size: 15px; }
+  .client-proof {
+    padding: 30px 0;
+  }
+  .client-proof__inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .client-proof__logos {
+    justify-content: flex-start;
+  }
+  .client-proof__logos span {
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 0.76rem;
+  }
 }
 
 /* Compact desktop scale pass */
@@ -1768,6 +1783,51 @@ body::after {
 .projects-more .btn {
   min-width: 178px;
 }
+
+.client-proof {
+  padding: 38px 0;
+  background: #ffffff;
+  border-top: 1px solid rgba(226, 232, 240, 0.82);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.82);
+}
+
+.client-proof__inner {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) 1.28fr;
+  align-items: center;
+  gap: 34px;
+}
+
+.client-proof__inner p:not(.section-kicker) {
+  margin: 8px 0 0;
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.client-proof__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.client-proof__logos span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(203, 213, 225, 0.86);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  color: #334155;
+  font-size: 0.82rem;
+  font-weight: 760;
+  letter-spacing: -0.01em;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.05);
+}
+
 .projects-page {
   padding-top: 150px;
 }
