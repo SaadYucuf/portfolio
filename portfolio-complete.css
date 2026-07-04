@@ -1331,6 +1331,13 @@ body::after {
 
 @media (max-width: 1024px) {
   .desktop-nav, .language-switch, .nav-cta { display: none; }
+  .mobile-panel .language-switch {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+    min-height: 50px;
+  }
   .mobile-toggle { display: inline-flex; }
   .mobile-panel.is-open { display: grid; }
   .section-head, .about-body { grid-template-columns: 1fr; gap: 28px; }
