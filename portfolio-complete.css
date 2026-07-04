@@ -686,6 +686,24 @@ body::after {
   font-weight: 900;
   font-size: 24px;
 }
+.about-cards .line-icon,
+.expertise-card .line-icon {
+  background:
+    linear-gradient(145deg, rgba(37,99,255,.12), rgba(37,99,255,.04)),
+    #fff;
+  border: 1px solid rgba(37,99,255,.14);
+  box-shadow: 0 14px 30px rgba(37,99,255,.09);
+}
+.about-cards .line-icon svg,
+.expertise-card .line-icon svg {
+  width: 31px;
+  height: 31px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .about-cards strong { display: block; font-size: 25px; margin-bottom: 8px; }
 .about-cards p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 17px; }
 .expertise-card .icon-image {
@@ -700,6 +718,12 @@ body::after {
   object-fit: contain;
   padding: 8px;
   display: block;
+}
+.about-cards article:hover .line-icon,
+.expertise-card:hover .line-icon,
+.expertise-card:hover .icon-image {
+  border-color: rgba(37,99,255,.3);
+  box-shadow: 0 16px 34px rgba(37,99,255,.14);
 }
 
 /* Expertise */
