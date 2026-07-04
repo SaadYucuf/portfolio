@@ -1923,6 +1923,9 @@ body::after {
   border-radius: 99px;
   background: var(--blue);
 }
+.about-section .title-accent {
+  display: none;
+}
 .about-text-desktop {
   max-width: 690px;
   margin-top: 30px;
@@ -1932,7 +1935,17 @@ body::after {
 }
 .about-text-desktop p,
 .about-text-mobile p { margin: 0 0 18px; }
-.about-text-mobile { display: none; }
+.about-text-mobile {
+  display: block;
+  max-width: 650px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.68;
+}
+.about-section .about-text-desktop {
+  display: none;
+}
 .approach-card {
   position: relative;
   z-index: 2;
@@ -1982,11 +1995,19 @@ body::after {
   display: flex;
   align-items: flex-start;
   gap: 14px;
+  position: relative;
   padding: 14px 0;
   border-top: 1px solid var(--border);
   color: var(--ink);
   font-size: 16px;
   line-height: 1.45;
+}
+.approach-list li::before {
+  content: none;
+  display: none;
+}
+.approach-list li .check-icon + * {
+  min-width: 0;
 }
 .approach-list li:first-child { border-top: 0; }
 .approach-list strong { color: var(--blue); font-weight: 720; }
