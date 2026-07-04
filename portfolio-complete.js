@@ -87,6 +87,7 @@ const filters = ['All', 'ERP', 'Manufacturing', 'Website', 'Integration', 'Logis
 let activeFilter = 'All';
 const grid = $('[data-project-grid]');
 const filterWrap = $('[data-project-filters]');
+const isProjectsPage = document.body?.dataset.page === 'projects';
 
 const i18n = {
   en: {
@@ -273,7 +274,8 @@ function renderFilters() {
 
 function renderProjects() {
   if (!grid) return;
-  const visible = projects.filter((project) => activeFilter === 'All' || project.tags.includes(activeFilter));
+  const filtered = projects.filter((project) => activeFilter === 'All' || project.tags.includes(activeFilter));
+  const visible = isProjectsPage ? filtered : filtered.slice(0, 3);
   grid.innerHTML = visible.map((project) => `
     <a class="project-card reveal is-visible" href="${routePrefix}${project.href}" aria-label="${(i18n[currentLang] || i18n.en).openCase} ${project.title}">
       <div class="project-card__image"><img src="${asset(project.image)}" alt="${project.title} case study preview" loading="lazy"></div>
