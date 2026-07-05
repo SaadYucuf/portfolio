@@ -1306,6 +1306,17 @@ body::after {
   background: rgba(37,99,255,.08);
   font-weight: 900;
 }
+.footer-connect .footer-icon-img {
+  overflow: hidden;
+  background: #eff6ff;
+  border: 1px solid rgba(37, 99, 255, .14);
+}
+.footer-connect .footer-icon-img img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
 .footer-connect b { display: block; font-size: 18px; }
 .footer-connect small { display: block; color: var(--muted); font-size: 16px; }
 .footer-cta p { margin: 0 0 28px; color: #243049; font-size: 20px; line-height: 1.6; }
