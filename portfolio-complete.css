@@ -542,7 +542,38 @@ body::after {
 .position-card strong { display: block; font-size: 26px; }
 .position-card span { display: block; color: rgba(255,255,255,.74); margin-top: 8px; font-size: 18px; }
 .mobile-position-card {
-  display: none;
+  display: block;
+  width: min(100%, 520px);
+  margin: 18px auto 0;
+  padding: 18px 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(215,226,244,.94);
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 20px 46px rgba(15,23,42,.08);
+  text-align: left;
+}
+.mobile-position-card small {
+  display: block;
+  color: var(--blue);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+.mobile-position-card strong {
+  display: block;
+  color: var(--ink);
+  font-size: 20px;
+  letter-spacing: -.02em;
+  line-height: 1.15;
+}
+.mobile-position-card span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
 }
 .hero-stats {
   display: grid;
