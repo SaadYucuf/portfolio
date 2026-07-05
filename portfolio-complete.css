@@ -541,6 +541,9 @@ body::after {
 }
 .position-card strong { display: block; font-size: 26px; }
 .position-card span { display: block; color: rgba(255,255,255,.74); margin-top: 8px; font-size: 18px; }
+.mobile-position-card {
+  display: none;
+}
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1434,6 +1437,39 @@ body::after {
     object-position: center;
     mix-blend-mode: normal;
     max-height: 100%;
+  }
+  .mobile-position-card {
+    display: block;
+    margin-top: 14px;
+    padding: 16px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(215,226,244,.94);
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 18px 40px rgba(15,23,42,.08);
+    text-align: left;
+  }
+  .mobile-position-card small {
+    display: block;
+    color: var(--blue);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+  .mobile-position-card strong {
+    display: block;
+    color: var(--ink);
+    font-size: 19px;
+    letter-spacing: -.02em;
+    line-height: 1.15;
+  }
+  .mobile-position-card span {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45;
   }
   .hero-stats { grid-template-columns: 1fr; }
   .hero-stats article, .hero-stats article:nth-child(3) { border-left: none; }
