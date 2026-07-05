@@ -2154,3 +2154,69 @@ body::after {
   .about-card-content { grid-column: 1; }
   .about-card-arrow { grid-column: 2; grid-row: 2; }
 }
+
+/* Odoo/CRM asset polish */
+.badge-line-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.badge-asset-logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.icon-image.brand-icon img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+.stat-logo {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+.odoo-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+.odoo-proof-strip figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255,255,255,.88);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+.odoo-proof-strip img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #fff;
+}
+.odoo-proof-strip figcaption {
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 750;
+}
+@media (max-width: 760px) {
+  .odoo-proof-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .odoo-proof-strip figure:nth-child(n+2) { display: none; }
+  .badge-asset-logo,
+  .odoo-badge-logo { width: 28px; height: 28px; }
+}
